@@ -689,8 +689,6 @@ MonoBehaviour:
   - {fileID: 8696673654983134887}
   - {fileID: -4731438336562001402}
   - {fileID: 4135229692886101830}
-  - {fileID: -2655048527360177825}
-  - {fileID: 4717700617653308734}
   - {fileID: 2220871646205782247}
   - {fileID: -1885129840416676580}
   m_renderMode: 1
@@ -713,6 +711,7 @@ MonoBehaviour:
   m_Name: InterceptCreateSessionFeature Standalone
   m_EditorClassIdentifier: 
   m_enabled: 1
+  <failedInitialization>k__BackingField: 0
   nameUi: 'Sample: Intercept Create Session'
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.example.intercept
@@ -721,6 +720,7 @@ MonoBehaviour:
   priority: 0
   required: 0
   message: Hello from C#!
+  <receivedMessage>k__BackingField: 
 --- !u!114 &-2513858183220632965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,8 +982,6 @@ MonoBehaviour:
   - {fileID: 4743943348186933471}
   - {fileID: -6368128839055358620}
   - {fileID: -7581625304019661375}
-  - {fileID: 5677957032540683211}
-  - {fileID: 4712781041778684065}
   - {fileID: 4472254247930972645}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
@@ -1283,6 +1281,7 @@ MonoBehaviour:
   m_Name: InterceptCreateSessionFeature Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: 'Sample: Intercept Create Session'
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.example.intercept
@@ -1291,6 +1290,7 @@ MonoBehaviour:
   priority: 0
   required: 0
   message: Hello from C#!
+  <receivedMessage>k__BackingField: 
 --- !u!114 &1600911170270580402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,6 +1599,7 @@ MonoBehaviour:
   m_Name: MeshingTeapotFeature Metro
   m_EditorClassIdentifier: 
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: 'Sample: Meshing Teapot'
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.example.meshing
@@ -1739,8 +1740,6 @@ MonoBehaviour:
   - {fileID: 6049565151292236065}
   - {fileID: -1240317829809740624}
   - {fileID: 4346079247648062527}
-  - {fileID: 1585705340462094052}
-  - {fileID: 3676292355816436824}
   - {fileID: -1115938763246814926}
   - {fileID: 6565765835229084923}
   m_renderMode: 1
@@ -1865,6 +1864,7 @@ MonoBehaviour:
   m_Name: MeshingTeapotFeature Android
   m_EditorClassIdentifier: 
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: 'Sample: Meshing Teapot'
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.example.meshing
@@ -1885,6 +1885,7 @@ MonoBehaviour:
   m_Name: MeshingTeapotFeature Standalone
   m_EditorClassIdentifier: 
   m_enabled: 1
+  <failedInitialization>k__BackingField: 0
   nameUi: 'Sample: Meshing Teapot'
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.example.meshing
@@ -2087,6 +2088,7 @@ MonoBehaviour:
   m_Name: InterceptCreateSessionFeature Android
   m_EditorClassIdentifier: 
   m_enabled: 0
+  <failedInitialization>k__BackingField: 0
   nameUi: 'Sample: Intercept Create Session'
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.example.intercept
@@ -2095,6 +2097,7 @@ MonoBehaviour:
   priority: 0
   required: 0
   message: Hello from C#!
+  <receivedMessage>k__BackingField: 
 --- !u!114 &6049565151292236065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2127,7 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7365b139f7aec43b23d26b7a48b5a6, type: 3}
   m_Name: MetaQuestTouchPlusControllerProfile Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Touch Plus Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metaquestplus
@@ -2227,7 +2230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b862ee14fb479fbfe5fffe655d3ed3, type: 3}
   m_Name: MetaQuestTouchProControllerProfile Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Touch Pro Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metaquestpro
@@ -2347,7 +2350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7365b139f7aec43b23d26b7a48b5a6, type: 3}
   m_Name: MetaQuestTouchPlusControllerProfile Standalone
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Touch Plus Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metaquestplus
