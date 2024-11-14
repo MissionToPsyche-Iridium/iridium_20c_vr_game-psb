@@ -1,9 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class AttachPointPopup : MonoBehaviour
+public class Popup_Controller : MonoBehaviour
 {
     [SerializeField] private GameObject popupUI;         // Assign the popup UI GameObject in the Inspector
     [SerializeField] private AudioSource myAudioSource;
@@ -23,7 +25,9 @@ public class AttachPointPopup : MonoBehaviour
     private void OnObjectAttached(SelectEnterEventArgs args)
     {
         // Display the popup when an object is attached
-        DisplayPopup();
+        IXRSelectInteractable states = socketInteractor.GetOldestInteractableSelected();
+        GameObject stateTemp = states.transform.gameObject;
+        DisplayPopup(stateTemp);
     }
 
     //rework this function to clear instead when button is pressed
@@ -35,13 +39,26 @@ public class AttachPointPopup : MonoBehaviour
         ClearPopup();
     }
 
-    private void DisplayPopup()
+    private void DisplayPopup(GameObject state)
     {
         if (popupUI != null && !isPopupVisible)
         {
-            popupUI.SetActive(true); // Enable popup UI
-            myAudioSource?.Play();   // Play audio if assigned
-            isPopupVisible = true;
+            if(socketInteractor.CompareTag("Florida") == state.CompareTag("Florida"))
+            {
+                popupUI.SetActive(true); // Enable popup UI
+                myAudioSource?.Play();   // Play audio if assigned
+                isPopupVisible = true;
+            } else if (socketInteractor.CompareTag("Arizona") == state.CompareTag("Arizona"))
+            {
+                popupUI.SetActive(true); // Enable popup UI
+                myAudioSource?.Play();   // Play audio if assigned
+                isPopupVisible = true;
+            } else if (socketInteractor.CompareTag("Massachuesettes") == state.CompareTag("Massachuesettes"))
+            {
+                popupUI.SetActive(true); // Enable popup UI
+                myAudioSource?.Play();   // Play audio if assigned
+                isPopupVisible = true;
+            }
         }
     }
 
