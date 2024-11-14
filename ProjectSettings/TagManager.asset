@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Left Hand
   - Right Hand
+  - Arizona
+  - Massachuesettes
+  - Florida
   layers:
   - Default
   - TransparentFX
