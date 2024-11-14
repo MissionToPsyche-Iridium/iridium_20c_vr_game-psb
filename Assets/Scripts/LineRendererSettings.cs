@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class LineRendererSettings : MonoBehaviour
 {
     [SerializeField] LineRenderer rend;
 
@@ -10,8 +11,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
-        rend = GameObject.GetComponent<LineRenderer>();
-
+        rend = gameObject.GetComponent<LineRenderer>();
+        img = panel.GetComponent<Image>();
         points = new Vector3[2];
 
         points[0]= Vector3.zero;
@@ -28,21 +29,27 @@ public class NewBehaviourScript : MonoBehaviour
     public void AlignLineRenderer(LineRenderer rend)
     {
         Ray ray;
-        ray = new Ray(transfrom.position, transform.forward);
+        ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, layerMask))
         {
-            points[1]=transform.forward+new Vector3(0,0,hit.distance);       
+            points[1]=transform.forward+new Vector3(0,0,hit.distance);
+            rend.startColor = Color.red;
+            rend.endColor = Color.red;
+            btn = hit.collider.gameObject.GetComponent<Button>();
+
         }
         else
         {
             points[1] = transform.forward + new Vector3(0, 0, 20);
+            rend.startColor = Color.green;
+            rend.endColor = Color.green;
 
         }
 
         rend.SetPositions(points);
-
+        rend.material.color = rend.startColor;
     }
 
     private void Update()
@@ -50,6 +57,8 @@ public class NewBehaviourScript : MonoBehaviour
         AlignLineRenderer(rend);
 
     }
-
+    public GameObject panel;
+    public Image img;
+    public Button btn;
 }
 
