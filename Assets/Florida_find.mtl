@@ -1,0 +1,6 @@
+newmtl USMap_States
+map_Ke 800px-USA-satellite.jpg
+map_Kd 800px-USA-satellite.jpg
+Kd 1 1 1
+d 1
+
