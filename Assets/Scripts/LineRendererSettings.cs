@@ -26,14 +26,16 @@ public class LineRendererSettings : MonoBehaviour
 
     public LayerMask layerMask;
 
-    public void AlignLineRenderer(LineRenderer rend)
+    public bool AlignLineRenderer(LineRenderer rend)
     {
         Ray ray;
         ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
-
+        bool hitbtn = false;
         if (Physics.Raycast(ray, out hit, layerMask))
         {
+            hitbtn = true;
+
             points[1]=transform.forward+new Vector3(0,0,hit.distance);
             rend.startColor = Color.red;
             rend.endColor = Color.red;
@@ -42,6 +44,8 @@ public class LineRendererSettings : MonoBehaviour
         }
         else
         {
+            hitbtn = false;
+
             points[1] = transform.forward + new Vector3(0, 0, 20);
             rend.startColor = Color.green;
             rend.endColor = Color.green;
@@ -60,5 +64,18 @@ public class LineRendererSettings : MonoBehaviour
     public GameObject panel;
     public Image img;
     public Button btn;
+
+    public void ColorChangeOnClick()
+    {
+
+        if(btn!=null)
+        {
+            if (btn.name == "play_btn")
+            {
+                img.color = Color.green;
+                
+            }
+        }
+    }
 }
 
