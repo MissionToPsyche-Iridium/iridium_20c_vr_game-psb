@@ -6,9 +6,13 @@ using UnityEngine.InputSystem;
 public class PauseMenuManager : MonoBehaviour
 {
     public Transform head;
-    public float spawnDistance = 2;
+    public float spawnDistance = 3;
     public GameObject menu;
     public InputActionProperty showButton;
+        [SerializeField] float x = 0.0f;
+
+    [SerializeField] float y = 0.0f;
+        [SerializeField] float z = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +27,7 @@ public class PauseMenuManager : MonoBehaviour
         {
             menu.SetActive(!menu.activeSelf);
 
-            menu.transform.position = head.position + new Vector3(head.forward.x,0,head.forward.z).normalized * spawnDistance;
+            menu.transform.position = head.position + new Vector3(head.forward.x+x ,y,head.forward.z+z).normalized * spawnDistance;
         }
 
         menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y,head.position.z));
