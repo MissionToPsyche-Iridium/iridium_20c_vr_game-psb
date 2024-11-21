@@ -9,6 +9,7 @@ TagManager:
   - Arizona
   - Massachuesettes
   - Florida
+  - Floor
   layers:
   - Default
   - TransparentFX
