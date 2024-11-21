@@ -26,7 +26,7 @@ public class LineRendererSettings : MonoBehaviour
 
     public LayerMask layerMask;
 
-    public bool AlignLineRenderer(LineRenderer rend)
+    public void AlignLineRenderer(LineRenderer rend)
     {
         Ray ray;
         ray = new Ray(transform.position, transform.forward);
