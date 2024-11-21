@@ -26,7 +26,14 @@ public class PauseMenuManager : MonoBehaviour
         if (showButton.action.WasPressedThisFrame())
         {
             menu.SetActive(!menu.activeSelf);
-
+            if (menu.activeSelf)
+            {
+                Time.timeScale = 0.0f;
+            }
+            else
+            {
+                Time.timeScale = 1.0f;
+            }
             menu.transform.position = head.position + new Vector3(head.forward.x+x ,y,head.forward.z+z).normalized * spawnDistance;
         }
 

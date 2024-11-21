@@ -5,17 +5,28 @@ using UnityEngine;
 public class FloorCollision : MonoBehaviour
 {
    [SerializeField] AudioSource source;
-
+    [SerializeField] GameObject floor;
+    [SerializeField] GameObject self;
+    
+    private bool playedOnce = false;
+    
     void Start()
     {
         source = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+void Update()
+{
+    if ((floor.transform.position.y - self.transform.position.y)  == 1 && !playedOnce)
     {
-        if (collision.gameObject.tag == "Floor")
-        {
-            source.Play();
-        }
+        source.Play();
+        playedOnce = true;
     }
+    else
+    {
+        source.Stop();
+        playedOnce = false;
+    }
+}
 }
