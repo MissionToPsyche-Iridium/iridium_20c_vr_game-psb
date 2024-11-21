@@ -10,6 +10,7 @@ TagManager:
   - Massachuesettes
   - Florida
   - Floor
+  - UIButton
   layers:
   - Default
   - TransparentFX
