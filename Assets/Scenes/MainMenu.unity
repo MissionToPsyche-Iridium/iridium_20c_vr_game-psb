@@ -805,7 +805,7 @@ MonoBehaviour:
   triggerAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Trigger
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: b151df82-aee8-4e4d-b94f-5b7d45281b23
@@ -817,7 +817,7 @@ MonoBehaviour:
   gripAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Grip
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: cf8fa3b4-4c54-464f-9be2-320992547d7c
@@ -1029,6 +1029,7 @@ GameObject:
   - component: {fileID: 1090354164}
   - component: {fileID: 1090354163}
   - component: {fileID: 1090354162}
+  - component: {fileID: 1090354166}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Right Hand
@@ -1401,6 +1402,25 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6447266317303757838, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1090354166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090354160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752f37888b1b5ce48bcb7382e14b1549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  panel: {fileID: 0}
+  img: {fileID: 0}
+  btn: {fileID: 0}
 --- !u!1 &1285612721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,7 +1999,6 @@ GameObject:
   - component: {fileID: 1730619227}
   - component: {fileID: 1730619226}
   - component: {fileID: 1730619233}
-  - component: {fileID: 1730619232}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -2197,7 +2216,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1730619232
+--- !u!114 &1730619233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2213,21 +2232,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
-  panel: {fileID: 1456917455}
+  panel: {fileID: 0}
   img: {fileID: 0}
   btn: {fileID: 0}
---- !u!114 &1730619233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730619225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1915678198
 GameObject:
   m_ObjectHideFlags: 0
