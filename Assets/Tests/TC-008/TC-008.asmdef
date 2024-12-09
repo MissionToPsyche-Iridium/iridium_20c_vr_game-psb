@@ -1,0 +1,6 @@
+{
+    "name": "TC-008",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}
