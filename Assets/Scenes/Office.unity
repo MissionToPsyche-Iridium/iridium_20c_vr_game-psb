@@ -1373,6 +1373,8 @@ GameObject:
   - component: {fileID: 172511716}
   - component: {fileID: 172511715}
   - component: {fileID: 172511714}
+  - component: {fileID: 172511719}
+  - component: {fileID: 172511720}
   m_Layer: 0
   m_Name: Left Controller (pause menu)
   m_TagString: Untagged
@@ -2018,6 +2020,47 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -1636515391019944688, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &172511719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172511712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2d28bcb90197d48b8fc86590d547ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &172511720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172511712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94b05fc730684c4dabb4a9407daffff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1988333694}
+  leftHand: {fileID: 1128918624}
+  rightHand: {fileID: 204935931}
+  leftHandPause: {fileID: 172511712}
+  rightHandPause: {fileID: 1725899824}
+  showButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Show Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 90321b03-f69d-4aa4-b60d-c794bd99c6d0
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 8497685798473381005, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &200012590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3586,7 +3629,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 305638611}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 172511719}
+        m_TargetAssemblyTypeName: QuitButtonManager, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1725899831}
+        m_TargetAssemblyTypeName: QuitButtonManager, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &305638611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5300,7 +5367,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 172511720}
+        m_TargetAssemblyTypeName: ContinueButtonManager, Assembly-CSharp
+        m_MethodName: disablePauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1725899832}
+        m_TargetAssemblyTypeName: ContinueButtonManager, Assembly-CSharp
+        m_MethodName: disablePauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &621164232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12430,6 +12521,8 @@ GameObject:
   - component: {fileID: 1725899828}
   - component: {fileID: 1725899827}
   - component: {fileID: 1725899826}
+  - component: {fileID: 1725899831}
+  - component: {fileID: 1725899832}
   m_Layer: 0
   m_Name: Right Controller (pause menu)
   m_TagString: Untagged
@@ -13075,6 +13168,47 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6447266317303757838, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1725899831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725899824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2d28bcb90197d48b8fc86590d547ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1725899832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725899824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94b05fc730684c4dabb4a9407daffff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1988333694}
+  leftHand: {fileID: 1128918624}
+  rightHand: {fileID: 204935931}
+  leftHandPause: {fileID: 172511712}
+  rightHandPause: {fileID: 1725899824}
+  showButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Show Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: dece38a2-216f-4c12-9845-ad8a65c56437
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 8497685798473381005, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &1740638007
 PrefabInstance:
   m_ObjectHideFlags: 0
