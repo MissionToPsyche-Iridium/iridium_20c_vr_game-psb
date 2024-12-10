@@ -34,6 +34,8 @@ public class PauseMenuManager : MonoBehaviour
             rightHand.SetActive(!rightHand.activeSelf);
             leftHandPause.SetActive(!leftHandPause.activeSelf);
             rightHandPause.SetActive(!rightHandPause.activeSelf);
+            leftHandPause.transform.position = leftHand.transform.position;
+            rightHandPause.transform.position = rightHand.transform.position;
             if (menu.activeSelf)
             {
                 Time.timeScale = 0.0f;
