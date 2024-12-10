@@ -8,6 +8,10 @@ public class PauseMenuManager : MonoBehaviour
     public Transform head;
     public float spawnDistance = 3;
     public GameObject menu;
+    public GameObject leftHand;
+    public GameObject rightHand;
+    public GameObject leftHandPause;
+    public GameObject rightHandPause;
     public InputActionProperty showButton;
         [SerializeField] float x = 0.0f;
 
@@ -26,6 +30,10 @@ public class PauseMenuManager : MonoBehaviour
         if (showButton.action.WasPressedThisFrame())
         {
             menu.SetActive(!menu.activeSelf);
+            leftHand.SetActive(!leftHand.activeSelf);
+            rightHand.SetActive(!rightHand.activeSelf);
+            leftHandPause.SetActive(!leftHandPause.activeSelf);
+            rightHandPause.SetActive(!rightHandPause.activeSelf);
             if (menu.activeSelf)
             {
                 Time.timeScale = 0.0f;
