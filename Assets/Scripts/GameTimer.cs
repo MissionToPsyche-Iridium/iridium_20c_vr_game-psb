@@ -47,7 +47,7 @@ public class GameTimer : MonoBehaviour
     void EndGame()
     {
         // Load the Game Over scene
-        SceneManager.LoadScene("GameOoverScene");
+        SceneManager.LoadScene("GameOverScene");
     }
 }
 

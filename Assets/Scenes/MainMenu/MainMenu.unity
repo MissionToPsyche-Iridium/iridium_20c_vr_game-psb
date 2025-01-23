@@ -291,7 +291,15 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
+<<<<<<< HEAD:Assets/Scenes/MainMenu.unity
     m_NormalColor: {r: 0.9150943, g: 0.5157946, b: 0.22014059, a: 1}
+=======
+<<<<<<< HEAD:Assets/Scenes/MainMenu/MainMenu.unity
+    m_NormalColor: {r: 0.9764706, g: 0.627451, b: 0, a: 1}
+=======
+    m_NormalColor: {r: 0.95686275, g: 0.4862745, b: 0.2, a: 1}
+>>>>>>> main:Assets/Scenes/MainMenu.unity
+>>>>>>> origin/UnTested-Changes-Over-Break:Assets/Scenes/MainMenu/MainMenu.unity
     m_HighlightedColor: {r: 0.9858491, g: 0.6871632, b: 0.4696734, a: 1}
     m_PressedColor: {r: 1, g: 0.4292453, b: 0.4319723, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
