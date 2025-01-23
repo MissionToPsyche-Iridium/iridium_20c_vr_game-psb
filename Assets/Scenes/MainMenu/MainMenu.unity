@@ -313,9 +313,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1230878710}
-        m_TargetAssemblyTypeName: EventModeButtonManager, Assembly-CSharp
-        m_MethodName: NextScene
+      - m_Target: {fileID: 1230878716}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -325,9 +325,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 784214363}
-        m_TargetAssemblyTypeName: EventModeButtonManager, Assembly-CSharp
-        m_MethodName: NextScene
+      - m_Target: {fileID: 784214369}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -988,7 +988,7 @@ GameObject:
   - component: {fileID: 784214366}
   - component: {fileID: 784214365}
   - component: {fileID: 784214364}
-  - component: {fileID: 784214363}
+  - component: {fileID: 784214369}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -1012,18 +1012,6 @@ Transform:
   - {fileID: 455443982}
   m_Father: {fileID: 421319066}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &784214363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784214361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 388ba6d929652ae49a13d473daac8bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!210 &784214364
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1646,6 +1634,18 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6447266317303757838, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &784214369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784214361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda183669346aec40b0a2a8d0a24107d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1044064245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1766,7 +1766,7 @@ GameObject:
   - component: {fileID: 1230878713}
   - component: {fileID: 1230878712}
   - component: {fileID: 1230878711}
-  - component: {fileID: 1230878710}
+  - component: {fileID: 1230878716}
   m_Layer: 0
   m_Name: 'Left Controller '
   m_TagString: Untagged
@@ -1790,18 +1790,6 @@ Transform:
   - {fileID: 1044064246}
   m_Father: {fileID: 421319066}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1230878710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230878708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 388ba6d929652ae49a13d473daac8bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!210 &1230878711
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -2424,6 +2412,18 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -1636515391019944688, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1230878716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230878708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda183669346aec40b0a2a8d0a24107d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1285612721
 GameObject:
   m_ObjectHideFlags: 0
