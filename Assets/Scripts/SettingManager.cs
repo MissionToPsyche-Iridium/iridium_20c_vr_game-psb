@@ -4,32 +4,32 @@ using UnityEngine;
 
 public class SettingManager : MonoBehaviour
 {
-    static private bool continuesTurn = true;
-    static private bool snapTurn = false;
-    static private bool eventMode = true;
-    static private bool normalMode = false;
+    static private bool _continuesTurn = true;
+    static private bool _snapTurn = false;
+    static private bool _eventMode = true;
+    static private bool _normalMode = false;
 
         public static bool continuesTurn
     {
-        get { return continuesTurn; }
-        set { continuesTurn = value; }
+        get { return _continuesTurn; }
+        set { _continuesTurn = value; }
     }
 
         public static bool snapTurn
     {
-        get { return snapTurn; }
-        set { snapTurn = value; }
+        get { return _snapTurn; }
+        set { _snapTurn = value; }
     }
 
         public static bool eventMode
     {
-        get { return eventMode; }
-        set { eventMode = value; }
+        get { return _eventMode; }
+        set { _eventMode = value; }
     }
     
         public static bool normalMode
     {
-        get { return normalMode; }
-        set { normalMode = value; }
+        get { return _normalMode; }
+        set { _normalMode = value; }
     }
 }
