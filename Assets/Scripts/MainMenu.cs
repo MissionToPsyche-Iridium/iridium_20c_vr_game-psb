@@ -16,6 +16,11 @@ public class MainMenu : MonoBehaviour
         optionsMenu.SetActive(true);
         titleMenu.SetActive(false);
     }
+    public void GoTitle()
+    { 
+        optionsMenu.SetActive(false);
+        titleMenu.SetActive(true);
+    }
     public void QuitGame()
     {
         Application.Quit();

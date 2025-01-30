@@ -1,35 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SettingManager : MonoBehaviour
 {
-    static private bool _continuesTurn = true;
-    static private bool _snapTurn = false;
-    static private bool _eventMode = true;
-    static private bool _normalMode = false;
+    private static SettingManager instance;
 
-        public static bool continuesTurn
+    private bool continuousTurn = true;
+    private bool eventMode = true;
+
+    public static SettingManager Instance
     {
-        get { return _continuesTurn; }
-        set { _continuesTurn = value; }
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<SettingManager>();
+
+                if (instance == null)
+                {
+                    GameObject singletonObject = new GameObject();
+                    instance = singletonObject.AddComponent<SettingManager>();
+                    singletonObject.name = typeof(SettingManager).ToString();
+                    DontDestroyOnLoad(singletonObject);
+                }
+            }
+            return instance;
+        }
     }
 
-        public static bool snapTurn
+    public bool ContinuousTurn
     {
-        get { return _snapTurn; }
-        set { _snapTurn = value; }
+        get { return continuousTurn; }
+        set { continuousTurn = value; }
     }
 
-        public static bool eventMode
+
+    public bool EventMode
     {
-        get { return _eventMode; }
-        set { _eventMode = value; }
+        get { return eventMode; }
+        set { eventMode = value; }
     }
-    
-        public static bool normalMode
+
+
+    private void Awake()
     {
-        get { return _normalMode; }
-        set { _normalMode = value; }
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
