@@ -11,11 +11,7 @@ public class GameTimer : MonoBehaviour
     private void Start()
     {
         // Start the timer automatically when the game begins
-        if(SettingManager.Instance.EventMode == false) {
-            timerIsRunning = false;
-        }else{
-            timerIsRunning = true;
-        }
+        timerIsRunning = true;
 
     }
 
