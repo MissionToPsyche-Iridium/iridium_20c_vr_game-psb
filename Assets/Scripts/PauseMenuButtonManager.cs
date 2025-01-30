@@ -17,6 +17,8 @@ public class PauseMenuButtonManager : MonoBehaviour
 
     public void MainMenuScene() {
         SceneManager.LoadScene("MainMenu");
+        SettingManager.Instance.ContinuousTurn = true;
+        SettingManager.Instance.EventMode = true; 
         Time.timeScale = 1.0f;
     }
 

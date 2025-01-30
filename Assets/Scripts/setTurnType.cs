@@ -14,11 +14,13 @@ public class setTurnType : MonoBehaviour
         {
             snapTurn.enabled = false;
             continuousTurn.enabled = true;
+            SettingManager.Instance.ContinuousTurn = true;
         }
         else if (index == 1)
         {
             snapTurn.enabled = true;
             continuousTurn.enabled = false;
+            SettingManager.Instance.ContinuousTurn = false;
         }
     }
 }
