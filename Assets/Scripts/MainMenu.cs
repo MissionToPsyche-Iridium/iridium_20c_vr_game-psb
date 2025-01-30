@@ -36,4 +36,15 @@ public class MainMenu : MonoBehaviour
             SettingManager.Instance.ContinuousTurn = false;
         }
     }
+    public void setTypeToggle(bool value)
+    {
+        if (value)
+        {
+            SettingManager.Instance.EventMode = true;
+        }
+        else 
+        {
+            SettingManager.Instance.EventMode = false;
+        }
+    }
 }
