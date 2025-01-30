@@ -333,9 +333,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 242168363}
-    - targetCorrespondingSourceObject: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 242168364}
   m_SourcePrefab: {fileID: 100100000, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
 --- !u!4 &242168361 stripped
 Transform:
@@ -383,19 +380,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!114 &242168364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242168362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99b8f75163aa2054c9c745f5e5263ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
 --- !u!1 &324464944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b8f75163aa2054c9c745f5e5263ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
 --- !u!1 &597291338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,9 +1293,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
       insertIndex: -1
       addedObject: {fileID: 844883515}
-    - targetCorrespondingSourceObject: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 844883516}
   m_SourcePrefab: {fileID: 100100000, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
 --- !u!4 &844883513 stripped
 Transform:
@@ -1360,19 +1340,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!114 &844883516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844883514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99b8f75163aa2054c9c745f5e5263ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
 --- !u!1 &886306136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,7 +1439,6 @@ GameObject:
   - component: {fileID: 1100866630}
   - component: {fileID: 1100866629}
   - component: {fileID: 1100866628}
-  - component: {fileID: 1100866631}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: UIButton
@@ -1606,19 +1572,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100866626}
   m_CullTransparentMesh: 1
---- !u!114 &1100866631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100866626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99b8f75163aa2054c9c745f5e5263ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
 --- !u!1 &1445999829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b8f75163aa2054c9c745f5e5263ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
 --- !u!1 &1860901947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,7 +2650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b8f75163aa2054c9c745f5e5263ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
 --- !u!1 &2052392364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,7 +2723,6 @@ GameObject:
   - component: {fileID: 2091135758}
   - component: {fileID: 2091135757}
   - component: {fileID: 2091135756}
-  - component: {fileID: 2091135759}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: UIButton
@@ -2906,19 +2856,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091135754}
   m_CullTransparentMesh: 1
---- !u!114 &2091135759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091135754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99b8f75163aa2054c9c745f5e5263ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventSystem: {fileID: 0}
 --- !u!1 &2130344451
 GameObject:
   m_ObjectHideFlags: 0

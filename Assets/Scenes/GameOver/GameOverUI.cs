@@ -6,9 +6,6 @@ using UnityEngine.EventSystems; // For handling UI events
 
 public class GameOverUI : MonoBehaviour
 {
-
-    public EventSystem eventSystem; // Reference to the event system
-
     public void GoToMainMenu()
     {
         // Load the Main Menu scene
