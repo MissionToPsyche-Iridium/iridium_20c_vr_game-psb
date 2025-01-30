@@ -25,4 +25,15 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void setTypeFromIndex(int index)
+    {
+        if (index == 0)
+        {
+            SettingManager.Instance.ContinuousTurn = true;
+        }
+        else if (index == 1)
+        {
+            SettingManager.Instance.ContinuousTurn = false;
+        }
+    }
 }
