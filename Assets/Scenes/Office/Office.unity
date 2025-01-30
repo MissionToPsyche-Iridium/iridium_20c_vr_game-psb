@@ -840,6 +840,7 @@ GameObject:
   - component: {fileID: 89352996}
   - component: {fileID: 89352997}
   - component: {fileID: 89352998}
+  - component: {fileID: 89352999}
   m_Layer: 0
   m_Name: XR Interaction Manager
   m_TagString: Untagged
@@ -890,6 +891,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
+--- !u!114 &89352999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89352994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254e683af762acd4889d8fb39ff538d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 0}
+  timerCanvas: {fileID: 1594947434}
+  textTimer: {fileID: 1879715572}
 --- !u!4 &96717235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1766811887253348290, guid: aa5089a1d15239b4d9dead8c744bd224, type: 3}
