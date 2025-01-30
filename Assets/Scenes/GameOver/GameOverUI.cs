@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; // For Button
-using UnityEngine.XR.Interaction.Toolkit; // For XR interaction components
-using UnityEngine.EventSystems; // For handling UI events
+using System.Diagnostics;
 
 public class GameOverUI : MonoBehaviour
 {
@@ -15,8 +13,9 @@ public class GameOverUI : MonoBehaviour
     public void QuitGame()
     {
         // Quit the application
-        Debug.Log("Quit Game"); // This will log a message in the Editor for testing purposes
-        Application.Quit();
+        //Application.Quit();
+        Process.GetCurrentProcess().Kill();
+
     }
 
 }
