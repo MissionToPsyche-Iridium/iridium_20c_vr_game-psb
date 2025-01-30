@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-
+using UnityEngine.UI;
 public class setTurnType : MonoBehaviour
 {
     public ActionBasedSnapTurnProvider snapTurn;

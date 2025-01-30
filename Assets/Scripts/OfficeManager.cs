@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-
+using UnityEngine.UI;
 public class OfficeManager : MonoBehaviour
 {
     public GameTimer timer;
@@ -10,7 +10,8 @@ public class OfficeManager : MonoBehaviour
     public GameObject textTimer;
     public ActionBasedSnapTurnProvider snapTurn;
     public ActionBasedContinuousTurnProvider continuousTurn;
-
+    [SerializeField] public GameObject dropDownObject;
+    private Dropdown dropDown;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,11 +19,16 @@ public class OfficeManager : MonoBehaviour
             timer.enabled = false;
             timerCanvas.SetActive(false);
             textTimer.SetActive(false);
-        }
 
+        }
+        
         if(SettingManager.Instance.ContinuousTurn == false) {
             snapTurn.enabled = true;
             continuousTurn.enabled = false;
+            dropDown = dropDownObject.GetComponent<Dropdown>();
+            int index = dropDown.options.FindIndex(option => option.text == "Snap Turn");
+            dropDown.value = index;
+
         }
     }
 
