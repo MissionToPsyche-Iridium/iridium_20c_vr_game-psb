@@ -28,7 +28,7 @@ public class OfficeManager : MonoBehaviour
             dropDown = dropDownObject.GetComponent<Dropdown>();
             int index = dropDown.options.FindIndex(option => option.text == "Snap Turn");
             dropDown.value = index;
-
+            dropDown.RefreshShownValue();
         }
     }
 
