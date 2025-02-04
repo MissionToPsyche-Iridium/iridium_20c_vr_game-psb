@@ -3380,6 +3380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapTurn: {fileID: 1321662474}
   continuousTurn: {fileID: 1321662473}
+  dropDownObject: {fileID: 774488343}
 --- !u!1001 &248245439
 PrefabInstance:
   m_ObjectHideFlags: 0

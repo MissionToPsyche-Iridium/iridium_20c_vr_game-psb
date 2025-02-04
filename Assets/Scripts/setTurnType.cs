@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.UI;
+using TMPro; // Add this namespace for TMP_Dropdown
 public class setTurnType : MonoBehaviour
 {
     public ActionBasedSnapTurnProvider snapTurn;
     public ActionBasedContinuousTurnProvider continuousTurn;
-
-    public void setTypeFromIndex(int index)
+    [SerializeField] public GameObject dropDownObject;
+    private TMP_Dropdown dropDown; // Change Dropdown to TMP_Dropdown
+    public void setTypeFromIndex()
     {
-        if (index == 0)
+        dropDown = dropDownObject.GetComponent<TMP_Dropdown>(); // Change to TMP_Dropdown
+        if (dropDown.options[dropDown.value].text == "Snap Turn")
         {
-            snapTurn.enabled = false;
-            continuousTurn.enabled = true;
-            SettingManager.Instance.ContinuousTurn = true;
-        }
-        else if (index == 1)
-        {
+            SettingManager.Instance.ContinuousTurn = false;
             snapTurn.enabled = true;
             continuousTurn.enabled = false;
-            SettingManager.Instance.ContinuousTurn = false;
+        }
+        else 
+        {
+            SettingManager.Instance.ContinuousTurn = true;
+            snapTurn.enabled = false;
+            continuousTurn.enabled = true;
         }
     }
 }
