@@ -22,6 +22,10 @@ public class OfficeManager : MonoBehaviour
 
         }
         
+    }
+
+    void Start() 
+    {
         if(SettingManager.Instance.ContinuousTurn == false) {
             snapTurn.enabled = true;
             continuousTurn.enabled = false;
