@@ -30,29 +30,10 @@ public class OfficeManager : MonoBehaviour
     {
         if (SettingManager.Instance.ContinuousTurn == false)
         {
-            snapTurn.enabled = true;
             continuousTurn.enabled = false;
-
-            if (dropDownObject == null)
-            {
-                Debug.LogError("dropDownObject is not assigned!");
-                return;
-            }
-
+            snapTurn.enabled = true;
             dropDown = dropDownObject.GetComponent<TMP_Dropdown>(); // Change to TMP_Dropdown
-            if (dropDown == null)
-            {
-                Debug.LogError("TMP_Dropdown component is missing on dropDownObject!");
-                return;
-            }
-
             int index = dropDown.options.FindIndex(option => option.text == "Snap Turn");
-            if (index == -1)
-            {
-                Debug.LogError("Option 'Snap Turn' not found in TMP_Dropdown!");
-                return;
-            }
-
             dropDown.value = index;
             dropDown.RefreshShownValue();
         }

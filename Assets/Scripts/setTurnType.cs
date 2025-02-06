@@ -16,8 +16,8 @@ public class setTurnType : MonoBehaviour
         if (dropDown.options[dropDown.value].text == "Snap Turn")
         {
             SettingManager.Instance.ContinuousTurn = false;
-            snapTurn.enabled = true;
             continuousTurn.enabled = false;
+            snapTurn.enabled = true;
         }
         else 
         {
