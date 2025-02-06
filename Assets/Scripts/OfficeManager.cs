@@ -12,7 +12,7 @@ public class OfficeManager : MonoBehaviour
     public GameObject textTimer;
     public ActionBasedSnapTurnProvider snapTurn;
     public ActionBasedContinuousTurnProvider continuousTurn;
-    [SerializeField] public GameObject dropDownObject;
+    public GameObject dropDownObject;
     private TMP_Dropdown dropDown; // Change Dropdown to TMP_Dropdown
 
     // Start is called before the first frame update

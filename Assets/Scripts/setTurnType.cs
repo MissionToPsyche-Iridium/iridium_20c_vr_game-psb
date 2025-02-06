@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.UI;
 using TMPro; // Add this namespace for TMP_Dropdown
 public class setTurnType : MonoBehaviour
 {
     public ActionBasedSnapTurnProvider snapTurn;
     public ActionBasedContinuousTurnProvider continuousTurn;
-    [SerializeField] public GameObject dropDownObject;
+    public GameObject dropDownObject;
     private TMP_Dropdown dropDown; // Change Dropdown to TMP_Dropdown
     public void setTypeFromIndex()
     {
