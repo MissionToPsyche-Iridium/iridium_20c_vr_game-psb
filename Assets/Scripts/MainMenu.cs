@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject titleMenu;
-    public GameObject optionsMenu;
+    [SerializeField] public GameObject titleMenu;
+    [SerializeField] public GameObject optionsMenu;
     public void PlayGame()
     {
         SceneManager.LoadScene("Office");

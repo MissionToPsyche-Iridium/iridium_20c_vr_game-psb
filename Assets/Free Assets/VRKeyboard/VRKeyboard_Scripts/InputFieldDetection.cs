@@ -1,15 +1,14 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(InputField))]
 // [RequireComponent(typeof(EventTrigger))]
-public class InputFieldDetection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
+public class InputFieldDetection : MonoBehaviour, IPointerClickHandler
 {
     private InputField myselfInputField;            // myself component - InputField
     private Text inputFieldText;                    // myself component in InputField - Text
     private InputField.LineType inputFieldLineType; // the lineType of InputField component
-    private OpenVirtualKeyboard keyboardController; // Virtual Keyboard Controller in the scene
 
     private void Awake()
     {
@@ -21,23 +20,6 @@ public class InputFieldDetection : MonoBehaviour, IPointerEnterHandler, IPointer
         
         inputFieldLineType = myselfInputField.lineType;
         
-        if (keyboardController == null)
-            keyboardController = GameObject.Find("Virtual Keyboard Controller").GetComponent<OpenVirtualKeyboard>();
-        
-        // keyboardController.onExitInputField = true;
-        
-        // myselfInputField.onEndEdit.AddListener(eventData =>
-        // {
-        //     keyboardController.onExitInputField = true;
-        // });
-        
-        // EventTrigger trigger = GetComponent<EventTrigger>();
-        // EventTrigger.Entry entry = new EventTrigger.Entry {eventID = EventTriggerType.Deselect};
-        // entry.callback.AddListener((eventData) =>
-        // {
-        //     keyboardController.onExitInputField = true;
-        // });
-        // trigger.triggers.Add(entry);
     }
 
     private void OnEnable()
@@ -50,39 +32,11 @@ public class InputFieldDetection : MonoBehaviour, IPointerEnterHandler, IPointer
         
         inputFieldLineType = myselfInputField.lineType;
         
-        if (keyboardController == null)
-            keyboardController = GameObject.Find("Virtual Keyboard Controller").GetComponent<OpenVirtualKeyboard>();
+    
         
-        // keyboardController.onExitInputField = true;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-#if(UNITY_EDITOR)
-        print("InputField OnPointerEnter");
-#endif
-    }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-#if(UNITY_EDITOR)
-        print("InputField OnPointerExit");
-#endif
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-#if(UNITY_EDITOR)
-        print("InputField OnPointerDown");
-#endif
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-#if(UNITY_EDITOR)
-        print("InputField OnPointerUp");
-#endif
-    }
 
     /// <summary>
     /// Run the function after the pointer click the inputfield
@@ -90,7 +44,6 @@ public class InputFieldDetection : MonoBehaviour, IPointerEnterHandler, IPointer
     /// <param name="eventData"></param>
     public void OnPointerClick(PointerEventData eventData)
     {
-        keyboardController.onExitKeyboardArea = false;
         GetInputFieldTarget.SelectInputFieldName = transform.name;
         
         // you can uncomment when testing
@@ -108,7 +61,6 @@ public class InputFieldDetection : MonoBehaviour, IPointerEnterHandler, IPointer
          print("index = " + GetInputFieldTarget.Index);
 #endif
 
-        keyboardController.OnOpenVirtualKeyboard();
     }
     
     /// <summary>
