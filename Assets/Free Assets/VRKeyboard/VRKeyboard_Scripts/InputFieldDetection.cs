@@ -1,10 +1,9 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(InputField))]
-// [RequireComponent(typeof(EventTrigger))]
-public class InputFieldDetection : MonoBehaviour, IPointerClickHandler
+public class InputFieldDetection : MonoBehaviour
 {
     private InputField myselfInputField;            // myself component - InputField
     private Text inputFieldText;                    // myself component in InputField - Text
@@ -19,57 +18,32 @@ public class InputFieldDetection : MonoBehaviour, IPointerClickHandler
             inputFieldText = myselfInputField.textComponent;
         
         inputFieldLineType = myselfInputField.lineType;
-        
-    }
 
-    private void OnEnable()
-    {
-        if (myselfInputField == null)
-            myselfInputField = GetComponent<InputField>();
-        
-        if (inputFieldText == null)
-            inputFieldText = myselfInputField.textComponent;
-        
-        inputFieldLineType = myselfInputField.lineType;
-        
-    
-        
-    }
+        // Disable interaction with the InputField
+        myselfInputField.interactable = false;
 
-
-
-    /// <summary>
-    /// Run the function after the pointer click the inputfield
-    /// </summary>
-    /// <param name="eventData"></param>
-    public void OnPointerClick(PointerEventData eventData)
-    {
+        // Connect the InputField to the keyboard on load
         GetInputFieldTarget.SelectInputFieldName = transform.name;
-        
-        // you can uncomment when testing
-#if(UNITY_EDITOR)
-         print("SelectInputFieldName = " + transform.name);
-#endif
+    }
 
+    private void Update()
+    {
+        UpdateCharacterIndex();
+    }
+
+    private void UpdateCharacterIndex()
+    {
         Vector2 localMousePos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(inputFieldText.rectTransform, eventData.pointerPressRaycast.screenPosition, eventData.pressEventCamera, out localMousePos);
-        print($"localMousePos = ({localMousePos.x},{localMousePos.y})");
+        Vector2 screenMousePos = Mouse.current.position.ReadValue();
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(inputFieldText.rectTransform, screenMousePos, null, out localMousePos);
         GetInputFieldTarget.Index = GetCharacterIndexFromPosition(localMousePos, inputFieldText, inputFieldLineType);
         
-        // you can uncomment when testing
 #if(UNITY_EDITOR)
-         print("index = " + GetInputFieldTarget.Index);
+        print($"localMousePos = ({localMousePos.x},{localMousePos.y})");
+        print("index = " + GetInputFieldTarget.Index);
 #endif
-
     }
-    
-    /// <summary>
-    /// Get the character local index position when OnPointerClick at inputField.text
-    /// </summary>
-    /// <param name="pos"></param>
-    /// <param name="text"></param>
-    /// <param name="lineType"></param>
-    /// <returns></returns>
+
     private int GetCharacterIndexFromPosition(Vector2 pos, Text text, InputField.LineType lineType)
     {
         TextGenerator gen = text.cachedTextGenerator;
@@ -105,21 +79,12 @@ public class InputFieldDetection : MonoBehaviour, IPointerClickHandler
 
         return endCharIndex;
     }
-    
-    /// <summary>
-    /// Part of GetCharacterIndexFromPosition, to run the function by OnPointerClick
-    /// </summary>
-    /// <param name="pos"></param>
-    /// <param name="generator"></param>
-    /// <param name="lineType"></param>
-    /// <param name="text"></param>
-    /// <returns></returns>
+
     private int GetUnclampedCharacterLineFromPosition(Vector2 pos, TextGenerator generator, InputField.LineType lineType, Text text)
     {
         if (!(lineType == InputField.LineType.MultiLineNewline || lineType == InputField.LineType.MultiLineSubmit))
             return 0;
 
-        // transform y to local scale
         float y = pos.y * text.pixelsPerUnit;
         float lastBottomY = 0.0f;
 
@@ -128,10 +93,8 @@ public class InputFieldDetection : MonoBehaviour, IPointerClickHandler
             float topY = generator.lines[i].topY;
             float bottomY = topY - generator.lines[i].height;
 
-            // pos is somewhere in the leading above this line
             if (y > topY)
             {
-                // determine which line we're closer to
                 float leading = topY - lastBottomY;
                 if (y > topY - 0.5f * leading)
                     return i - 1;
@@ -145,16 +108,9 @@ public class InputFieldDetection : MonoBehaviour, IPointerClickHandler
             lastBottomY = bottomY;
         }
 
-        // Position is after last line.
         return generator.lineCount;
     }
-    
-    /// <summary>
-    /// Part of GetCharacterIndexFromPosition, to run the function by OnPointerClick
-    /// </summary>
-    /// <param name="gen"></param>
-    /// <param name="line"></param>
-    /// <returns></returns>
+
     private static int GetLineEndPosition(TextGenerator gen, int line)
     {
         line = Mathf.Max(line, 0);

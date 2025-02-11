@@ -7,9 +7,7 @@ using UnityEngine.UI;
 public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
     public Color32 mNormalColor = Color.white;  // Default key color
-    public Color32 mHoverColor = Color.gray;    // Hover color
-    public Color32 mDownColor = Color.red;      // Pressed color
-
+    public Color32 mDownColor = Color.grey;   // Pressed color
     private Image buttonImage;  // Key Image
     private string buttonString;  // Key text
     private Text showString;  // Text displayed on key
@@ -51,7 +49,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        buttonImage.color = mDownColor; // Set key color to red when pressed
+        buttonImage.color = mDownColor; // Set key color when pressed
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -61,7 +59,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        buttonImage.color = mHoverColor; // Temporary hover effect
+        //buttonImage.color = mHoverColor; // Temporary hover effect
 
         string target = GetInputFieldTarget.SelectInputFieldName;
         int index = GetInputFieldTarget.Index;
