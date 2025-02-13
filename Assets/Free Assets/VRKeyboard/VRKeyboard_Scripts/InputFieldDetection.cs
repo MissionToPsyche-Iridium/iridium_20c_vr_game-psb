@@ -37,11 +37,6 @@ public class InputFieldDetection : MonoBehaviour
         Vector2 screenMousePos = Mouse.current.position.ReadValue();
         RectTransformUtility.ScreenPointToLocalPointInRectangle(inputFieldText.rectTransform, screenMousePos, null, out localMousePos);
         GetInputFieldTarget.Index = GetCharacterIndexFromPosition(localMousePos, inputFieldText, inputFieldLineType);
-        
-#if(UNITY_EDITOR)
-        print($"localMousePos = ({localMousePos.x},{localMousePos.y})");
-        print("index = " + GetInputFieldTarget.Index);
-#endif
     }
 
     private int GetCharacterIndexFromPosition(Vector2 pos, Text text, InputField.LineType lineType)
@@ -50,7 +45,6 @@ public class InputFieldDetection : MonoBehaviour
 
         if (gen.lineCount == 0)
         {
-            print("cachedTextGenerator = 0");
             return 0;
         }
 

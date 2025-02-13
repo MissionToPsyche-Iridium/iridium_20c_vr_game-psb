@@ -74,10 +74,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
 
         string targetText = inputTarget.text;
 
-        if (!(string.Equals(buttonString, "delete") || string.Equals(buttonString, "clear") ||
-              string.Equals(buttonString, "backward") || string.Equals(buttonString, "forward") ||
-              string.Equals(buttonString, "Letter case") || string.Equals(buttonString, "To0") ||
-              string.Equals(buttonString, "ToLast")))
+        if (!(string.Equals(buttonString, "delete") ||  string.Equals(buttonString, "enter")))
         {
             inputTarget.text = targetText.Insert(index, buttonString);
             GetInputFieldTarget.Index++;
@@ -89,31 +86,24 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                 case "delete":
                     if (GetInputFieldTarget.Index > 0)
                     {
-                        GetInputFieldTarget.Index--;
-                        inputTarget.text = targetText.Remove(GetInputFieldTarget.Index, 1);
-                    }
-                    break;
-                case "clear":
                     inputTarget.text = "";
                     GetInputFieldTarget.Index = 0;
-                    break;
-                case "backward":
+                    }
+                break;
+                case "enter":
                     if (GetInputFieldTarget.Index > 0)
-                        GetInputFieldTarget.Index--;
-                    break;
-                case "forward":
-                    if (GetInputFieldTarget.Index < inputTarget.text.Length)
-                        GetInputFieldTarget.Index++;
-                    break;
-                case "Letter case":
-                    LetterCaseDetection.Lowercase = !LetterCaseDetection.Lowercase;
-                    break;
-                case "ToLast":
-                    GetInputFieldTarget.Index = inputTarget.text.Length;
-                    break;
-                case "To0":
-                    GetInputFieldTarget.Index = 0;
-                    break;
+                    {
+                       if (inputTarget.text.Equals("1987"))
+                       {
+                            Debug.Log("Correct");
+                          }
+                          else
+                          {
+                            Debug.Log("Incorrect");
+                       }
+                       
+                    }
+                break;
             }
         }
 
