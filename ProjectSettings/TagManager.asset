@@ -11,6 +11,7 @@ TagManager:
   - Florida
   - Floor
   - UIButton
+  - Key
   layers:
   - Default
   - TransparentFX
