@@ -3984,8 +3984,6 @@ GameObject:
   - component: {fileID: 1117274274}
   - component: {fileID: 1117274273}
   - component: {fileID: 1117274272}
-  - component: {fileID: 1117274270}
-  - component: {fileID: 1117274269}
   m_Layer: 0
   m_Name: WiFi Router
   m_TagString: Untagged
@@ -4009,32 +4007,6 @@ Transform:
   - {fileID: 995411185}
   m_Father: {fileID: 81835736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1117274269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117274267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afbfccbbb4259247be421060dff8cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popupUI: {fileID: 0}
-  myAudioSource: {fileID: 0}
---- !u!114 &1117274270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117274267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c3fd19e9fcd8f4fbde5b93c93b2d81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1117274272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4118,8 +4090,6 @@ GameObject:
   - component: {fileID: 1139289948}
   - component: {fileID: 1139289947}
   - component: {fileID: 1139289946}
-  - component: {fileID: 1139289949}
-  - component: {fileID: 1139289945}
   m_Layer: 0
   m_Name: FM Hitbox
   m_TagString: Untagged
@@ -4142,18 +4112,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 147892202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1139289945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139289943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93051f0e3a6f0a34fa58f15e9e3d2df0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1139289946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4225,18 +4183,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139289943}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1139289949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139289943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c3fd19e9fcd8f4fbde5b93c93b2d81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1214430353
 GameObject:
   m_ObjectHideFlags: 0
@@ -4724,18 +4670,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: 34677110e1e47004e9e23f6597432276, type: 3}
---- !u!114 &1229026468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229026462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b01638607864e44a9f50dc6403f8544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1245459429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5773,9 +5707,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100006, guid: 34677110e1e47004e9e23f6597432276, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1229026466}
-    - targetCorrespondingSourceObject: {fileID: 100006, guid: 34677110e1e47004e9e23f6597432276, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1229026468}
   m_SourcePrefab: {fileID: 100100000, guid: 34677110e1e47004e9e23f6597432276, type: 3}
 --- !u!1001 &1379710763
 PrefabInstance:
@@ -7438,8 +7369,6 @@ GameObject:
   - component: {fileID: 1681694627}
   - component: {fileID: 1681694626}
   - component: {fileID: 1681694625}
-  - component: {fileID: 1681694628}
-  - component: {fileID: 1681694629}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -7536,30 +7465,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681694623}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1681694628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681694623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c3fd19e9fcd8f4fbde5b93c93b2d81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1681694629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681694623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93051f0e3a6f0a34fa58f15e9e3d2df0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1699344963
 GameObject:
   m_ObjectHideFlags: 0
@@ -9023,8 +8928,6 @@ GameObject:
   - component: {fileID: 1839880358}
   - component: {fileID: 1839880357}
   - component: {fileID: 1839880356}
-  - component: {fileID: 1839880355}
-  - component: {fileID: 1839880354}
   m_Layer: 0
   m_Name: CoffeeMachine
   m_TagString: Untagged
@@ -9048,32 +8951,6 @@ Transform:
   - {fileID: 1728863978}
   m_Father: {fileID: 1881663838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1839880354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839880352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c3fd19e9fcd8f4fbde5b93c93b2d81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1839880355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839880352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0afbfccbbb4259247be421060dff8cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popupUI: {fileID: 0}
-  myAudioSource: {fileID: 0}
 --- !u!136 &1839880356
 CapsuleCollider:
   m_ObjectHideFlags: 0
