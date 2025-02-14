@@ -10,10 +10,10 @@ public class SafeCollision : MonoBehaviour
     public GameObject leftHandPause;
     public GameObject rightHandPause;
 
-    private void OnTriggerEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         // Check if the collision is with a specific object, e.g., "Player"
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             // Handle the collision with the player
             safeCanvas.SetActive(true);
@@ -26,10 +26,10 @@ public class SafeCollision : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
         // Check if the collision is with a specific object, e.g., "Player"
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             // Handle the collision exit with the player
             safeCanvas.SetActive(false);
