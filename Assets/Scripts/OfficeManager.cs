@@ -15,6 +15,7 @@ public class OfficeManager : MonoBehaviour
     [SerializeField] public GameObject dropDownObject;
     private TMP_Dropdown dropDown; // Change Dropdown to TMP_Dropdown
 
+    public GameObject safeCollider;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,6 +24,7 @@ public class OfficeManager : MonoBehaviour
             timer.enabled = false;
             timerCanvas.SetActive(false);
             textTimer.SetActive(false);
+            Destroy(safeCollider);
         }
     }
 
