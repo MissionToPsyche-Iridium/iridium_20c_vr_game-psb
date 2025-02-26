@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
 
-public class CustomSocketInteractor : XRSocketInteractor
+public class PopupSocketInteractor : XRSocketInteractor
 {
-    [SerializeField] public GameObject popupImage; // Reference to your UI image
+    [SerializeField] private GameObject popupImage; // Reference to your UI image
     private bool isPopupActive = false; // Track if the popup is active
     [SerializeField] private InputActionProperty triggerAction; //using the triggerAction to close the popup
-    [SerializeField] public GameObject interactorObject; //the snap zone object
+    [SerializeField] private GameObject interactorObject; //the snap zone object
 
     public override bool CanSelect(IXRSelectInteractable interactable)
     {
