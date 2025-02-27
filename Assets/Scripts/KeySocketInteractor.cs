@@ -25,6 +25,6 @@ public class KeySocketInteractor : XRSocketInteractor
     {
         base.OnSelectEntered(args);
         //go to the conference scene
-        //SceneManager.LoadScene("ConferenceRoom");
+        SceneManager.LoadScene("ConferenceRoom");
     }
 }
