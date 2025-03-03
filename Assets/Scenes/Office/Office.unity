@@ -1608,7 +1608,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3979531648177794551, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6233,7 +6234,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3979531648177794551, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6241,11 +6243,6 @@ PrefabInstance:
 --- !u!4 &458760631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4053396113723301936, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
-  m_PrefabInstance: {fileID: 458760630}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &458760632 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3979531648177794551, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
   m_PrefabInstance: {fileID: 458760630}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &469184281
@@ -11416,7 +11413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 89352998}
   m_Colliders:
-  - {fileID: 458760632}
+  - {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -13136,7 +13133,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3979531648177794551, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13144,11 +13142,6 @@ PrefabInstance:
 --- !u!4 &1220723066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4053396113723301936, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
-  m_PrefabInstance: {fileID: 1220723065}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1220723067 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 3979531648177794551, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
   m_PrefabInstance: {fileID: 1220723065}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1246977936
@@ -15097,7 +15090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 89352998}
   m_Colliders:
-  - {fileID: 1220723067}
+  - {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -16246,7 +16239,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3979531648177794551, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
