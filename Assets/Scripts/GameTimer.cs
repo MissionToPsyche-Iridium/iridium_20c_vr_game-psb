@@ -42,7 +42,7 @@ public class GameTimer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         // Update the text with a formatted time string
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = "Time remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     void EndGame()
