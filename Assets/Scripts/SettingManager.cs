@@ -6,6 +6,10 @@ public class SettingManager : MonoBehaviour
 
     private bool continuousTurn = true;
     private bool eventMode = true;
+    private int masterVolume = 100;
+    private int musicVolume = 100;
+    private int soundEffectVolume = 100;
+    private int brightness = 10;
 
     public static SettingManager Instance
     {
@@ -38,6 +42,30 @@ public class SettingManager : MonoBehaviour
     {
         get { return eventMode; }
         set { eventMode = value; }
+    }
+
+    public int MasterVolume
+    {
+        get { return masterVolume; }
+        set { masterVolume = value; }
+    }
+
+    public int MusicVolume
+    {
+        get { return musicVolume; }
+        set { musicVolume = value; }
+    }
+
+    public int SoundEffectVolume
+    {
+        get { return soundEffectVolume; }
+        set { soundEffectVolume = value; }
+    }
+
+    public int Brightness
+    {
+        get { return brightness; }
+        set { brightness = value; }
     }
 
 
