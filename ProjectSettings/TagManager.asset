@@ -12,6 +12,7 @@ TagManager:
   - Floor
   - UIButton
   - Key
+  - Obstacle
   layers:
   - Default
   - TransparentFX
