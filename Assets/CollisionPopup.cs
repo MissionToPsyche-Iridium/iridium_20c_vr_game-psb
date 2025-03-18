@@ -20,6 +20,10 @@ public class CollisionPopup : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {  
         if(collision.gameObject.tag == "Obstacle")
+        {
             Console.WriteLine("Collision Has Occured");
+            
+        }
+            
     }
 }
