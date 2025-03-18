@@ -311,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 34677110e1e47004e9e23f6597432276, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.45
+      value: 12.12
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 34677110e1e47004e9e23f6597432276, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3006,7 +3006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 34677110e1e47004e9e23f6597432276, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.271118
+      value: 4.27
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 34677110e1e47004e9e23f6597432276, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3014,7 +3014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 34677110e1e47004e9e23f6597432276, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.4308784
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 34677110e1e47004e9e23f6597432276, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4698,8 +4698,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6.5, y: 5.5, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6.25, y: 0.2, z: 2.25}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!1 &288234591
 GameObject:
   m_ObjectHideFlags: 0
@@ -5702,7 +5702,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 18.293852, y: 55.663025, z: -91.84465}
+  m_ConnectedAnchor: {x: 17.716711, y: 55.663025, z: -91.84354}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -11695,7 +11695,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.000051875017, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 14.867296, y: 54.596115, z: 37.849083}
+  m_ConnectedAnchor: {x: 13.537296, y: 54.596115, z: 37.849083}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -15456,7 +15456,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.000051875017, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 19.263332, y: 54.596115, z: 38.03618}
+  m_ConnectedAnchor: {x: 18.686192, y: 54.596115, z: 38.037296}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -16983,7 +16983,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 15.0243, y: 55.663025, z: 38.594997}
+  m_ConnectedAnchor: {x: 13.6943, y: 55.663025, z: 38.594997}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -23235,8 +23235,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6, y: 5.5, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 8.916421, y: 0.11707306, z: 2.4}
+  m_Center: {x: 1.2854362, y: 2.55, z: 0.1}
 --- !u!1 &2106378541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5052278468339351742, guid: 3acea8b8ad745384fa9a7feabe641426, type: 3}
