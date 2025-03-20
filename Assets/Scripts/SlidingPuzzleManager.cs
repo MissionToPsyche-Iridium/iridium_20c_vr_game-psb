@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 public class SlidingPuzzleManager : MonoBehaviour
 {
     [SerializeField] private Transform gameTransform;
     [SerializeField] private Transform piecePrefab;
+    [SerializeField] private XRRayInteractor rayInteractorLeft;
+    [SerializeField] private XRRayInteractor rayInteractorRight;
+    [SerializeField] private InputActionProperty leftBumper;
+    [SerializeField] private InputActionProperty rightBumper;
 
     private List<Transform> pieces;
     private int emptyLocation;
     private int size;
     private bool shuffling = false;
+    private int temp;
 
     private void CreateGamePieces(float gapThickness) {
         //This is the width of each tile
@@ -52,19 +59,42 @@ public class SlidingPuzzleManager : MonoBehaviour
         pieces = new List<Transform>();
         size = 3;
         CreateGamePieces(0.01f);
+        temp = 0;
     }
 
     //Update is called once per frame
     void Update() {
         //check for completion
         if(!shuffling && CheckCompletion()) {
-            Debug.Log("Finished the game");
+            if(temp == 0) {
+                shuffling = true;
+                StartCoroutine(WaitShuffle(0.5f));
+                temp = 1;
+            }else{
+                Debug.Log("Beat the minigame");
+            }
         }
         //need to put the VR checking for when the ray hits and user presses bumper
-        if(Input.GetMouseButtonDown(0)) {
+        if(leftBumper.action.WasPressedThisFrame()) {
             //need to get where the ray hits when the user presses the bumper
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition),Vector2.zero);
-            if(hit) {
+            RaycastHit hit;
+            if(rayInteractorLeft.TryGetCurrent3DRaycastHit(out hit)) {
+                // Go through the list, the index tells us the position
+                for(int i = 0; i < pieces.Count; i++) {
+                    if(pieces[i] == hit.transform) {
+                        //check each direction to see if valid move
+                        //We break out on success so we don't carry on and swap back again
+                        if(SwapIfValid(i, -size, size)) { break; }
+                        if(SwapIfValid(i, +size, size)) { break; }
+                        if(SwapIfValid(i, -1, 0 )) { break; }
+                        if(SwapIfValid(i, +1, size - 1)) { break; }
+                    }
+                }
+            }
+        } else if(rightBumper.action.WasPressedThisFrame()) {
+            //need to get where the ray hits when the user presses the bumper
+            RaycastHit hit;
+            if(rayInteractorRight.TryGetCurrent3DRaycastHit(out hit)) {
                 // Go through the list, the index tells us the position
                 for(int i = 0; i < pieces.Count; i++) {
                     if(pieces[i] == hit.transform) {

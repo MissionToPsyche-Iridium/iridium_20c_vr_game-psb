@@ -1696,6 +1696,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1ed2026c715e4e4cb90ce1297e75392, type: 3}
   m_PrefabInstance: {fileID: 802428707}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &553579163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 553579165}
+  - component: {fileID: 553579164}
+  m_Layer: 0
+  m_Name: SlidingPuzzleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &553579164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553579163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792d35f20ab182e4281df403cce557d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTransform: {fileID: 1416299774}
+  piecePrefab: {fileID: 7085040941766780444, guid: ad7f9fe00f4f56c4fa6bb586bb8c75bf, type: 3}
+  rayInteractorLeft: {fileID: 1253560216}
+  rayInteractorRight: {fileID: 1706468524}
+  leftBumper:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Bumper
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 105e8ba1-6cda-4694-a064-cc00b1aae26a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  rightBumper:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Bumper
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 60b6e7f8-53b4-42d5-bde4-6c054b16b42b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!4 &553579165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553579163}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.64, y: 3, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &656879904
 GameObject:
   m_ObjectHideFlags: 0
@@ -6005,6 +6077,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407029620}
   m_CullTransparentMesh: 1
+--- !u!1 &1416299773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416299774}
+  - component: {fileID: 1416299775}
+  - component: {fileID: 1416299776}
+  m_Layer: 0
+  m_Name: SlidingPuzzleGameBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416299774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416299773}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.64, y: 3, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1416299775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416299773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45fee9106948044b91b9b3009f92dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 1214430353}
+  rightHand: {fileID: 1021120497}
+  leftHandPause: {fileID: 1253560212}
+  rightHandPause: {fileID: 1706468518}
+--- !u!65 &1416299776
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416299773}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 5, z: 4.5}
+  m_Center: {x: 0, y: 0, z: -2.5}
 --- !u!1 &1498765747
 GameObject:
   m_ObjectHideFlags: 0
@@ -10252,3 +10394,5 @@ SceneRoots:
   - {fileID: 770663167}
   - {fileID: 9438667}
   - {fileID: 1789193236}
+  - {fileID: 553579165}
+  - {fileID: 1416299774}
