@@ -2523,6 +2523,10 @@ PrefabInstance:
       value: Battery_big
       objectReference: {fileID: 0}
     - target: {fileID: 195924, guid: 77c6276b63956c9439d917f842b9eeb0, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195924, guid: 77c6276b63956c9439d917f842b9eeb0, type: 3}
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
@@ -3895,6 +3899,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
+  m_IsKinematic: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112

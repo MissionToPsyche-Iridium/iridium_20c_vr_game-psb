@@ -14,7 +14,7 @@ public class CollisionPopup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Console.WriteLine("Player Rigidbody velocity= "+GetComponent<Rigidbody>().velocity);
     }
 
     void OnCollisionEnter(Collision collision)
