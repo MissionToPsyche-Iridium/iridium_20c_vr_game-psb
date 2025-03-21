@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using System.Collections;
 public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
     public Color32 mNormalColor = Color.white;  // Default key color
@@ -17,6 +17,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     private readonly CultureInfo cult = new CultureInfo("en-US", false);
 
     public AudioClip incorrectSound;
+    public AudioClip  correctSound;
     public GameObject safeDoor;
     public GameObject key;
 
@@ -117,11 +118,15 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         rightHandPause.SetActive(!rightHandPause.activeSelf);
                         leftHand.transform.position = leftHandPause.transform.position;
                         rightHand.transform.position = rightHandPause.transform.position;
+                        inputTarget.textComponent.color = Color.green;
+                        AudioSource.PlayClipAtPoint(correctSound, transform.position);
                         Destroy(safeCollider);
                     }
                     else
                     {
                         AudioSource.PlayClipAtPoint(incorrectSound, transform.position);
+                        inputTarget.textComponent.color = Color.red;
+                        StartCoroutine(ResetTextColor());
                         inputTarget.text = "";
                         GetInputFieldTarget.Index = 0;
                     }
@@ -130,10 +135,11 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
         }
     }
 
-    Invoke(nameof(ResetColor), 0.2f);
+    
 }
-    private void ResetColor()
+    private IEnumerator ResetTextColor()
     {
-        buttonImage.color = mNormalColor; // Ensure color resets after click
+        yield return new WaitForSeconds(.2f);  //Wait for .2 second
+        inputTarget.textComponent.color = Color.white; // Reset text color to white
     }
 }
