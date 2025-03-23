@@ -30,12 +30,14 @@ public class PauseMenuManager : MonoBehaviour
         if (showButton.action.WasPressedThisFrame())
         {
             menu.SetActive(!menu.activeSelf);
-            leftHand.SetActive(!leftHand.activeSelf);
-            rightHand.SetActive(!rightHand.activeSelf);
-            leftHandPause.SetActive(!leftHandPause.activeSelf);
-            rightHandPause.SetActive(!rightHandPause.activeSelf);
-            leftHandPause.transform.position = leftHand.transform.position;
-            rightHandPause.transform.position = rightHand.transform.position;
+            if(leftHandPause.activeSelf == false) {
+                leftHand.SetActive(!leftHand.activeSelf);
+                rightHand.SetActive(!rightHand.activeSelf);
+                leftHandPause.SetActive(!leftHandPause.activeSelf);
+                rightHandPause.SetActive(!rightHandPause.activeSelf);
+                leftHandPause.transform.position = leftHand.transform.position;
+                rightHandPause.transform.position = rightHand.transform.position;
+            }
             if (menu.activeSelf)
             {
                 Time.timeScale = 0.0f;
