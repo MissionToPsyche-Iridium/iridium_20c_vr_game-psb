@@ -99,9 +99,10 @@ public class SlidingPuzzleManager : MonoBehaviour
             //need to get where the ray hits when the user presses the bumper
             RaycastHit hit;
             if(rayInteractorRight.TryGetCurrent3DRaycastHit(out hit)) {
+                Debug.Log("Hit object: " + hit.transform.name);
                 // Go through the list, the index tells us the position
                 for(int i = 0; i < pieces.Count; i++) {
-                    if(pieces[i] == hit.transform) {
+                    if(pieces[i] == hit.transform || pieces[i].GetComponent<Collider>() == hit.collider || pieces[i] == hit.transform.root) {
                         //check each direction to see if valid move
                         //We break out on success so we don't carry on and swap back again
                         if(SwapIfValid(i, -size, size)) { break; }
