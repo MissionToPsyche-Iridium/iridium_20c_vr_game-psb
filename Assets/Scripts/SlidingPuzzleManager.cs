@@ -12,6 +12,11 @@ public class SlidingPuzzleManager : MonoBehaviour
     [SerializeField] private XRRayInteractor rayInteractorRight;
     [SerializeField] private InputActionProperty leftBumper;
     [SerializeField] private InputActionProperty rightBumper;
+    [SerializeField] private GameObject gameboard;
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject leftHandPause;
+    [SerializeField] private GameObject rightHandPause;
 
     private List<Transform> pieces;
     private int emptyLocation;
@@ -71,7 +76,14 @@ public class SlidingPuzzleManager : MonoBehaviour
                 StartCoroutine(WaitShuffle(0.5f));
                 temp = 1;
             }else{
-                Debug.Log("Beat the minigame");
+                pieces[pieces.Count - 2].gameObject.SetActive(true);//not showing the right image
+                leftHand.SetActive(!leftHand.activeSelf);
+                rightHand.SetActive(!rightHand.activeSelf);
+                leftHandPause.SetActive(!leftHandPause.activeSelf);
+                rightHandPause.SetActive(!rightHandPause.activeSelf);
+                leftHandPause.transform.position = leftHand.transform.position;
+                rightHandPause.transform.position = rightHand.transform.position;
+                gameboard.GetComponent<BoxCollider>().enabled = false;
             }
         }
         //need to put the VR checking for when the ray hits and user presses bumper
@@ -79,13 +91,9 @@ public class SlidingPuzzleManager : MonoBehaviour
             //need to get where the ray hits when the user presses the bumper
             RaycastHit hit;
             if(rayInteractorLeft.TryGetCurrent3DRaycastHit(out hit)) {
-                Debug.Log("Hit object: " + hit.transform.name);
                 // Go through the list, the index tells us the position
-                for(int i = 0; i < pieces.Count; i++) {//first part of the if statement is checking if they are the same object
-                //second part of the if statement is checking through the objects colliders
-                //third part of the if statement is checking if the child of the hit is the piece
-                    if(pieces[i] == hit.transform || pieces[i].GetComponent<Collider>() == hit.collider || pieces[i] == hit.transform.root) {
-                        Debug.Log("Hit");
+                for(int i = 0; i < pieces.Count; i++) {
+                    if(pieces[i] == hit.transform) {
                         //check each direction to see if valid move
                         //We break out on success so we don't carry on and swap back again
                         if(SwapIfValid(i, -size, size)) { break; }
@@ -99,10 +107,9 @@ public class SlidingPuzzleManager : MonoBehaviour
             //need to get where the ray hits when the user presses the bumper
             RaycastHit hit;
             if(rayInteractorRight.TryGetCurrent3DRaycastHit(out hit)) {
-                Debug.Log("Hit object: " + hit.transform.name);
                 // Go through the list, the index tells us the position
                 for(int i = 0; i < pieces.Count; i++) {
-                    if(pieces[i] == hit.transform || pieces[i].GetComponent<Collider>() == hit.collider || pieces[i] == hit.transform.root) {
+                    if(pieces[i] == hit.transform) {
                         //check each direction to see if valid move
                         //We break out on success so we don't carry on and swap back again
                         if(SwapIfValid(i, -size, size)) { break; }

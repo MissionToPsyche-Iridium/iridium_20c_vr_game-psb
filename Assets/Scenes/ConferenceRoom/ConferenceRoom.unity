@@ -2089,6 +2089,11 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gameboard: {fileID: 1416299773}
+  leftHand: {fileID: 1214430353}
+  rightHand: {fileID: 1021120497}
+  leftHandPause: {fileID: 1253560212}
+  rightHandPause: {fileID: 1706468518}
 --- !u!4 &553579165
 Transform:
   m_ObjectHideFlags: 0
