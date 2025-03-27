@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class CollisionPopup : MonoBehaviour
 {   
-    private TextMeshPro popuptext;
+    [SerializeField] private TextMeshPro popuptext;
     // Start is called before the first frame update
     void Start()
     {
