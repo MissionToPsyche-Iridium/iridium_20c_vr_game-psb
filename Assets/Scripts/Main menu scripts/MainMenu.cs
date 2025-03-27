@@ -53,20 +53,4 @@ public class MainMenu : MonoBehaviour
             SettingManager.Instance.EventMode = false;
         }
     }
-
-    public void setMasterVolume(int value) {
-        SettingManager.Instance.MasterVolume = value;
-    }
-
-    public void setMusicVolume(int value) {
-        SettingManager.Instance.MusicVolume = value;
-    }
-
-    public void setSoundEffectVolume(int value) {
-        SettingManager.Instance.SoundEffectVolume = value;
-    }
-
-    public void setBrightness(int value) {
-        SettingManager.Instance.Brightness = value;
-    }
 }

@@ -1694,6 +1694,7 @@ GameObject:
   - component: {fileID: 172511715}
   - component: {fileID: 172511714}
   - component: {fileID: 172511719}
+  - component: {fileID: 172511720}
   m_Layer: 0
   m_Name: Left Controller (pause menu)
   m_TagString: Untagged
@@ -2369,6 +2370,18 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 8497685798473381005, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &172511720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172511712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60099966f0c6ff4381cd256251ab961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &179227918
 GameObject:
   m_ObjectHideFlags: 0
@@ -4077,8 +4090,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 172511720}
+        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setSoundEffectVolume
         m_Mode: 3
         m_Arguments:
@@ -4089,8 +4102,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1725899832}
+        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setSoundEffectVolume
         m_Mode: 3
         m_Arguments:
@@ -16854,8 +16867,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 172511720}
+        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setMusicVolume
         m_Mode: 3
         m_Arguments:
@@ -16866,8 +16879,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1725899832}
+        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setMusicVolume
         m_Mode: 3
         m_Arguments:
@@ -18761,6 +18774,7 @@ GameObject:
   - component: {fileID: 1725899827}
   - component: {fileID: 1725899826}
   - component: {fileID: 1725899831}
+  - component: {fileID: 1725899832}
   m_Layer: 0
   m_Name: Right Controller (pause menu)
   m_TagString: Untagged
@@ -19436,6 +19450,18 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 8497685798473381005, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1725899832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725899824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60099966f0c6ff4381cd256251ab961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1728828341
 GameObject:
   m_ObjectHideFlags: 0
@@ -22060,8 +22086,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 172511720}
+        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setBrightness
         m_Mode: 3
         m_Arguments:
@@ -22072,8 +22098,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1725899832}
+        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setBrightness
         m_Mode: 3
         m_Arguments:
@@ -24539,8 +24565,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 172511720}
+        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setMasterVolume
         m_Mode: 3
         m_Arguments:
@@ -24551,8 +24577,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1725899832}
+        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setMasterVolume
         m_Mode: 3
         m_Arguments:
