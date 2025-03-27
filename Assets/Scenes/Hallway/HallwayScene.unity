@@ -3717,12 +3717,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 986285178}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 986285178}
+  m_maskType: 0
 --- !u!23 &986285178
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4083,6 +4083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6438bc5c596db9e68555e3f855f255d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popuptext: {fileID: 986285177}
 --- !u!54 &1054288759
 Rigidbody:
   m_ObjectHideFlags: 0
