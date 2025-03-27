@@ -19304,8 +19304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df21e5ba7a52634192e3aea48e11f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
-  settingsMenu: {fileID: 0}
+  pauseMenu: {fileID: 1853822760}
+  settingsMenu: {fileID: 301902415}
   leftHand: {fileID: 1128918624}
   rightHand: {fileID: 204935931}
   leftHandPause: {fileID: 172511712}
