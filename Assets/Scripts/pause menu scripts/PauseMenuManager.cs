@@ -30,14 +30,14 @@ public class PauseMenuManager : MonoBehaviour
         if (showButton.action.WasPressedThisFrame())
         {
             menu.SetActive(!menu.activeSelf);
-            if(leftHandPause.activeSelf == false) {
+            if(SettingManager.Instance.IsRayHandActive == false) {
                 leftHand.SetActive(!leftHand.activeSelf);
                 rightHand.SetActive(!rightHand.activeSelf);
                 leftHandPause.SetActive(!leftHandPause.activeSelf);
                 rightHandPause.SetActive(!rightHandPause.activeSelf);
                 leftHandPause.transform.position = leftHand.transform.position;
                 rightHandPause.transform.position = rightHand.transform.position;
-            }
+            }//make a bool for setting the hands
             if (menu.activeSelf)
             {
                 Time.timeScale = 0.0f;

@@ -22,6 +22,7 @@ public class SlidingPuzzleCollision : MonoBehaviour
             rightHandPause.SetActive(!rightHandPause.activeSelf);
             leftHandPause.transform.position = leftHand.transform.position;
             rightHandPause.transform.position = rightHand.transform.position;
+            SettingManager.Instance.IsRayHandActive = true;
         }
     }
 
@@ -37,6 +38,7 @@ public class SlidingPuzzleCollision : MonoBehaviour
             rightHandPause.SetActive(!rightHandPause.activeSelf);
             leftHandPause.transform.position = leftHand.transform.position;
             rightHandPause.transform.position = rightHand.transform.position;
+            SettingManager.Instance.IsRayHandActive = false;
         }
     }
 }

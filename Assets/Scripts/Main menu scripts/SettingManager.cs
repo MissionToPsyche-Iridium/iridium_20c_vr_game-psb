@@ -10,6 +10,7 @@ public class SettingManager : MonoBehaviour
     private int musicVolume = 100;
     private int soundEffectVolume = 100;
     private int brightness = 10;
+    private bool isRayHandActive = false;
 
     public static SettingManager Instance
     {
@@ -68,6 +69,11 @@ public class SettingManager : MonoBehaviour
         set { brightness = value; }
     }
 
+    public bool IsRayHandActive
+    {
+        get { return isRayHandActive; }
+        set { isRayHandActive = value; }
+    }
 
     private void Awake()
     {
