@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SettingManager : MonoBehaviour
 {
@@ -6,10 +7,8 @@ public class SettingManager : MonoBehaviour
 
     private bool continuousTurn = true;
     private bool eventMode = true;
-    private int masterVolume = 100;
-    private int musicVolume = 100;
-    private int soundEffectVolume = 100;
-    private int brightness = 10;
+    private AudioMixer audioMixer;
+    private float brightness = 10;
     private bool isRayHandActive = false;
 
     public static SettingManager Instance
@@ -45,25 +44,12 @@ public class SettingManager : MonoBehaviour
         set { eventMode = value; }
     }
 
-    public int MasterVolume
+    public AudioMixer AudioMixer
     {
-        get { return masterVolume; }
-        set { masterVolume = value; }
+        get {return audioMixer; }
     }
 
-    public int MusicVolume
-    {
-        get { return musicVolume; }
-        set { musicVolume = value; }
-    }
-
-    public int SoundEffectVolume
-    {
-        get { return soundEffectVolume; }
-        set { soundEffectVolume = value; }
-    }
-
-    public int Brightness
+    public float Brightness
     {
         get { return brightness; }
         set { brightness = value; }
