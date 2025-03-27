@@ -7,7 +7,7 @@ public class SettingManager : MonoBehaviour
 
     private bool continuousTurn = true;
     private bool eventMode = true;
-    private AudioMixer audioMixer;
+    private AudioMixer mixer;
     private float brightness = 10;
     private bool isRayHandActive = false;
 
@@ -44,9 +44,9 @@ public class SettingManager : MonoBehaviour
         set { eventMode = value; }
     }
 
-    public AudioMixer AudioMixer
+    public AudioMixer Mixer
     {
-        get {return audioMixer; }
+        get {return mixer; }
     }
 
     public float Brightness
