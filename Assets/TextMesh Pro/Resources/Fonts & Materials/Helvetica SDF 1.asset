@@ -168,9 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Helvetica SDF 1
   m_EditorClassIdentifier: 
-  hashCode: 895022652
+  hashCode: -277909203
   material: {fileID: -3743277997928348574}
-  materialHashCode: -1971727972
+  materialHashCode: -662140947
   m_Version: 1.1.0
   m_SourceFontFileGUID: 3f6ad89310bb2694d911fe72c50c4036
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 3f6ad89310bb2694d911fe72c50c4036, type: 3}
