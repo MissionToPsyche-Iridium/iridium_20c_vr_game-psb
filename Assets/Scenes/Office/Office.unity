@@ -4093,7 +4093,7 @@ MonoBehaviour:
       - m_Target: {fileID: 172511720}
         m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setSoundEffectVolume
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4105,7 +4105,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1725899832}
         m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setSoundEffectVolume
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6297,7 +6297,7 @@ AudioSource:
   m_GameObject: {fileID: 607021436}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -8654,7 +8654,7 @@ AudioSource:
   m_GameObject: {fileID: 905935460}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -10079,7 +10079,7 @@ AudioSource:
   m_GameObject: {fileID: 1084377303}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -11919,7 +11919,7 @@ AudioSource:
   m_GameObject: {fileID: 1187416655}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1fc172f3e9b96bb44b0bf53df4fa4af6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -12763,7 +12763,7 @@ AudioSource:
   m_GameObject: {fileID: 1278041414}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -16548,7 +16548,7 @@ MonoBehaviour:
       - m_Target: {fileID: 172511720}
         m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setMusicVolume
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16560,7 +16560,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1725899832}
         m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setMusicVolume
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17068,7 +17068,7 @@ AudioSource:
   m_GameObject: {fileID: 1651619585}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -17916,7 +17916,7 @@ AudioSource:
   m_GameObject: {fileID: 1711185126}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1fc172f3e9b96bb44b0bf53df4fa4af6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -21656,7 +21656,7 @@ MonoBehaviour:
       - m_Target: {fileID: 172511720}
         m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setBrightness
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21668,7 +21668,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1725899832}
         m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
         m_MethodName: setBrightness
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -21962,7 +21962,7 @@ AudioSource:
   m_GameObject: {fileID: 1945775967}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 470291209478254940, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 8300000, guid: df1e73d04f6dc40ff8ca120deee13de8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
@@ -23043,7 +23043,7 @@ AudioSource:
   m_GameObject: {fileID: 2012602017}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1fc172f3e9b96bb44b0bf53df4fa4af6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -23493,7 +23493,7 @@ AudioSource:
   m_GameObject: {fileID: 2051658659}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
