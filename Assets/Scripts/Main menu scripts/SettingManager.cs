@@ -7,7 +7,7 @@ public class SettingManager : MonoBehaviour
 
     private bool continuousTurn = true;
     private bool eventMode = true;
-    private AudioMixer mixer = Resources.Load<AudioMixer>("AudioMixer");
+    [SerializeField] private AudioMixer mixer;
     private float brightness = 10;
     private bool isRayHandActive = false;
 
@@ -25,7 +25,6 @@ public class SettingManager : MonoBehaviour
                     instance = singletonObject.AddComponent<SettingManager>();
                     singletonObject.name = typeof(SettingManager).ToString();
                     DontDestroyOnLoad(singletonObject);
-                    
                 }
             }
             return instance;
@@ -47,7 +46,7 @@ public class SettingManager : MonoBehaviour
 
     public AudioMixer Mixer
     {
-        get {return mixer; }
+        get { return mixer; }
     }
 
     public float Brightness
