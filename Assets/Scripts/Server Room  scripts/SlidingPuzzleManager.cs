@@ -6,13 +6,13 @@ using UnityEngine.InputSystem;
 
 public class SlidingPuzzleManager : MonoBehaviour
 {
-    [SerializeField] private Transform gameTransform;
+    [SerializeField] private GameObject gameBoard;
     [SerializeField] private Transform piecePrefab;
     [SerializeField] private XRRayInteractor rayInteractorLeft;
     [SerializeField] private XRRayInteractor rayInteractorRight;
     [SerializeField] private InputActionProperty leftBumper;
     [SerializeField] private InputActionProperty rightBumper;
-    [SerializeField] private GameObject gameboard;
+    [SerializeField] private GameObject self;
     [SerializeField] private GameObject leftHand;
     [SerializeField] private GameObject rightHand;
     [SerializeField] private GameObject leftHandPause;
@@ -30,7 +30,7 @@ public class SlidingPuzzleManager : MonoBehaviour
         //creating the puzzle pieces based on the size
         for(int row = 0; row < size; row++) {
             for(int col = 0; col < size; col++) {
-                Transform piece = Instantiate(piecePrefab, gameTransform);
+                Transform piece = Instantiate(piecePrefab, gameBoard.transform);
                 pieces.Add(piece);
                 //Pieces will be in a game board going from -1 to +1
                 piece.localPosition = new Vector3(-1 + (2*width*col) + width, 
@@ -75,7 +75,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                 shuffling = true;
                 StartCoroutine(WaitShuffle(0.5f));
                 temp = 1;
-            }else{
+            }else {
                 pieces[pieces.Count - 2].gameObject.SetActive(true);//not showing the right image
                 leftHand.SetActive(!leftHand.activeSelf);
                 rightHand.SetActive(!rightHand.activeSelf);
@@ -83,7 +83,8 @@ public class SlidingPuzzleManager : MonoBehaviour
                 rightHandPause.SetActive(!rightHandPause.activeSelf);
                 leftHandPause.transform.position = leftHand.transform.position;
                 rightHandPause.transform.position = rightHand.transform.position;
-                gameboard.GetComponent<BoxCollider>().enabled = false;
+                Destroy(gameBoard);
+                Destroy(self);
             }
         }
         //need to put the VR checking for when the ray hits and user presses bumper

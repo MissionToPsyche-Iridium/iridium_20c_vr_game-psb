@@ -2061,7 +2061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792d35f20ab182e4281df403cce557d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTransform: {fileID: 1416299774}
+  gameBoard: {fileID: 1416299773}
   piecePrefab: {fileID: 7085040941766780444, guid: ad7f9fe00f4f56c4fa6bb586bb8c75bf, type: 3}
   rayInteractorLeft: {fileID: 1253560216}
   rayInteractorRight: {fileID: 1706468524}
@@ -2089,7 +2089,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  gameboard: {fileID: 1416299773}
+  self: {fileID: 553579163}
   leftHand: {fileID: 1214430353}
   rightHand: {fileID: 1021120497}
   leftHandPause: {fileID: 1253560212}
