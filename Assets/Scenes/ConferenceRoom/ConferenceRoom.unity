@@ -11190,6 +11190,11 @@ MonoBehaviour:
   snapTurn: {fileID: 770663171}
   continuousTurn: {fileID: 770663168}
   dropDownObject: {fileID: 0}
+  safeCollider: {fileID: 0}
+  masterVolume: {fileID: 1277682019}
+  musicVolume: {fileID: 1170862408}
+  sFXVolume: {fileID: 1397683193}
+  brightness: {fileID: 855788951}
 --- !u!1 &1795738807
 GameObject:
   m_ObjectHideFlags: 0

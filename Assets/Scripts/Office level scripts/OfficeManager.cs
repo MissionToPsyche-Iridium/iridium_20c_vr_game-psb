@@ -7,14 +7,18 @@ using TMPro; // Add this namespace for TMP_Dropdown
 
 public class OfficeManager : MonoBehaviour
 {
-    public GameTimer timer;
-    public GameObject timerCanvas;
-    public GameObject textTimer;
-    public ActionBasedSnapTurnProvider snapTurn;
-    public ActionBasedContinuousTurnProvider continuousTurn;
-    [SerializeField] public GameObject dropDownObject;
+    [SerializeField] private GameTimer timer;
+    [SerializeField] private GameObject timerCanvas;
+    [SerializeField] private GameObject textTimer;
+    [SerializeField] private ActionBasedSnapTurnProvider snapTurn;
+    [SerializeField] private ActionBasedContinuousTurnProvider continuousTurn;
+    [SerializeField] private GameObject dropDownObject;
     private TMP_Dropdown dropDown; // Change Dropdown to TMP_Dropdown
-    public GameObject safeCollider;
+    [SerializeField] private GameObject safeCollider;
+    [SerializeField] private Slider masterVolume;
+    [SerializeField] private Slider musicVolume;
+    [SerializeField] private Slider sFXVolume;
+    [SerializeField] private Slider brightness;
     // Start is called before the first frame update
     void Awake()
     {
@@ -32,6 +36,21 @@ public class OfficeManager : MonoBehaviour
 
     void Start()
     {
+        float value;
+        bool result;
+        result = SettingManager.Instance.Mixer.GetFloat("MasterVolume", out value);
+        if(result) {
+            masterVolume.value = value;
+        }
+        result = SettingManager.Instance.Mixer.GetFloat("MusicVolume", out value);
+        if(result) {
+            musicVolume.value = value;
+        }
+        result = SettingManager.Instance.Mixer.GetFloat("SfxVolume", out value);
+        if(result) {
+            sFXVolume.value = value;
+        }
+        brightness.value = SettingManager.Instance.Brightness;
         if (SettingManager.Instance.ContinuousTurn == false)
         {
             continuousTurn.enabled = false;
