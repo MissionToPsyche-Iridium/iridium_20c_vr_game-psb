@@ -1,11 +1,11 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Audio; // Required for AudioMixer
-
+using PrimeTween;
 public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
     public Color32 mNormalColor = Color.white;  // Default key color
@@ -109,7 +109,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         if (inputTarget.text.Equals("2017"))
                         {
                             key.SetActive(true);
-                            StartCoroutine(RotateSafeDoor(safeDoor, new Vector3(0, 0, -90), 1f));
+                            StartCoroutine(RotateSafeDoor());
                             Transform parentToDestroy = transform.parent.parent.parent;
                             Destroy(parentToDestroy.gameObject);
                             leftHand.SetActive(!leftHand.activeSelf);
@@ -118,15 +118,24 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                             rightHandPause.SetActive(!rightHandPause.activeSelf);
                             leftHand.transform.position = leftHandPause.transform.position;
                             rightHand.transform.position = rightHandPause.transform.position;
-                            inputTarget.textComponent.color = Color.green;
+                            Transform keypadCanvas = transform.parent.parent;
+                            var keypadInputField = keypadCanvas.GetComponentInChildren<InputField>();
+                            keypadInputField.text = inputTarget.text;
+                            keypadInputField.textComponent.color = Color.green; // Set text color to green
                             correctAudioSource.Play();
                             Destroy(safeCollider);
+                            SettingManager.Instance.IsRayHandActive = false;
+
                         }
                         else
                         {
                             incorrectAudioSource.Play();
-                            inputTarget.textComponent.color = Color.red;
-                            StartCoroutine(ResetTextColor());
+                            Transform keypadCanvas = transform.parent.parent;
+                            var keypadInputField = keypadCanvas.GetComponentInChildren<InputField>();
+                            keypadInputField.text = inputTarget.text;
+                            keypadInputField.textComponent.color = Color.red; // Set text color to red
+                            StartCoroutine(Delay());
+                            keypadInputField.textComponent.color = Color.white; 
                             inputTarget.text = "";
                             GetInputFieldTarget.Index = 0;
                         }
@@ -137,25 +146,12 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     }
 
 
-    private IEnumerator ResetTextColor()
+    private IEnumerator Delay()
     {
-        yield return new WaitForSeconds(1f);  //Wait for 1 second
-        inputTarget.textComponent.color = Color.white; // Reset text color to white
+        yield return Tween.Delay(1f);  //Wait for 1 second
     }
-    private IEnumerator RotateSafeDoor(GameObject door, Vector3 rotationAngles, float duration)
-{
-    Quaternion initialRotation = door.transform.rotation;
-    Quaternion targetRotation = initialRotation * Quaternion.Euler(rotationAngles);
-    float elapsedTime = 0f;
-
-    while (elapsedTime < duration)
+    private IEnumerator RotateSafeDoor()
     {
-        door.transform.rotation = Quaternion.Slerp(initialRotation, targetRotation, elapsedTime / duration);
-        elapsedTime += Time.deltaTime;
-        yield return null;
+        yield return Tween.Rotation(safeDoor.transform, new Vector3(0, 0 , -90), 1f);
     }
-
-    // Ensure the final rotation is set
-    door.transform.rotation = targetRotation;
-}
 }
