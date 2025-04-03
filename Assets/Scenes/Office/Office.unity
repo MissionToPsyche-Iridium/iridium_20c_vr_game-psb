@@ -3919,6 +3919,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!4 &253593250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2dc72f24aca07ed42a3aa4cd507655f1, type: 3}
@@ -5053,6 +5054,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!1 &379785730
 GameObject:
   m_ObjectHideFlags: 0
@@ -6093,6 +6095,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!1 &555164285
 GameObject:
   m_ObjectHideFlags: 0
@@ -7123,6 +7126,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 1059239423}
   incorrectAudioSource: {fileID: 1318142283}
+  codeText: {fileID: 1713827349}
 --- !u!114 &690825867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7758,6 +7762,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!1 &758092989
 GameObject:
   m_ObjectHideFlags: 0
@@ -9288,6 +9293,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!4 &968861208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 28248b07a4d9570409371ebb6d5a2a3b, type: 3}
@@ -10815,6 +10821,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!850595691 &1103859292
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -13474,6 +13481,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!1 &1295181276
 GameObject:
   m_ObjectHideFlags: 0
@@ -15790,6 +15798,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!1001 &1524168297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20595,6 +20604,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!1 &1784172210
 GameObject:
   m_ObjectHideFlags: 0
@@ -20819,6 +20829,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!1 &1807793121
 GameObject:
   m_ObjectHideFlags: 0
@@ -20968,6 +20979,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  codeText: {fileID: 0}
 --- !u!1001 &1808099480
 PrefabInstance:
   m_ObjectHideFlags: 0

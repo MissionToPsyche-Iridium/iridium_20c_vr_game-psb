@@ -26,7 +26,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     public GameObject safeCollider;
     public AudioSource correctAudioSource; 
     public AudioSource incorrectAudioSource; 
-
+    
+    public GameObject codeText;
     private void Awake()
     {
         buttonImage = GetComponent<Image>();
@@ -118,10 +119,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                             rightHandPause.SetActive(!rightHandPause.activeSelf);
                             leftHand.transform.position = leftHandPause.transform.position;
                             rightHand.transform.position = rightHandPause.transform.position;
-                            Transform keypadCanvas = transform.parent.parent;
-                            var keypadInputField = keypadCanvas.GetComponentInChildren<InputField>();
-                            keypadInputField.text = inputTarget.text;
-                            keypadInputField.textComponent.color = Color.green; // Set text color to green
+                            codeText.GetComponent<Text>().color = Color.green; // Set text color to green
                             correctAudioSource.Play();
                             Destroy(safeCollider);
                             SettingManager.Instance.IsRayHandActive = false;
@@ -130,12 +128,9 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         else
                         {
                             incorrectAudioSource.Play();
-                            Transform keypadCanvas = transform.parent.parent;
-                            var keypadInputField = keypadCanvas.GetComponentInChildren<InputField>();
-                            keypadInputField.text = inputTarget.text;
-                            keypadInputField.textComponent.color = Color.red; // Set text color to red
+                            codeText.GetComponent<Text>().color = Color.red; // Set text color to red
                             StartCoroutine(Delay());
-                            keypadInputField.textComponent.color = Color.white; 
+                            codeText.GetComponent<Text>().color = Color.white; // Set text color to white
                             inputTarget.text = "";
                             GetInputFieldTarget.Index = 0;
                         }
