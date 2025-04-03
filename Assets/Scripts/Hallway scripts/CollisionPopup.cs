@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CollisionPopup : MonoBehaviour
@@ -26,9 +27,17 @@ public class CollisionPopup : MonoBehaviour
         if(collision.gameObject.tag == "Obstacle")
         {
             popuptext.enabled=true;
+
             Debug.Log("Collision Has Occured");
+            ReloadScene();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             
         }
             
+    }
+
+    IEnumerator ReloadScene()
+    {
+        yield return new WaitForSecondsRealtime(5);
     }
 }
