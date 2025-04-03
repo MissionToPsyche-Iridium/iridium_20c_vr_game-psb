@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class KeySocketInteractor : XRSocketInteractor
 {
     [SerializeField] private GameObject interactorObject; //the snap zone object
-
+    [SerializeField] private Image black;
+    [SerializeField] private Animator anim;
     public override bool CanSelect(IXRSelectInteractable interactable)
     {
         GameObject objectToCheck = interactable.transform.gameObject;
@@ -24,7 +25,14 @@ public class KeySocketInteractor : XRSocketInteractor
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
-        //go to the conference scene
+        StartCoroutine(PlayFade());
         SceneManager.LoadScene("ConferenceRoom");
+    }
+
+    IEnumerator PlayFade()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a==1);
+
     }
 }

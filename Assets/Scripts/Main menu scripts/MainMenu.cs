@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject titleMenu;
     [SerializeField] private GameObject optionsMenu;
-
+    [SerializeField] private Image black;
+    [SerializeField] private Animator anim;
     public void PlayGame()
     {
+        StartCoroutine(PlayFade());
         SceneManager.LoadScene("Office");
     }
 
@@ -52,5 +56,13 @@ public class MainMenu : MonoBehaviour
         {
             SettingManager.Instance.EventMode = false;
         }
+    }
+
+
+    IEnumerator PlayFade()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a==1);
+
     }
 }

@@ -20,6 +20,8 @@ public class OfficeManager : MonoBehaviour
     [SerializeField] private Slider sFXVolume;
     [SerializeField] private Slider brightness;
     // Start is called before the first frame update
+    [SerializeField] private Image black;
+    [SerializeField] private Animator anim;
     void Awake()
     {
         if (SettingManager.Instance.EventMode == false)
