@@ -3670,7 +3670,7 @@ MonoBehaviour:
   titleMenu: {fileID: 432574694}
   optionsMenu: {fileID: 359758529}
   black: {fileID: 1588496766}
-  anim: {fileID: 0}
+  anim: {fileID: 1588496765}
 --- !u!114 &784214370
 MonoBehaviour:
   m_ObjectHideFlags: 0
