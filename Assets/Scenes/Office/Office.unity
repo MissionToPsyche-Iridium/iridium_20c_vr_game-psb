@@ -4020,7 +4020,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!4 &253593250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2dc72f24aca07ed42a3aa4cd507655f1, type: 3}
@@ -5155,7 +5154,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!1 &379785730
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,7 +6194,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!1 &555164285
 GameObject:
   m_ObjectHideFlags: 0
@@ -7227,7 +7224,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 1059239423}
   incorrectAudioSource: {fileID: 1318142283}
-  codeText: {fileID: 1713827349}
 --- !u!114 &690825867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7249,9 +7245,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0, g: 1, b: 0.162251, a: 1}
+    m_HighlightedColor: {r: 0.18463182, g: 0.6698113, b: 0, a: 1}
+    m_PressedColor: {r: 0, g: 0.31132078, b: 0.07881783, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -7863,7 +7859,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!1 &758092989
 GameObject:
   m_ObjectHideFlags: 0
@@ -9394,7 +9389,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!4 &968861208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 28248b07a4d9570409371ebb6d5a2a3b, type: 3}
@@ -10922,7 +10916,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!850595691 &1103859292
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -13582,7 +13575,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!1 &1295181276
 GameObject:
   m_ObjectHideFlags: 0
@@ -15739,7 +15731,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!1001 &1524168297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20492,7 +20483,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!1 &1784172210
 GameObject:
   m_ObjectHideFlags: 0
@@ -20717,7 +20707,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!1 &1807793121
 GameObject:
   m_ObjectHideFlags: 0
@@ -20867,7 +20856,6 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
-  codeText: {fileID: 0}
 --- !u!1001 &1808099480
 PrefabInstance:
   m_ObjectHideFlags: 0

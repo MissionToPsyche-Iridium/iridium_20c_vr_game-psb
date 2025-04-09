@@ -27,7 +27,6 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     public AudioSource correctAudioSource; 
     public AudioSource incorrectAudioSource; 
     
-    public GameObject codeText;
     private void Awake()
     {
         buttonImage = GetComponent<Image>();
@@ -119,7 +118,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                             rightHandPause.SetActive(!rightHandPause.activeSelf);
                             leftHand.transform.position = leftHandPause.transform.position;
                             rightHand.transform.position = rightHandPause.transform.position;
-                            codeText.GetComponent<Text>().color = Color.green; // Set text color to green
+                            inputTarget.textComponent.color = Color.green; // Set text color to green
                             correctAudioSource.Play();
                             Destroy(safeCollider);
                             SettingManager.Instance.IsRayHandActive = false;
@@ -128,9 +127,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         else
                         {
                             incorrectAudioSource.Play();
-                            codeText.GetComponent<Text>().color = Color.red; // Set text color to red
+                            inputTarget.textComponent.color = Color.red; // Set text color to red
                             StartCoroutine(Delay());
-                            codeText.GetComponent<Text>().color = Color.white; // Set text color to white
                             inputTarget.text = "";
                             GetInputFieldTarget.Index = 0;
                         }
@@ -143,7 +141,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
 
     private IEnumerator Delay()
     {
-        yield return Tween.Delay(1f);  //Wait for 1 second
+    yield return new WaitForSeconds(3f); // Wait for 1 second
+    inputTarget.textComponent.color = Color.white; // Reset text color to white
     }
     private IEnumerator RotateSafeDoor()
     {

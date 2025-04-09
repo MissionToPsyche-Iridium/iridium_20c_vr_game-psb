@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         StartCoroutine(PlayFade());
-        SceneManager.LoadScene("Office");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Office");
     }
 
     public void GoOptions()
