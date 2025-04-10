@@ -67,6 +67,9 @@ public class SettingManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            SettingManager.Instance.Mixer.SetFloat("MusicVolume", 100);
+            SettingManager.Instance.Mixer.SetFloat("SfxVolume", 100);
+            SettingManager.Instance.Mixer.SetFloat("MasterVolume", 100);
         }
         else
         {
