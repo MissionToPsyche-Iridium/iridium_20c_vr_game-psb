@@ -138,14 +138,13 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
         }
     }
 
-
     private IEnumerator Delay()
     {
-    yield return new WaitForSeconds(3f); // Wait for 1 second
+    yield return new WaitForSeconds(3f); // Wait for 3 seconds
     inputTarget.textComponent.color = Color.white; // Reset text color to white
     }
     private IEnumerator RotateSafeDoor()
     {
-        yield return Tween.Rotation(safeDoor.transform, new Vector3(0, 0 , -90), 1f);
+        yield return Tween.Rotation(safeDoor.transform, new Vector3(0, 90 , -90), 2f);
     }
 }
