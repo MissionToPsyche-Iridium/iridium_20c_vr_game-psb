@@ -29,7 +29,7 @@ public class CollisionPopup : MonoBehaviour
             popuptext.enabled=true;
 
             Debug.Log("Collision Has Occured");
-            ReloadScene();
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             
         }
