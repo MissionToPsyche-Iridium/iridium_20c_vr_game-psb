@@ -11951,7 +11951,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971e74dbcc19db4428af7e9fb6683059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jigsawPuzzleImages: []
+  difficulty: 4
+  jigsawPuzzleImages:
+  - {fileID: 0}
   jigsawBoard: {fileID: 428834634}
   levelSelectPrefab: {fileID: 683732168}
 --- !u!1001 &1881663837
