@@ -11,7 +11,6 @@ public class ConferenceRoomManager : MonoBehaviour
     [SerializeField] private ActionBasedContinuousTurnProvider continuousTurn;
     [SerializeField] private GameObject dropDownObject;
     private TMP_Dropdown dropDown; // Change Dropdown to TMP_Dropdown
-    [SerializeField] private GameObject safeCollider;
     [SerializeField] private Slider masterVolume;
     [SerializeField] private Slider musicVolume;
     [SerializeField] private Slider sFXVolume;
