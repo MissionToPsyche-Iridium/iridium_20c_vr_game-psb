@@ -4275,9 +4275,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 692343454}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 20
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 20
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -16303,18 +16303,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1636187554}
     m_Modifications:
-    - target: {fileID: 3931968142734478870, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0b4800d9465c7d04b8284dfdf680548a, type: 2}
-    - target: {fileID: 6021340007930454660, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.032
-      objectReference: {fileID: 0}
-    - target: {fileID: 6021340007930454660, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 3506290060219908963, guid: a15c4b10370dd354a8d5d0fb6d99e482, type: 3}
       propertyPath: m_Name
       value: box
@@ -16370,6 +16358,18 @@ PrefabInstance:
     - target: {fileID: 4315302312925223385, guid: a15c4b10370dd354a8d5d0fb6d99e482, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931968142734478870, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b4800d9465c7d04b8284dfdf680548a, type: 2}
+    - target: {fileID: 6021340007930454660, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021340007930454660, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3979531648177794551, guid: cab90c40ab6e48540b863bd64860e39a, type: 3}
@@ -16972,9 +16972,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1784172211}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 20
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 20
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -22902,9 +22902,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1869065339}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 20
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 20
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
