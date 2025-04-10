@@ -18,7 +18,7 @@ public class OpenCloseDoor : MonoBehaviour {
     doorOpen = !doorOpen;
   }
 
-  public void triggerHoverText(){
+  public void onHoverEnter(){
     if(gameObject.GetComponent<TextMeshPro>().enabled==false)
     {
       gameObject.GetComponent<TextMeshPro>().enabled=true;
