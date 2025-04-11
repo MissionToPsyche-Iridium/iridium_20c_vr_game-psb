@@ -17,6 +17,7 @@ public class JigSawPuzzleManager : MonoBehaviour
         private Vector2Int dimensions;
         private float height;
         private float width;
+        private float aspect = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
