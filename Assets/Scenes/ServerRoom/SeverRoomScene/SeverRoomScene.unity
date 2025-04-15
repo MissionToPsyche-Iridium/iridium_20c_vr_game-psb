@@ -3990,6 +3990,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (13)
@@ -4878,6 +4882,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (14)
@@ -6190,6 +6198,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (1)
@@ -6414,7 +6426,7 @@ Transform:
   m_GameObject: {fileID: 710975568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -15.787, y: 0, z: 0.695}
+  m_LocalPosition: {x: -15.787, y: 0.5, z: 0.695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7554,6 +7566,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (7)
@@ -7712,6 +7728,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (4)
@@ -8513,6 +8533,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (10)
@@ -9230,6 +9254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (19)
@@ -9291,6 +9319,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (12)
@@ -9362,6 +9394,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (15)
@@ -9599,6 +9635,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (11)
@@ -10134,6 +10174,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (6)
@@ -12641,6 +12685,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (3)
@@ -12824,6 +12872,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (5)
@@ -14222,6 +14274,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (9)
@@ -14484,6 +14540,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (8)
@@ -15787,39 +15847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792d35f20ab182e4281df403cce557d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameBoard: {fileID: 111603485}
-  piecePrefab: {fileID: 7085040941766780444, guid: ad7f9fe00f4f56c4fa6bb586bb8c75bf, type: 3}
-  rayInteractorLeft: {fileID: 234361916}
-  rayInteractorRight: {fileID: 1413988241}
-  leftBumper:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Bumper
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 105e8ba1-6cda-4694-a064-cc00b1aae26a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  rightBumper:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Bumper
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 60b6e7f8-53b4-42d5-bde4-6c054b16b42b
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  self: {fileID: 1631826667}
-  leftHand: {fileID: 45639032}
-  rightHand: {fileID: 2032530386}
-  leftHandPause: {fileID: 234361910}
-  rightHandPause: {fileID: 1413988234}
 --- !u!4 &1637106649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5675013305860159573, guid: 2f3fe288da751a2428fc82d8e5ed9f7e, type: 3}
@@ -15974,6 +16001,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (2)
@@ -16450,6 +16481,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (18)
@@ -16804,6 +16839,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (16)
@@ -18471,6 +18510,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2012990112}
     m_Modifications:
+    - target: {fileID: 1945432178, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5040540905546997027, guid: a8d819c88b06d5d479cad532c162c475, type: 3}
       propertyPath: m_Name
       value: floor (17)
@@ -18599,6 +18642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2012990112}
+  - component: {fileID: 2012990113}
   m_Layer: 0
   m_Name: Floors
   m_TagString: Untagged
@@ -18640,6 +18684,28 @@ Transform:
   - {fileID: 1695634199}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &2012990113
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012990111}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &2029613342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19939,28 +20005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58027f70e0c087c4d8aae98400afc16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 710975572}
-  spawnDistance: 4
-  menu: {fileID: 1802117450}
-  leftHand: {fileID: 45639032}
-  rightHand: {fileID: 2032530386}
-  leftHandPause: {fileID: 234361910}
-  rightHandPause: {fileID: 1413988234}
-  showButton:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Show Button
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 1096af1c-edc0-4524-8580-bdd35e7d64ea
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 8497685798473381005, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  x: 0.5
-  y: 3
-  z: 0
 --- !u!4 &2136047367
 Transform:
   m_ObjectHideFlags: 0
@@ -22054,6 +22098,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1455457102}
   - {fileID: 635331798}
+  - {fileID: 2012990112}
   - {fileID: 4353206134159576111}
   - {fileID: 784185336}
   - {fileID: 1176934405}
@@ -22085,7 +22130,6 @@ SceneRoots:
   - {fileID: 1695472544}
   - {fileID: 1468653798628536152}
   - {fileID: 7505213867602829668}
-  - {fileID: 2012990112}
   - {fileID: 1625925989}
   - {fileID: 158791040}
   - {fileID: 1117934114}
