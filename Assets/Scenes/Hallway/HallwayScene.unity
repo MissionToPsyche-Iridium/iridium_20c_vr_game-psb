@@ -6012,12 +6012,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 986285178}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 986285178}
+  m_maskType: 0
 --- !u!23 &986285178
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7353,7 +7353,7 @@ AudioSource:
   m_GameObject: {fileID: 1289468254}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 470291209478254940, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4edbefaa4e23b47ea8001b0bd96a28ad, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

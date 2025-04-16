@@ -2247,15 +2247,15 @@ MonoBehaviour:
   m_HandleRect: {fileID: 571057592}
   m_Direction: 0
   m_MinValue: 1
-  m_MaxValue: 100
+  m_MaxValue: 8
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 234361911}
-        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
-        m_MethodName: setBrightness
+      - m_Target: {fileID: 234361919}
+        m_TargetAssemblyTypeName: setBrightness, Assembly-CSharp
+        m_MethodName: SetLightIntensity
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2265,9 +2265,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1413988236}
-        m_TargetAssemblyTypeName: setVolumeAndBrightness, Assembly-CSharp
-        m_MethodName: setBrightness
+      - m_Target: {fileID: 1413988243}
+        m_TargetAssemblyTypeName: setBrightness, Assembly-CSharp
+        m_MethodName: SetLightIntensity
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2354,6 +2354,7 @@ GameObject:
   - component: {fileID: 234361913}
   - component: {fileID: 234361912}
   - component: {fileID: 234361911}
+  - component: {fileID: 234361919}
   m_Layer: 0
   m_Name: Left Controller (pause menu)
   m_TagString: Untagged
@@ -3041,6 +3042,20 @@ Transform:
   - {fileID: 1107409104}
   m_Father: {fileID: 819554274}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &234361919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234361910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c56e993fcfaf74186ef51499e0e3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightObjects:
+  - {fileID: 1455457100}
 --- !u!4 &237187678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7589819978036697002, guid: d7cd5c7975835a14cae4bcbafa34bd4b, type: 3}
@@ -16107,6 +16122,7 @@ GameObject:
   - component: {fileID: 1413988238}
   - component: {fileID: 1413988237}
   - component: {fileID: 1413988236}
+  - component: {fileID: 1413988243}
   m_Layer: 0
   m_Name: Right Controller (pause menu)
   m_TagString: Untagged
@@ -16794,6 +16810,20 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6447266317303757838, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1413988243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413988234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c56e993fcfaf74186ef51499e0e3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightObjects:
+  - {fileID: 1455457100}
 --- !u!1001 &1418895696
 PrefabInstance:
   m_ObjectHideFlags: 0
