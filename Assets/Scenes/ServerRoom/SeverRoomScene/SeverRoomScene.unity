@@ -24096,7 +24096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapTurn: {fileID: 710975573}
   continuousTurn: {fileID: 710975569}
-  dropDownObject: {fileID: 0}
+  dropDownObject: {fileID: 720441494}
 --- !u!114 &2136047366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24111,15 +24111,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 0}
   spawnDistance: 3
-  menu: {fileID: 0}
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 0}
-  leftHandPause: {fileID: 0}
-  rightHandPause: {fileID: 0}
+  menu: {fileID: 1802117450}
+  leftHand: {fileID: 45639032}
+  rightHand: {fileID: 2032530386}
+  leftHandPause: {fileID: 234361910}
+  rightHandPause: {fileID: 1413988234}
   showButton:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Show Button
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: b8418d38-9779-43bc-a336-61e43b702824
@@ -24127,9 +24127,9 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
-  x: 0
-  y: 0
+    m_Reference: {fileID: 8497685798473381005, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  x: 0.5
+  y: 3
   z: 0
 --- !u!4 &2136047367
 Transform:
