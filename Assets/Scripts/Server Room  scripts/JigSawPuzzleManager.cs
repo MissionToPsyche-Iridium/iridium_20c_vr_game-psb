@@ -41,6 +41,8 @@ public class JigSawPuzzleManager : MonoBehaviour
         createJigsawPieces(jigsawImage);
         // Shuffle the pieces and place them on the board
         scatter();
+
+        updateBorder();
     }
 
 
@@ -94,29 +96,63 @@ public class JigSawPuzzleManager : MonoBehaviour
             }
         }
     }
-    private void scatter()
+private void scatter()
+{
+    float orthoHeight = Camera.main.orthographicSize;
+    float screenAspect = (float)Screen.width / Screen.height;
+    float orthoWidth = orthoHeight * screenAspect;
+    
+    float pieceWidth = width * pieceHolder.localScale.x;
+    float pieceHeight = height * pieceHolder.localScale.y;
+    
+    orthoHeight -= pieceHeight;
+    orthoWidth -= pieceWidth;
+    float boardZ = pieceHolder.position.z;
+
+
+    List<Rect> placedPieces = new List<Rect>();
+    
+foreach (Transform piece in jigsawPieces)
+{
+        bool validPosition = false;
+        float x = 0, y = 0;
+        int attempts = 0;
+        const int maxAttempts = 100;
+
+    while (!validPosition && attempts < maxAttempts)
     {
-        float orthoHeight = Camera.main.orthographicSize / 4;
-        float screenAspect = (float)Screen.width / Screen.height;
-        float orthoWidth = orthoHeight * screenAspect;
-        
-        float pieceWidth = width * pieceHolder.localScale.x;
-        float pieceHeight = height * pieceHolder.localScale.y;
-        
-        orthoHeight -= pieceHeight;
-        orthoWidth -= pieceWidth;
-        
-        foreach (Transform piece in jigsawPieces)
+    x = Random.Range(-orthoWidth, orthoWidth);
+    y = Random.Range(0,orthoHeight*2);
+    Rect newPieceRect = new Rect(
+        x - pieceWidth/2, 
+        y - pieceWidth/2,
+        pieceWidth, 
+        pieceHeight
+        );
+    validPosition = true;
+    
+    foreach (Rect placedPiece in placedPieces)
+    {
+        if (newPieceRect.Overlaps(placedPiece))
         {
-            float x = Random.Range(-orthoWidth, orthoWidth);
-            float y = Random.Range(-orthoHeight, orthoHeight);
-            piece.position = new Vector3(x, y, -1);
+            validPosition = false;
+            break;
         }
     }
-
+    
+        if (validPosition)
+        {
+            placedPieces.Add(newPieceRect);
+            break;
+        }
+        attempts++;
+        }
+    piece.position = new Vector3(x, y, boardZ);
+    }
+}
     private void updateBorder() 
     {
-        LineRenderer lineRenderer = jigsawBoard.GetComponent<LineRenderer>();
+        LineRenderer lineRenderer = pieceHolder.GetComponent<LineRenderer>();
         float halfWidth = (dimensions.x * width) / 2;
         float halfHeight = (dimensions.y * height) / 2;
 
