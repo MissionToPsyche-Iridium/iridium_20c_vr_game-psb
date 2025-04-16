@@ -107,7 +107,7 @@ private void scatter()
     
     orthoHeight -= pieceHeight;
     orthoWidth -= pieceWidth;
-    float boardZ = pieceHolder.position.z;
+    float boardX = pieceHolder.position.x;
 
 
     List<Rect> placedPieces = new List<Rect>();
@@ -115,16 +115,16 @@ private void scatter()
 foreach (Transform piece in jigsawPieces)
 {
         bool validPosition = false;
-        float x = 0, y = 0;
+        float z = 0, y = 0;
         int attempts = 0;
         const int maxAttempts = 100;
 
     while (!validPosition && attempts < maxAttempts)
     {
-    x = Random.Range(-orthoWidth, orthoWidth);
-    y = Random.Range(0,orthoHeight*2);
+    z = Random.Range(-orthoWidth, orthoWidth/4);
+    y = Random.Range(0,orthoHeight*1.5f);
     Rect newPieceRect = new Rect(
-        x - pieceWidth/2, 
+        z - pieceWidth/2, 
         y - pieceWidth/2,
         pieceWidth, 
         pieceHeight
@@ -147,7 +147,7 @@ foreach (Transform piece in jigsawPieces)
         }
         attempts++;
         }
-    piece.position = new Vector3(x, y, boardZ);
+    piece.position = new Vector3(boardX, y, z);
     }
 }
     private void updateBorder() 
