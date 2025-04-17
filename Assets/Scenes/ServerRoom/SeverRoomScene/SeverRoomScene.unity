@@ -24109,7 +24109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58027f70e0c087c4d8aae98400afc16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 0}
+  head: {fileID: 710975572}
   spawnDistance: 3
   menu: {fileID: 1802117450}
   leftHand: {fileID: 45639032}
