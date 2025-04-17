@@ -1475,6 +1475,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6428290606638997802, guid: 2ad22c812c7bab047a54f1cf4ddc769a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6428290606638997802, guid: 2ad22c812c7bab047a54f1cf4ddc769a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6428290606638997802, guid: 2ad22c812c7bab047a54f1cf4ddc769a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -6029,7 +6037,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 4, z: 3}
+  m_Size: {x: 5, y: 3, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &540206302
 Transform:
@@ -6040,7 +6048,7 @@ Transform:
   m_GameObject: {fileID: 540206300}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.650999, y: -1.2203598, z: 14.450001}
+  m_LocalPosition: {x: 12.650999, y: -1.2203598, z: 13.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18797,7 +18805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5496541, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

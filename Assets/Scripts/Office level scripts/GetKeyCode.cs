@@ -128,9 +128,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         {
                             incorrectAudioSource.Play();
                             inputTarget.textComponent.color = Color.red; // Set text color to red
+                            
                             StartCoroutine(Delay());
-                            inputTarget.text = "";
-                            GetInputFieldTarget.Index = 0;
                         }
                     }
                     break;
@@ -140,11 +139,13 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
 
     private IEnumerator Delay()
     {
-    yield return new WaitForSeconds(3f); // Wait for 3 seconds
+    yield return new WaitForSeconds(2f); // Wait for 2 seconds
     inputTarget.textComponent.color = Color.white; // Reset text color to white
+    inputTarget.text = "";
+    GetInputFieldTarget.Index = 0;
     }
     private IEnumerator RotateSafeDoor()
     {
-        yield return Tween.Rotation(safeDoor.transform, new Vector3(0, 90 , -90), 2f);
+        yield return Tween.Rotation(safeDoor.transform, endValue: Quaternion.Euler(safeDoor.transform.rotation.eulerAngles.x, safeDoor.transform.rotation.eulerAngles.y, safeDoor.transform.rotation.eulerAngles.z - 90), duration: 2);
     }
 }

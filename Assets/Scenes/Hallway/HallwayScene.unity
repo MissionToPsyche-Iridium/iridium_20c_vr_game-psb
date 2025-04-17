@@ -6186,12 +6186,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 986285178}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 986285178}
+  m_maskType: 0
 --- !u!23 &986285178
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6594,7 +6594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e52e438e22fd644b88b39edc4c4bc52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 30
+  timeRemaining: 120
   timerIsRunning: 0
   timerText: {fileID: 0}
 --- !u!1001 &1073003601
