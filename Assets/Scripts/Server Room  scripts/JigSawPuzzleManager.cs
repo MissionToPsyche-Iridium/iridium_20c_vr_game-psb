@@ -25,6 +25,10 @@ public class JigSawPuzzleManager : MonoBehaviour
         [SerializeField] private XRRayInteractor rayInteractorRight;
         [SerializeField] private InputActionProperty leftBumper;
         [SerializeField] private InputActionProperty rightBumper;
+         [SerializeField] private GameObject leftHand;
+        [SerializeField] private GameObject rightHand;
+        [SerializeField] private GameObject leftHandPause;
+        [SerializeField] private GameObject rightHandPause;        
         private int piecesCorrect = 0;
 
     // Start is called before the first frame update
@@ -121,7 +125,7 @@ foreach (Transform piece in jigsawPieces)
 
     while (!validPosition && attempts < maxAttempts)
     {
-    z = Random.Range(-orthoWidth, orthoWidth/4);
+    z = Random.Range(-orthoWidth, orthoWidth/5);
     y = Random.Range(0,orthoHeight*1.5f);
     Rect newPieceRect = new Rect(
         z - pieceWidth/2, 
@@ -217,7 +221,7 @@ foreach (Transform piece in jigsawPieces)
                 rayInteractorLeft.transform.position : 
                 rayInteractorRight.transform.position;
             Vector3 newPosition = Camera.main.ScreenToWorldPoint(controllerPosition);
-            newPosition.z += offset.z;
+            newPosition.x += offset.x;
             draggedPiece.position = newPosition;
         }
 
