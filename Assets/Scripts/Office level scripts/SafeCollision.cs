@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SafeCollision : MonoBehaviour
 {
-    public GameObject safeCanvas;
-    public GameObject leftHand;
-    public GameObject rightHand;
-    public GameObject leftHandPause;
-    public GameObject rightHandPause;
+    [SerializeField] private GameObject safeCanvas;
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject leftHandPause;
+    [SerializeField] private GameObject rightHandPause;
 
     private void OnTriggerEnter(Collider other)
     {

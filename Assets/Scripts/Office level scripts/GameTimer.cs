@@ -6,7 +6,7 @@ public class GameTimer : MonoBehaviour
 {
     public float timeRemaining = 120; // 2 mins
     public bool timerIsRunning = false;
-    public TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI timerText;
 
     private void Start()
     {

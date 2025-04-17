@@ -7,13 +7,13 @@ using UnityEngine.InputSystem;
 
 public class PauseMenuButtonManager : MonoBehaviour
 {
-    public GameObject pauseMenu;
-    public GameObject settingsMenu;
-    public GameObject leftHand;
-    public GameObject rightHand;
-    public GameObject leftHandPause;
-    public GameObject rightHandPause;
-    public InputActionProperty showButton;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject leftHandPause;
+    [SerializeField] private GameObject rightHandPause;
+    [SerializeField] private InputActionProperty showButton;
 
     public void MainMenuScene() {
         SceneManager.LoadScene("MainMenu");

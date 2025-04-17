@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FloorCollision : MonoBehaviour
 {
-   [SerializeField] AudioSource source;
-    [SerializeField] GameObject floor;
-    [SerializeField] GameObject self;
+    [SerializeField] private AudioSource source;
+    [SerializeField] private GameObject floor;
+    [SerializeField] private GameObject self;
     
     private bool playedOnce = false;
     

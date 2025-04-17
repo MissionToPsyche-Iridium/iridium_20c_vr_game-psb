@@ -5,24 +5,17 @@ using UnityEngine.InputSystem;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    public Transform head;
-    public float spawnDistance = 3;
-    public GameObject menu;
-    public GameObject leftHand;
-    public GameObject rightHand;
-    public GameObject leftHandPause;
-    public GameObject rightHandPause;
-    public InputActionProperty showButton;
-        [SerializeField] float x = 0.0f;
-
+    [SerializeField] private Transform head;
+    [SerializeField] private float spawnDistance = 3;
+    [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject leftHandPause;
+    [SerializeField] private GameObject rightHandPause;
+    [SerializeField] private InputActionProperty showButton;
+    [SerializeField] float x = 0.0f;
     [SerializeField] float y = 0.0f;
-        [SerializeField] float z = 0.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float z = 0.0f;
 
     // Update is called once per frame
     void Update()

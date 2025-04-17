@@ -17,15 +17,15 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     private InputField inputTarget;
     private bool toLowLetterCase;
     private readonly CultureInfo cult = new CultureInfo("en-US", false);
-    public GameObject safeDoor;
-    public GameObject key;
-    public GameObject leftHand;
-    public GameObject rightHand;
-    public GameObject leftHandPause;
-    public GameObject rightHandPause;
-    public GameObject safeCollider;
-    public AudioSource correctAudioSource; 
-    public AudioSource incorrectAudioSource; 
+    [SerializeField] private GameObject safeDoor;
+    [SerializeField] private GameObject key;
+    [SerializeField] private GameObject leftHand;
+    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject leftHandPause;
+    [SerializeField] private GameObject rightHandPause;
+    [SerializeField] private GameObject safeCollider;
+    [SerializeField] private AudioSource correctAudioSource; 
+    [SerializeField] private AudioSource incorrectAudioSource; 
     
     private void Awake()
     {
