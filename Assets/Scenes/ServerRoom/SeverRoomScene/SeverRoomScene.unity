@@ -18643,6 +18643,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792d35f20ab182e4281df403cce557d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameBoard: {fileID: 111603485}
+  piecePrefab: {fileID: 7085040941766780444, guid: ad7f9fe00f4f56c4fa6bb586bb8c75bf, type: 3}
+  rayInteractorLeft: {fileID: 234361916}
+  rayInteractorRight: {fileID: 1413988241}
+  leftBumper:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Bumper
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 95e50451-1168-4c43-91a8-5ffac1047fe0
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  rightBumper:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Bumper
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 32c85d9b-e13a-454f-8728-74a3835aaf67
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  self: {fileID: 1631826667}
+  leftHand: {fileID: 45639032}
+  rightHand: {fileID: 2032530386}
+  leftHandPause: {fileID: 234361910}
+  rightHandPause: {fileID: 1413988234}
 --- !u!4 &1637106649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5675013305860159573, guid: 2f3fe288da751a2428fc82d8e5ed9f7e, type: 3}
@@ -19638,10 +19671,10 @@ MonoBehaviour:
   jigsawBoard: {fileID: 1013439198}
   pieceHolder: {fileID: 1882939099}
   piecePrefab: {fileID: 98475094392343301, guid: 393b2d1216c799140a798c4e47c642f2, type: 3}
-  rayInteractorLeft: {fileID: 0}
-  rayInteractorRight: {fileID: 0}
+  rayInteractorLeft: {fileID: 234361916}
+  rayInteractorRight: {fileID: 1413988241}
   leftBumper:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Left Bumper
       m_Type: 0
@@ -19651,9 +19684,9 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   rightBumper:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Right Bumper
       m_Type: 0
@@ -19663,7 +19696,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!4 &1794065954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5675013305860159573, guid: 2f3fe288da751a2428fc82d8e5ed9f7e, type: 3}
