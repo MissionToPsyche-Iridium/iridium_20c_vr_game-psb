@@ -8,7 +8,7 @@ public class SettingManager : MonoBehaviour
     private bool continuousTurn = true;
     private bool eventMode = true;
     [SerializeField] private AudioMixer mixer;
-    private float brightness = 10;
+    private float brightness = 1.5f;
     private bool isRayHandActive = false;
 
     public static SettingManager Instance
