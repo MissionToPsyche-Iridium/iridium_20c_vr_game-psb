@@ -12,6 +12,8 @@ public class GameTimer : MonoBehaviour
     {
         // Start the timer automatically when the game begins
         timerIsRunning = true;
+        if(SceneManager.GetActiveScene().name=="HallwayScene")
+            timeRemaining=30;
 
     }
 
@@ -29,7 +31,10 @@ public class GameTimer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
-                EndGame(); // Call the function to end the game
+                if(SceneManager.GetActiveScene().name=="Office")
+                    EndGame(); 
+                else
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);// Call the function to end the game
             }
         }
     }
