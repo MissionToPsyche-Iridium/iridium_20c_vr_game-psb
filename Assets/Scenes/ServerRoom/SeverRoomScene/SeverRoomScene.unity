@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1802117450}
-  settingsMenu: {fileID: 0}
+  settingsMenu: {fileID: 858225502}
   leftHand: {fileID: 45639032}
   rightHand: {fileID: 2032530386}
   leftHandPause: {fileID: 234361910}
@@ -15801,7 +15801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1802117450}
-  settingsMenu: {fileID: 0}
+  settingsMenu: {fileID: 858225502}
   leftHand: {fileID: 45639032}
   rightHand: {fileID: 2032530386}
   leftHandPause: {fileID: 234361910}
