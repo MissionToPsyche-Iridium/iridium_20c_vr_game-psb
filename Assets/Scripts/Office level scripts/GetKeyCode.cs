@@ -13,7 +13,6 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     private Image buttonImage;  // Key Image
     private string buttonString;  // Key text
     private Text showString;  // Text displayed on key
-
     private InputField inputTarget;
     private bool toLowLetterCase;
     private readonly CultureInfo cult = new CultureInfo("en-US", false);
@@ -26,6 +25,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     [SerializeField] private GameObject safeCollider;
     [SerializeField] private AudioSource correctAudioSource; 
     [SerializeField] private AudioSource incorrectAudioSource; 
+
+    [SerializeField] private AudioSource keyPress;
     
     private void Awake()
     {
@@ -88,6 +89,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
         {
             // Append text to the end instead of inserting at index
             inputTarget.text = targetText + buttonString;
+            keyPress.Play();
             GetInputFieldTarget.Index = inputTarget.text.Length;
         }
         else

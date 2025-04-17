@@ -1068,6 +1068,7 @@ RectTransform:
   m_Children:
   - {fileID: 194582801}
   - {fileID: 1713827350}
+  - {fileID: 1419212275}
   - {fileID: 652640573}
   - {fileID: 2139886627}
   - {fileID: 1373129099}
@@ -4125,6 +4126,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 0}
 --- !u!4 &253593250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2dc72f24aca07ed42a3aa4cd507655f1, type: 3}
@@ -5259,6 +5261,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!1 &379785730
 GameObject:
   m_ObjectHideFlags: 0
@@ -6299,6 +6302,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!1 &555164285
 GameObject:
   m_ObjectHideFlags: 0
@@ -7330,6 +7334,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 1059239423}
   incorrectAudioSource: {fileID: 1318142283}
+  keyPress: {fileID: 0}
 --- !u!114 &690825867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7965,6 +7970,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!1 &758092989
 GameObject:
   m_ObjectHideFlags: 0
@@ -9495,6 +9501,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!4 &968861208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 28248b07a4d9570409371ebb6d5a2a3b, type: 3}
@@ -11022,6 +11029,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!850595691 &1103859292
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -13755,6 +13763,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!1 &1295181276
 GameObject:
   m_ObjectHideFlags: 0
@@ -14935,6 +14944,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404724438}
   m_CullTransparentMesh: 1
+--- !u!1 &1419212273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419212275}
+  - component: {fileID: 1419212274}
+  m_Layer: 0
+  m_Name: Key Press
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1419212274
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419212273}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -7860710572257928252, guid: c21171162dc01164ba7ddaa06be4d7bf, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 3526252e5b1fa05468ccb7261ba22ac3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 95
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1419212275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419212273}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 17, y: -462.9996, z: 515}
+  m_LocalScale: {x: 480.76938, y: 500, z: 500.00006}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 89178776}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1422551173
 GameObject:
   m_ObjectHideFlags: 0
@@ -15911,6 +16048,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!1001 &1524168297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20677,6 +20815,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!1 &1784172210
 GameObject:
   m_ObjectHideFlags: 0
@@ -20901,6 +21040,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!1 &1807793121
 GameObject:
   m_ObjectHideFlags: 0
@@ -21050,6 +21190,7 @@ MonoBehaviour:
   safeCollider: {fileID: 540206300}
   correctAudioSource: {fileID: 0}
   incorrectAudioSource: {fileID: 0}
+  keyPress: {fileID: 1419212274}
 --- !u!1001 &1808099480
 PrefabInstance:
   m_ObjectHideFlags: 0
