@@ -105,7 +105,6 @@ public class SlidingPuzzleManager : MonoBehaviour
                         if(SwapIfValid(i, +1, size - 1)) { break; }
                     }
                 }
-                slidingSound.Play();
             }
         } else if(rightBumper.action.WasPressedThisFrame()) {
             //need to get where the ray hits when the user presses the bumper
@@ -122,7 +121,6 @@ public class SlidingPuzzleManager : MonoBehaviour
                         if(SwapIfValid(i, +1, size - 1)) { break; }
                     }
                 }
-                slidingSound.Play();
             }
         }
     }
@@ -135,6 +133,7 @@ public class SlidingPuzzleManager : MonoBehaviour
             (pieces[i].localPosition, pieces[i + offset].localPosition) = ((pieces[i + offset].localPosition, pieces[i].localPosition));
             //update empty location
             emptyLocation = i;
+            slidingSound.Play();
             return true;
         }
         return false;
