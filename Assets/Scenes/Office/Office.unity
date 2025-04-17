@@ -4098,10 +4098,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mNormalColor:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190335
   mDownColor:
     serializedVersion: 2
-    rgba: 4286611584
+    rgba: 4278190268
   safeDoor: {fileID: 122291925}
   key: {fileID: 1720837450}
   leftHand: {fileID: 1128918624}
@@ -7303,10 +7303,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mNormalColor:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278255364
   mDownColor:
     serializedVersion: 2
-    rgba: 4286611584
+    rgba: 4278235144
   safeDoor: {fileID: 122291925}
   key: {fileID: 1720837450}
   leftHand: {fileID: 1128918624}
