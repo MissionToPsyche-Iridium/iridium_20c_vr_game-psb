@@ -13,7 +13,7 @@ public class GameTimer : MonoBehaviour
         // Start the timer automatically when the game begins
         timerIsRunning = true;
         if(SceneManager.GetActiveScene().name=="HallwayScene")
-            timeRemaining=30;
+            timeRemaining=120;
 
     }
 
