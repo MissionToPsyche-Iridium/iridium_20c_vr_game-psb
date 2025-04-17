@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
+using UnityEngine.Audio; // Required for AudioMixer
 
 public class SlidingPuzzleManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class SlidingPuzzleManager : MonoBehaviour
     [SerializeField] private GameObject rightHand;
     [SerializeField] private GameObject leftHandPause;
     [SerializeField] private GameObject rightHandPause;
+    [SerializeField] private AudioSource slidingSound;
 
     private List<Transform> pieces;
     private int emptyLocation;
@@ -103,6 +105,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                         if(SwapIfValid(i, +1, size - 1)) { break; }
                     }
                 }
+                slidingSound.Play();
             }
         } else if(rightBumper.action.WasPressedThisFrame()) {
             //need to get where the ray hits when the user presses the bumper
@@ -119,6 +122,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                         if(SwapIfValid(i, +1, size - 1)) { break; }
                     }
                 }
+                slidingSound.Play();
             }
         }
     }
