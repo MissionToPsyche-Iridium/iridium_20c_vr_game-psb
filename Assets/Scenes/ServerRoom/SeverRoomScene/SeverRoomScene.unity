@@ -3059,8 +3059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c56e993fcfaf74186ef51499e0e3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightObjects:
-  - {fileID: 1455457100}
+  lightObjects: {fileID: 1455457100}
 --- !u!4 &237187678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7589819978036697002, guid: d7cd5c7975835a14cae4bcbafa34bd4b, type: 3}
@@ -16453,8 +16452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c56e993fcfaf74186ef51499e0e3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightObjects:
-  - {fileID: 1455457100}
+  lightObjects: {fileID: 1455457100}
 --- !u!1001 &1418895696
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2653,12 +2653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c56e993fcfaf74186ef51499e0e3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightObjects:
-  - {fileID: 1900699047}
-  - {fileID: 1467311266}
-  - {fileID: 569301931}
-  - {fileID: 1677547822}
-  - {fileID: 969417969}
+  lightObjects: {fileID: 569301931}
 --- !u!1 &179227918
 GameObject:
   m_ObjectHideFlags: 0
@@ -19757,12 +19752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c56e993fcfaf74186ef51499e0e3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightObjects:
-  - {fileID: 1900699047}
-  - {fileID: 1467311266}
-  - {fileID: 569301931}
-  - {fileID: 1677547822}
-  - {fileID: 969417969}
+  lightObjects: {fileID: 569301931}
 --- !u!1 &1728828341
 GameObject:
   m_ObjectHideFlags: 0

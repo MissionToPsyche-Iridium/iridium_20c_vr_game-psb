@@ -3696,8 +3696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c56e993fcfaf74186ef51499e0e3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightObjects:
-  - {fileID: 1285612721}
+  lightObjects: {fileID: 1285612721}
 --- !u!1 &784929029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5729,8 +5728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c56e993fcfaf74186ef51499e0e3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightObjects:
-  - {fileID: 1285612721}
+  lightObjects: {fileID: 1285612721}
 --- !u!1 &1234813919
 GameObject:
   m_ObjectHideFlags: 0
