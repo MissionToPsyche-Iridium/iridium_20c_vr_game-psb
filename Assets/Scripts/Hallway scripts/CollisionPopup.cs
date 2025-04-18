@@ -9,10 +9,12 @@ using UnityEngine.UI;
 public class CollisionPopup : MonoBehaviour
 {   
     [SerializeField] private TextMeshPro popuptext;
+    [SerializeField] private TextMeshPro Finishtext;
     // Start is called before the first frame update
     void Start()
     {
         popuptext.enabled=false;
+        Finishtext.enabled=false;
     }
 
     // Update is called once per frame
@@ -31,6 +33,12 @@ public class CollisionPopup : MonoBehaviour
             Debug.Log("Collision Has Occured");
             
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            
+        }
+        else if(collision.gameObject.tag=="Finish")
+        {
+            Finishtext.enabled=true;
+            Debug.Log("Game complete!");
             
         }
             
