@@ -10,11 +10,6 @@ public class SafeCollision : MonoBehaviour
     [SerializeField] private GameObject leftHandPause;
     [SerializeField] private GameObject rightHandPause;
     [SerializeField] private GetKeyCode getKeyCode; 
-    private InputField inputField;
-    void Start()
-    {
-       inputField = getKeyCode.inputTarget;
-    }
     private void OnTriggerEnter(Collider other)
     {
         
@@ -48,8 +43,8 @@ public class SafeCollision : MonoBehaviour
             rightHandPause.transform.position = rightHand.transform.position;
             SettingManager.Instance.IsRayHandActive = false;
             // Reset the input field text when exiting the trigger
-            inputField.textComponent.color = Color.white; // Reset text color to white
-            inputField.text = "";
+            getKeyCode.inputTarget.textComponent.color = Color.white; // Reset text color to white
+            getKeyCode.inputTarget.text = "";
             GetInputFieldTarget.Index = 0;
         }
     }
