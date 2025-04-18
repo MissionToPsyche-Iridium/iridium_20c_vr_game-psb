@@ -18,7 +18,7 @@ MonoBehaviour:
     m_List:
     - stateName: disabled
       stateEntered: {fileID: 0}
-      stateExited: {fileID: 8300000, guid: c05801222d64c46cca546c6faa389fdd, type: 3}
+      stateExited: {fileID: 0}
     - stateName: idle
       stateEntered: {fileID: 0}
       stateExited: {fileID: 0}

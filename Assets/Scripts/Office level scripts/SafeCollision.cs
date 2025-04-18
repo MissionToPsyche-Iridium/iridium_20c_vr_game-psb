@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SafeCollision : MonoBehaviour
 {
     [SerializeField] private GameObject safeCanvas;
@@ -9,9 +9,15 @@ public class SafeCollision : MonoBehaviour
     [SerializeField] private GameObject rightHand;
     [SerializeField] private GameObject leftHandPause;
     [SerializeField] private GameObject rightHandPause;
-
+    [SerializeField] private GetKeyCode getKeyCode; 
+    private InputField inputField;
+    void Start()
+    {
+       inputField = getKeyCode.inputTarget;
+    }
     private void OnTriggerEnter(Collider other)
     {
+        
         // Check if the collision is with a specific object, e.g., "Player"
         if (other.CompareTag("Player"))
         {
@@ -41,6 +47,10 @@ public class SafeCollision : MonoBehaviour
             leftHandPause.transform.position = leftHand.transform.position;
             rightHandPause.transform.position = rightHand.transform.position;
             SettingManager.Instance.IsRayHandActive = false;
+            // Reset the input field text when exiting the trigger
+            inputField.textComponent.color = Color.white; // Reset text color to white
+            inputField.text = "";
+            GetInputFieldTarget.Index = 0;
         }
     }
 }

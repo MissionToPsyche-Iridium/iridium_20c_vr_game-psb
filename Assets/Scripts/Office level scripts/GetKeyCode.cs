@@ -12,8 +12,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     public Color32 mDownColor = Color.grey;   // Pressed color
     private Image buttonImage;  // Key Image
     private string buttonString;  // Key text
-    private Text showString;  // Text displayed on key
-    private InputField inputTarget;
+    public Text showString;  // Text displayed on key
+    public InputField inputTarget;
     private bool toLowLetterCase;
     private readonly CultureInfo cult = new CultureInfo("en-US", false);
     [SerializeField] private GameObject safeDoor;
@@ -25,7 +25,6 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     [SerializeField] private GameObject safeCollider;
     [SerializeField] private AudioSource correctAudioSource; 
     [SerializeField] private AudioSource incorrectAudioSource; 
-
     [SerializeField] private AudioSource keyPress;
     
     private void Awake()
@@ -99,6 +98,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                 case "delete":
                     if (inputTarget.text.Length > 0)
                     {
+                        keyPress.Play();
                         // Remove the last character
                         inputTarget.text = inputTarget.text.Substring(0, inputTarget.text.Length - 1);
                         GetInputFieldTarget.Index = inputTarget.text.Length;
@@ -130,7 +130,6 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         {
                             incorrectAudioSource.Play();
                             inputTarget.textComponent.color = Color.red; // Set text color to red
-                            
                             StartCoroutine(Delay());
                         }
                     }
