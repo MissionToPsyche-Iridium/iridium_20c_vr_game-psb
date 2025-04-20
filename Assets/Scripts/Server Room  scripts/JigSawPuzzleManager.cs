@@ -188,6 +188,7 @@ foreach (Transform piece in jigsawPieces)
             {
                 Debug.Log("Puzzle Completed!");
                 // Do something here
+                GameProgressManager.Instance.isJigsawComplete = true;
             }
         }
 

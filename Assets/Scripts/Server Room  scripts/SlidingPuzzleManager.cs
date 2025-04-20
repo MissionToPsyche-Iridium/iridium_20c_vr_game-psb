@@ -146,6 +146,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                 return false;
             }
         }
+        GameProgressManager.Instance.isPuzzleComplete = true;
         return true;
     }
 
