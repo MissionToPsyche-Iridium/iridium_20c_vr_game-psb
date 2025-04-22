@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.UI;
 using TMPro; // Add this namespace for TMP_Dropdown
 
-public class ConferenceRoomManager : MonoBehaviour
+public class ServerRoomManager : MonoBehaviour
 {
     [SerializeField] private ActionBasedSnapTurnProvider snapTurn;
     [SerializeField] private ActionBasedContinuousTurnProvider continuousTurn;

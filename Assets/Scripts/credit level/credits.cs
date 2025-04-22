@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // For scene management
 
 public class CreditsScroll : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class CreditsScroll : MonoBehaviour
         {
             rectTransform.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
             // Positive Y moves UP
+        }
+        if(rectTransform.anchoredPosition.y > 3000) {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

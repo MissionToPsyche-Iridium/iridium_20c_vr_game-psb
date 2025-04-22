@@ -13110,7 +13110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1187416661}
-  floor: {fileID: 1969294084}
   self: {fileID: 1187416655}
 --- !u!1001 &1202618854
 PrefabInstance:
@@ -19906,7 +19905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 1711185132}
-  floor: {fileID: 1969294084}
   self: {fileID: 1711185126}
 --- !u!1 &1712586496
 GameObject:
@@ -25452,7 +25450,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 2012602023}
-  floor: {fileID: 1969294084}
   self: {fileID: 2012602017}
 --- !u!1001 &2016956822
 PrefabInstance:
