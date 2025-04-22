@@ -13,7 +13,6 @@ public class SlidingPuzzleManager : MonoBehaviour
     [SerializeField] private XRRayInteractor rayInteractorRight;
     [SerializeField] private InputActionProperty leftBumper;
     [SerializeField] private InputActionProperty rightBumper;
-    [SerializeField] private GameObject self;
     [SerializeField] private GameObject leftHand;
     [SerializeField] private GameObject rightHand;
     [SerializeField] private GameObject leftHandPause;
@@ -79,16 +78,20 @@ public class SlidingPuzzleManager : MonoBehaviour
                 temp = 1;
             }else {
                 pieces[pieces.Count - 2].gameObject.SetActive(true);//not showing the right image
+                BoxCollider box = gameBoard.GetComponent<BoxCollider>();
+                box.enabled = false;
+                for(int i = 0; i < pieces.Count; i++) {
+                    MeshCollider meshCo = pieces[i].GetComponent<MeshCollider>();
+                    meshCo.enabled = false;
+                }
                 leftHand.SetActive(!leftHand.activeSelf);
                 rightHand.SetActive(!rightHand.activeSelf);
                 leftHandPause.SetActive(!leftHandPause.activeSelf);
                 rightHandPause.SetActive(!rightHandPause.activeSelf);
                 leftHandPause.transform.position = leftHand.transform.position;
                 rightHandPause.transform.position = rightHand.transform.position;
-                Destroy(gameBoard);
-                Destroy(self);
                 GameProgressManager.Instance.isPuzzleComplete = true;
-                GameProgressManager.Instance.isJigsawComplete = true;
+                //NEED TO ADD POPUP STUFF
             }
         }
         //need to put the VR checking for when the ray hits and user presses bumper
