@@ -53,6 +53,7 @@ public class CollisionPopup : MonoBehaviour
         }
         else if(collision.gameObject.tag=="Finish")
         {
+            collision.gameObject.GetComponent<MeshCollider>().enabled=false;
             Finishtext.enabled=true;
             GameTimer.enabled=false;
             didcollide=false;
