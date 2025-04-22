@@ -126,7 +126,7 @@ foreach (Transform piece in jigsawPieces)
 
     while (!validPosition && attempts < maxAttempts)
     {
-    z = Random.Range(-orthoWidth, orthoWidth/5);
+    z = Random.Range(-orthoWidth/2, orthoWidth/5);
     y = Random.Range(0,orthoHeight*1.5f);
     Rect newPieceRect = new Rect(
         z - pieceWidth/2, 
@@ -173,29 +173,46 @@ foreach (Transform piece in jigsawPieces)
         lineRenderer.enabled = true;
     }
 
-    private void snapCheck()
+private void snapCheck()
+{
+    int pieceIndex = jigsawPieces.IndexOf(draggedPiece);
+    int col = pieceIndex % dimensions.x;
+    int row = pieceIndex / dimensions.x;
+
+    // Calculate the target position in local coordinates
+    Vector3 targetPosition = new Vector3(
+        draggedPiece.position.x, // Keep current X position
+        pieceHolder.position.y + (-height * dimensions.y / 2) + (height * row),
+        pieceHolder.position.z + (-width * dimensions.x / 2) + (width * col)
+    );
+
+    // Calculate distance using world positions
+    float distanceYZ = Vector3.Distance(
+        new Vector3(0, draggedPiece.position.y, draggedPiece.position.z),
+        new Vector3(0, targetPosition.y, targetPosition.z)
+    );
+
+    // Adjust snap threshold based on piece size
+    float snapThreshold = (width + height) / 4;
+
+    if (distanceYZ < snapThreshold)
     {
-        int pieceIndex = jigsawPieces.IndexOf(draggedPiece);
-        int col = pieceIndex % dimensions.x;
-        int row = pieceIndex / dimensions.x;
-        Vector2 targetPosition = new Vector2(
-            -width * dimensions.x / 2 + (width * col)+(width/2), 
-            (-height * dimensions.y / 2) + (height * row)+(height/2));
-        if (Vector2.Distance(draggedPiece.localPosition, targetPosition) < (width / 2))
+        draggedPiece.position = targetPosition;
+        // Disable the collider after successful snap
+        Collider pieceCollider = draggedPiece.GetComponent<Collider>();
+        if (pieceCollider != null)
         {
-            draggedPiece.localPosition = targetPosition;
-            draggedPiece.GetComponent<BoxCollider2D>().enabled = false;
-            piecesCorrect++;
-
-            if (piecesCorrect == jigsawPieces.Count)
-            {
-                Debug.Log("Puzzle Completed!");
-                // Do something here
-                GameProgressManager.Instance.isJigsawComplete = true;
-            }
+            pieceCollider.enabled = false;
         }
+        piecesCorrect++;
 
+        if (piecesCorrect == jigsawPieces.Count)
+        {
+            Debug.Log("Puzzle Completed!");
+            GameProgressManager.Instance.isJigsawComplete = true;
+        }
     }
+}
     void Update()
     {
         if (leftBumper.action.WasPressedThisFrame() || rightBumper.action.WasPressedThisFrame())
@@ -207,32 +224,46 @@ foreach (Transform piece in jigsawPieces)
             {
                 rightHit = rayInteractorRight.TryGetCurrent3DRaycastHit(out hit);
             }
-
+            
             if ((leftHit || rightHit) && hit.transform.CompareTag("Piece"))
             {
                 draggedPiece = hit.transform;
-                Vector3 controllerPosition = leftHit ? 
+                Vector3 rayPosition = leftHit ? 
                     rayInteractorLeft.transform.position : 
                     rayInteractorRight.transform.position;
-                offset = draggedPiece.position - Camera.main.ScreenToWorldPoint(controllerPosition);
+                // Store only Y and Z offset, keep original X
+                float originalX = draggedPiece.position.x;
+                offset = new Vector3(0,  // Lock X offset
+                    draggedPiece.position.y - hit.point.y,
+                    draggedPiece.position.z - hit.point.z);
+                draggedPiece.position = new Vector3(originalX, 
+                    draggedPiece.position.y, 
+                    draggedPiece.position.z);
             }
         }
 
-        // Check if the piece is being dragged and update its position to raycast hit point
         if (draggedPiece)
         {
-            Vector3 controllerPosition = leftBumper.action.IsPressed() ? 
-                rayInteractorLeft.transform.position : 
-                rayInteractorRight.transform.position;
-            Vector3 newPosition = Camera.main.ScreenToWorldPoint(controllerPosition);
-            newPosition.z += offset.z;
-            draggedPiece.position = newPosition;
+            RaycastHit hit;
+            bool rayHit = leftBumper.action.IsPressed() ? 
+                rayInteractorLeft.TryGetCurrent3DRaycastHit(out hit) : 
+                rayInteractorRight.TryGetCurrent3DRaycastHit(out hit);
+        
+            if (rayHit)
+            {
+                // Keep original X position while updating Y and Z
+                draggedPiece.position = new Vector3(
+                    draggedPiece.position.x,  // Keep X position constant
+                    hit.point.y + offset.y,
+                    hit.point.z + offset.z
+                );
+            }
         }
 
         if (draggedPiece && (leftBumper.action.WasReleasedThisFrame() || rightBumper.action.WasReleasedThisFrame()))
         {
             snapCheck();
-            draggedPiece.position += Vector3.forward;
+            
             draggedPiece = null;
         }
     }
