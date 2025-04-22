@@ -10,11 +10,27 @@ public class CollisionPopup : MonoBehaviour
 {   
     [SerializeField] private TextMeshPro popuptext;
     [SerializeField] private TextMeshPro Finishtext;
+
+    [SerializeField] private TextMeshPro GameTimer;
+    bool didcollide=false;
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(StartCanvasCheck());
+    
+    }
+
+    IEnumerator StartCanvasCheck(){
+        if(didcollide==true)
+        {
+            popuptext.enabled=true;
+            yield return new WaitForSecondsRealtime(3);
+        }
+
         popuptext.enabled=false;
         Finishtext.enabled=false;
+        GameTimer.enabled=true;
+
     }
 
     // Update is called once per frame
@@ -29,7 +45,7 @@ public class CollisionPopup : MonoBehaviour
         if(collision.gameObject.tag == "Obstacle")
         {
             popuptext.enabled=true;
-
+            didcollide=true;
             Debug.Log("Collision Has Occured");
             
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -38,14 +54,18 @@ public class CollisionPopup : MonoBehaviour
         else if(collision.gameObject.tag=="Finish")
         {
             Finishtext.enabled=true;
+
+            didcollide=false;
+            StartCoroutine(NextScene());
             Debug.Log("Game complete!");
             
         }
             
     }
 
-    IEnumerator ReloadScene()
+    IEnumerator NextScene()
     {
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(30);
+        SceneManager.LoadScene("Credits");
     }
 }
