@@ -82,7 +82,8 @@ public class JigSawPuzzleManager : MonoBehaviour
                     -width * dimensions.x / 2 + (width *
                      column), (-height * dimensions.y / 2) + (height * row), -1);
                      piece.localScale = new Vector3(width, height, 1);
-                     piece.name = $"Piece {row*dimensions.x + column}"; ;
+                     piece.name = $"Piece {row*dimensions.x + column}";
+                     piece.gameObject.tag = "Piece";
                 jigsawPieces.Add(piece);
 
                 float width1 = 1f / dimensions.x;
@@ -147,6 +148,7 @@ foreach (Transform piece in jigsawPieces)
         if (validPosition)
         {
             placedPieces.Add(newPieceRect);
+            
             break;
         }
         attempts++;
@@ -174,10 +176,10 @@ foreach (Transform piece in jigsawPieces)
     private void snapCheck()
     {
         int pieceIndex = jigsawPieces.IndexOf(draggedPiece);
-        int col = pieceIndex % dimensions.x;
-        int row = pieceIndex / dimensions.x;
+        int col = pieceIndex % dimensions.z;
+        int row = pieceIndex / dimensions.z;
         Vector2 targetPosition = new Vector2(
-            -width * dimensions.x / 2 + (width * col)+(width/2), 
+            -width * dimensions.z / 2 + (width * col)+(width/2), 
             (-height * dimensions.y / 2) + (height * row)+(height/2));
         if (Vector2.Distance(draggedPiece.localPosition, targetPosition) < (width / 2))
         {
@@ -206,7 +208,7 @@ foreach (Transform piece in jigsawPieces)
                 rightHit = rayInteractorRight.TryGetCurrent3DRaycastHit(out hit);
             }
 
-            if (leftHit || rightHit)
+            if ((leftHit || rightHit) && hit.transform.CompareTag("Piece"))
             {
                 draggedPiece = hit.transform;
                 Vector3 controllerPosition = leftHit ? 
@@ -223,7 +225,7 @@ foreach (Transform piece in jigsawPieces)
                 rayInteractorLeft.transform.position : 
                 rayInteractorRight.transform.position;
             Vector3 newPosition = Camera.main.ScreenToWorldPoint(controllerPosition);
-            newPosition.x += offset.x;
+            newPosition.z += offset.z;
             draggedPiece.position = newPosition;
         }
 
