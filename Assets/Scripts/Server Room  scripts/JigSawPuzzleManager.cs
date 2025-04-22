@@ -176,10 +176,10 @@ foreach (Transform piece in jigsawPieces)
     private void snapCheck()
     {
         int pieceIndex = jigsawPieces.IndexOf(draggedPiece);
-        int col = pieceIndex % dimensions.z;
-        int row = pieceIndex / dimensions.z;
+        int col = pieceIndex % dimensions.x;
+        int row = pieceIndex / dimensions.x;
         Vector2 targetPosition = new Vector2(
-            -width * dimensions.z / 2 + (width * col)+(width/2), 
+            -width * dimensions.x / 2 + (width * col)+(width/2), 
             (-height * dimensions.y / 2) + (height * row)+(height/2));
         if (Vector2.Distance(draggedPiece.localPosition, targetPosition) < (width / 2))
         {
