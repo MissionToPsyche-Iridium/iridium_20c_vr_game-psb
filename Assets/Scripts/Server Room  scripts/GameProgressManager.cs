@@ -4,8 +4,8 @@ public class GameProgressManager : MonoBehaviour
 {
     public static GameProgressManager Instance;
 
-    public bool isPuzzleComplete = true;
-    public bool isJigsawComplete = true;
+    public bool isPuzzleComplete = false;
+    public bool isJigsawComplete = false;
 
     private void Awake()
     {
@@ -16,8 +16,8 @@ public class GameProgressManager : MonoBehaviour
             Destroy(gameObject);
 
         // Force both mini-games to start as incomplete (false)
-        isPuzzleComplete = false;
-        isJigsawComplete = false;
+        //isPuzzleComplete = false;
+        //isJigsawComplete = false;
     }
 
     public bool AreBothMinigamesComplete()

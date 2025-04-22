@@ -21,7 +21,7 @@ public class SimpleDoorScript : MonoBehaviour
         // Ensure glow is OFF at start
         doorMat.DisableKeyword("_EMISSION");
         doorMat.SetColor("_EmissionColor", Color.black);
-
+        isReadyToEnter = false;
         Debug.Log("Emission is disabled and set to black");
     }
 
@@ -50,7 +50,7 @@ public class SimpleDoorScript : MonoBehaviour
         if (isReadyToEnter && other.CompareTag("Player"))
         {
             Debug.Log("Player entered the door.");
-            SceneManager.LoadScene("NextScene");
+            SceneManager.LoadScene("HallwayScene");
         }
     }
 }

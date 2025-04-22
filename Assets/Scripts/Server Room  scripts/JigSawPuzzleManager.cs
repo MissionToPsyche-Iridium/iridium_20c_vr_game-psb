@@ -184,6 +184,7 @@ foreach (Transform piece in jigsawPieces)
             draggedPiece.localPosition = targetPosition;
             draggedPiece.GetComponent<BoxCollider2D>().enabled = false;
             piecesCorrect++;
+
             if (piecesCorrect == jigsawPieces.Count)
             {
                 Debug.Log("Puzzle Completed!");
