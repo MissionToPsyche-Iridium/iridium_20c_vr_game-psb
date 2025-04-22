@@ -65,7 +65,9 @@ public class CollisionPopup : MonoBehaviour
 
     IEnumerator NextScene()
     {
-        yield return new WaitForSecondsRealtime(30);
+        Debug.Log("End credit delayed coroutine started.");
+        yield return new WaitForSecondsRealtime(5);
+        Debug.Log("Yield 5 seconds complete.");
         SceneManager.LoadScene("Credits");
     }
 }
