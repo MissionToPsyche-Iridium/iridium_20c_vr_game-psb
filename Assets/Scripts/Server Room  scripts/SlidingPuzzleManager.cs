@@ -87,6 +87,8 @@ public class SlidingPuzzleManager : MonoBehaviour
                 rightHandPause.transform.position = rightHand.transform.position;
                 Destroy(gameBoard);
                 Destroy(self);
+                GameProgressManager.Instance.isPuzzleComplete = true;
+                GameProgressManager.Instance.isJigsawComplete = true;
             }
         }
         //need to put the VR checking for when the ray hits and user presses bumper
@@ -146,7 +148,6 @@ public class SlidingPuzzleManager : MonoBehaviour
                 return false;
             }
         }
-        GameProgressManager.Instance.isPuzzleComplete = true;
         return true;
     }
 

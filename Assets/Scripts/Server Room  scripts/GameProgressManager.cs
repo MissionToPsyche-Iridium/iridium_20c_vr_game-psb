@@ -16,8 +16,8 @@ public class GameProgressManager : MonoBehaviour
             Destroy(gameObject);
 
         // Force both mini-games to start as incomplete (false)
-        //isPuzzleComplete = false;
-        //isJigsawComplete = false;
+        isPuzzleComplete = false;
+        isJigsawComplete = false;
     }
 
     public bool AreBothMinigamesComplete()
