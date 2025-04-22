@@ -54,7 +54,7 @@ public class CollisionPopup : MonoBehaviour
         else if(collision.gameObject.tag=="Finish")
         {
             Finishtext.enabled=true;
-
+            GameTimer.enabled=false;
             didcollide=false;
             StartCoroutine(NextScene());
             Debug.Log("Game complete!");
