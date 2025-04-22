@@ -22,6 +22,8 @@ public class GameProgressManager : MonoBehaviour
 
     public bool AreBothMinigamesComplete()
     {
+        //Debug.Log("isPuzzleComplete: " + isPuzzleComplete);
+        //Debug.Log("isJigsawComplete: " + isJigsawComplete);
         return isPuzzleComplete && isJigsawComplete;
     }
 }

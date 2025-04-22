@@ -27,6 +27,7 @@ public class SimpleDoorScript : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("isReadyToEnter in update thing: " + isReadyToEnter);
         if (!isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete())
         {
             isReadyToEnter = true;
@@ -47,7 +48,7 @@ public class SimpleDoorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isReadyToEnter && other.CompareTag("Player"))
+        if (isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete() && other.CompareTag("Player"))
         {
             Debug.Log("Player entered the door.");
             SceneManager.LoadScene("HallwayScene");
