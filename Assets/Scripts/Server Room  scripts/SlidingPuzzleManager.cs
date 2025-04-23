@@ -9,6 +9,7 @@ public class SlidingPuzzleManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameBoard;
     [SerializeField] private Transform piecePrefab;
+    [SerializeField] private GameObject factCanvas;
     [SerializeField] private XRRayInteractor rayInteractorLeft;
     [SerializeField] private XRRayInteractor rayInteractorRight;
     [SerializeField] private InputActionProperty leftBumper;
@@ -91,7 +92,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                 leftHandPause.transform.position = leftHand.transform.position;
                 rightHandPause.transform.position = rightHand.transform.position;
                 GameProgressManager.Instance.isPuzzleComplete = true;
-                //NEED TO ADD POPUP STUFF
+                factCanvas.SetActive(!factCanvas.activeSelf);
             }
         }
         //need to put the VR checking for when the ray hits and user presses bumper
