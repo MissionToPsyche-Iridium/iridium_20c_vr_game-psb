@@ -126,8 +126,8 @@ foreach (Transform piece in jigsawPieces)
 
     while (!validPosition && attempts < maxAttempts)
     {
-    z = Random.Range(-orthoWidth/2, orthoWidth/5);
-    y = Random.Range(0,orthoHeight*1.5f);
+    z = Random.Range(-orthoWidth, .01f);
+    y = Random.Range(1,orthoHeight*1.5f);
     Rect newPieceRect = new Rect(
         z - pieceWidth/2, 
         y - pieceWidth/2,
