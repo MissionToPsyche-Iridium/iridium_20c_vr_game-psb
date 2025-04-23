@@ -13,6 +13,7 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private GameObject leftHandPause;
     [SerializeField] private GameObject rightHandPause;
     [SerializeField] private InputActionProperty showButton;
+    [SerializeField] private AudioSource source;
     [SerializeField] float x = 0.0f;
     [SerializeField] float y = 0.0f;
     [SerializeField] float z = 0.0f;
@@ -30,6 +31,7 @@ public class PauseMenuManager : MonoBehaviour
                 rightHandPause.SetActive(!rightHandPause.activeSelf);
                 leftHandPause.transform.position = leftHand.transform.position;
                 rightHandPause.transform.position = rightHand.transform.position;
+                source.Play();
             }//make a bool for setting the hands
             if (menu.activeSelf)
             {
