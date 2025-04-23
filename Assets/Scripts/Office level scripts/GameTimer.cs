@@ -7,7 +7,6 @@ public class GameTimer : MonoBehaviour
     public float timeRemaining = 120; // 2 mins
     public bool timerIsRunning = false;
     [SerializeField] private TextMeshProUGUI timerText;
-
     private void Start()
     {
         // Start the timer automatically when the game begins
@@ -47,9 +46,11 @@ public class GameTimer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         // Update the text with a formatted time string
+        if(SceneManager.GetActiveScene().name=="HallwayScene")
+        timerText.text=  "Get to the end! Don't hit any obstacles!\nTime remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);
+        else
         timerText.text = "Time remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);
     }
-
     void EndGame()
     {
         // Load the Game Over scene
