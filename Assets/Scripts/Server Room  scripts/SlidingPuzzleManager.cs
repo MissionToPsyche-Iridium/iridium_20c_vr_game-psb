@@ -77,7 +77,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                 shuffling = true;
                 StartCoroutine(WaitShuffle(0.5f));
                 temp = 1;
-            }else {
+            }else if (temp == 1) {
                 pieces[pieces.Count - 2].gameObject.SetActive(true);//not showing the right image
                 BoxCollider box = gameBoard.GetComponent<BoxCollider>();
                 box.enabled = false;
@@ -93,6 +93,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                 rightHandPause.transform.position = rightHand.transform.position;
                 GameProgressManager.Instance.isPuzzleComplete = true;
                 factCanvas.SetActive(!factCanvas.activeSelf);
+                temp = 2;
             }
         }
         //need to put the VR checking for when the ray hits and user presses bumper
