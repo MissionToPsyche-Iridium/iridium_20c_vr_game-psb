@@ -48,7 +48,7 @@ public class SimpleDoorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete() && other.CompareTag("Player"))
+        if (isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete() && (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Left Hand") || other.gameObject.CompareTag("Right Hand")))
         {
             Debug.Log("Player entered the door.");
             SceneManager.LoadScene("HallwayScene");
