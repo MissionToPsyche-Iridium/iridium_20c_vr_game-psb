@@ -48,10 +48,10 @@ public class SimpleDoorScript : MonoBehaviour
         }
     }
 
-     void OnCollisionEnter(Collision other)
+     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(isReadyToEnter + " " + GameProgressManager.Instance.AreBothMinigamesComplete() + " " + other.gameObject.tag);
-        if (isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete() && (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Left Hand") || other.gameObject.CompareTag("Right Hand")))
+        //Debug.Log(isReadyToEnter + " " + GameProgressManager.Instance.AreBothMinigamesComplete() + " " + other.tag);
+        if (isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete() && (other.CompareTag("Player") || other.CompareTag("Left Hand") || other.CompareTag("Right Hand")))
         {
             //Debug.Log("Player entered the door.");
             SceneManager.LoadScene("HallwayScene");
