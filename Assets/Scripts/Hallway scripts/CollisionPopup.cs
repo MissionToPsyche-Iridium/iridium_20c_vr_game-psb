@@ -15,6 +15,8 @@ public class CollisionPopup : MonoBehaviour
     [SerializeField] private TextMeshProUGUI GameTimer;
     bool didcollide=false;
     public bool complete=false;
+
+    int finalcollide=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,13 +57,20 @@ public class CollisionPopup : MonoBehaviour
         }
         else if(collision.gameObject.tag=="Finish")
         {   
+            finalcollide++;
             complete=true;
-            collision.gameObject.GetComponent<MeshCollider>().enabled=false;
+
+            if(finalcollide==1)
+            {
+                collision.gameObject.GetComponent<MeshCollider>().enabled=false;
             Finishtext.enabled=true;
             GameTimer.enabled=false;
             didcollide=false;
             StartCoroutine(NextScene());
             Debug.Log("Game complete!");
+            
+            }
+            
             
         }
             
@@ -72,6 +81,7 @@ public class CollisionPopup : MonoBehaviour
         Debug.Log("End credit delayed coroutine started.");
         yield return new WaitForSecondsRealtime(30);
         Debug.Log("Yield 30 seconds complete.");
+        finalcollide=0;
         SceneManager.LoadScene("Credits");
     }
 }
