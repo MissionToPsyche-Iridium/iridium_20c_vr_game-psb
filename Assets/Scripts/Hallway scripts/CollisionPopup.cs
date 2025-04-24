@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class CollisionPopup : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI GameTimer;
     bool didcollide=false;
+    public bool complete=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +54,8 @@ public class CollisionPopup : MonoBehaviour
             
         }
         else if(collision.gameObject.tag=="Finish")
-        {
+        {   
+            complete=true;
             collision.gameObject.GetComponent<MeshCollider>().enabled=false;
             Finishtext.enabled=true;
             GameTimer.enabled=false;
@@ -67,8 +70,8 @@ public class CollisionPopup : MonoBehaviour
     IEnumerator NextScene()
     {
         Debug.Log("End credit delayed coroutine started.");
-        yield return new WaitForSecondsRealtime(5);
-        Debug.Log("Yield 5 seconds complete.");
+        yield return new WaitForSecondsRealtime(30);
+        Debug.Log("Yield 30 seconds complete.");
         SceneManager.LoadScene("Credits");
     }
 }

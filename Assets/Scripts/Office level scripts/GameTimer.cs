@@ -6,6 +6,8 @@ public class GameTimer : MonoBehaviour
 {
     public float timeRemaining = 120; // 2 mins
     public bool timerIsRunning = false;
+
+    public CollisionPopup collision;
     [SerializeField] private TextMeshProUGUI timerText;
     private void Start()
     {
@@ -32,8 +34,19 @@ public class GameTimer : MonoBehaviour
                 timerIsRunning = false;
                 if(SceneManager.GetActiveScene().name=="Office")
                     EndGame(); 
-                else
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);// Call the function to end the game
+                else 
+                {
+                    if(SceneManager.GetActiveScene().name=="HallwayScene")
+                    // {   if(collision.complete==true)
+                    //     {
+                    //         Debug.Log("GameEndedHallway");
+                    //         EndGame();
+                    //     }
+                    //     else
+                    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    //     }// Call the function to end the game
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
             }
         }
     }
