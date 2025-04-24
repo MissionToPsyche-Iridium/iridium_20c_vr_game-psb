@@ -12,7 +12,7 @@ public class SimpleDoorScript : MonoBehaviour
     {
         if (doorRenderer == null)
         {
-            Debug.LogError("DoorRenderer not assigned! Please assign the Door's MeshRenderer.");
+            //Debug.LogError("DoorRenderer not assigned! Please assign the Door's MeshRenderer.");
             return;
         }
 
@@ -22,12 +22,12 @@ public class SimpleDoorScript : MonoBehaviour
         doorMat.DisableKeyword("_EMISSION");
         doorMat.SetColor("_EmissionColor", Color.black);
         isReadyToEnter = false;
-        Debug.Log("Emission is disabled and set to black");
+        //Debug.Log("Emission is disabled and set to black");
     }
 
     void Update()
     {
-        Debug.Log("isReadyToEnter in update thing: " + isReadyToEnter);
+        //Debug.Log("isReadyToEnter in update thing: " + isReadyToEnter);
         if (!isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete())
         {
             isReadyToEnter = true;
@@ -42,15 +42,16 @@ public class SimpleDoorScript : MonoBehaviour
             doorMat.EnableKeyword("_EMISSION");
             doorMat.SetColor("_EmissionColor", glowColor);
             DynamicGI.SetEmissive(doorRenderer, glowColor); // Optional
-            Debug.Log("Glow enabled, emission color set to: " + glowColor);
+            //Debug.Log("Glow enabled, emission color set to: " + glowColor);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+     void OnCollisionEnter(Collision other)
     {
+        Debug.Log(isReadyToEnter + " " + GameProgressManager.Instance.AreBothMinigamesComplete() + " " + other.gameObject.tag);
         if (isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete() && (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Left Hand") || other.gameObject.CompareTag("Right Hand")))
         {
-            Debug.Log("Player entered the door.");
+            //Debug.Log("Player entered the door.");
             SceneManager.LoadScene("HallwayScene");
         }
     }

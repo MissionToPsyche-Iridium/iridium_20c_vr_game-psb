@@ -126,9 +126,9 @@ foreach (Transform piece in jigsawPieces)
 
     while (!validPosition && attempts < maxAttempts)
     {
-    z = Random.Range(-orthoWidth, .01f);
-    y = Random.Range(1,orthoHeight*1.5f);
-    Rect newPieceRect = new Rect(
+        z = Random.Range(-orthoWidth, 0f);
+        y = Random.Range(1,orthoHeight*1.5f);
+        Rect newPieceRect = new Rect(
         z - pieceWidth/2, 
         y - pieceWidth/2,
         pieceWidth, 
@@ -153,6 +153,7 @@ foreach (Transform piece in jigsawPieces)
         }
         attempts++;
         }
+        
     piece.position = new Vector3(boardX, y, z);
     }
 }
@@ -168,8 +169,8 @@ foreach (Transform piece in jigsawPieces)
         lineRenderer.SetPosition(2, new Vector3(halfWidth, -halfHeight, borderZ));
         lineRenderer.SetPosition(3, new Vector3(-halfWidth, -halfHeight, borderZ));
 
-        lineRenderer.startWidth = 0.1f;
-        lineRenderer.endWidth = 0.1f;
+        lineRenderer.startWidth = 0.01f;
+        lineRenderer.endWidth = 0.01f;
         lineRenderer.enabled = true;
     }
 
@@ -179,19 +180,21 @@ private void snapCheck()
     int col = pieceIndex % dimensions.x;
     int row = pieceIndex / dimensions.x;
 
-    // Calculate the target position in local coordinates
-    Vector3 targetPosition = new Vector3(
-        draggedPiece.position.x, // Keep current X position
-        pieceHolder.position.y + (-height * dimensions.y / 2) + (height * row),
-        pieceHolder.position.z + (-width * dimensions.x / 2) + (width * col)
+    // Calculate the target position using local space coordinates then convert to world space
+    Vector3 localPosition = new Vector3(
+        0,  // Y axis is vertical in world space
+        -height * dimensions.y / 2 + (height * row),
+        -width * dimensions.x / 2 + (width * col)
     );
+    Vector3 targetPosition = pieceHolder.TransformPoint(localPosition);
+    
+    // Keep the original X position from the piece holder
+    targetPosition.x = pieceHolder.position.x;
 
-    // Calculate distance using world positions
     float distanceYZ = Vector3.Distance(
         new Vector3(0, draggedPiece.position.y, draggedPiece.position.z),
         new Vector3(0, targetPosition.y, targetPosition.z)
     );
-
     // Adjust snap threshold based on piece size
     float snapThreshold = (width + height) / 4;
 
