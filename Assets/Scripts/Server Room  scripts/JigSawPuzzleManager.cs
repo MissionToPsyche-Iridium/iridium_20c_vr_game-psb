@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
+using UnityEngine.Audio;
 public class JigSawPuzzleManager : MonoBehaviour
 {       
         [Header("Game Manager")]
@@ -30,6 +31,12 @@ public class JigSawPuzzleManager : MonoBehaviour
         [SerializeField] private GameObject leftHandPause;
         [SerializeField] private GameObject rightHandPause;        
         private int piecesCorrect = 0;
+
+        [Header("Audio")]
+        AudioSource selectSound;
+        AudioSource snapSound;
+        AudioSource completeSound;
+
         private Dictionary<Transform, Vector3> correctPositions = new Dictionary<Transform, Vector3>();
     [SerializeField] private float snapThreshold = 0.05f; // Tweak for snapping sensitivity
     // Start is called before the first frame update
