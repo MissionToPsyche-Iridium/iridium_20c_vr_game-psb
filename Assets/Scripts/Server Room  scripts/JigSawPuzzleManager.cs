@@ -33,9 +33,11 @@ public class JigSawPuzzleManager : MonoBehaviour
         private int piecesCorrect = 0;
 
         [Header("Audio")]
-        AudioSource selectSound;
-        AudioSource snapSound;
-        AudioSource completeSound;
+        public AudioSource selectSound;
+        public AudioSource snapSound;
+        public AudioSource completeSound;
+        
+        [SerializeField] private GameObject factCanvas;
 
         private Dictionary<Transform, Vector3> correctPositions = new Dictionary<Transform, Vector3>();
     [SerializeField] private float snapThreshold = 0.05f; // Tweak for snapping sensitivity
@@ -201,6 +203,7 @@ private void snapCheck()
     // If the distance is less than the snap threshold, snap the piece to the correct position and disable it
     if (distance <= snapThreshold)
     {
+        snapSound.Play();
         draggedPiece.position = correctPos;
 
         draggedPiece.GetComponent<Collider>().enabled = false;
@@ -210,8 +213,9 @@ private void snapCheck()
         if (piecesCorrect >= jigsawPieces.Count)
         {
             Debug.Log("Puzzle Completed!");
+            completeSound.Play();
             GameProgressManager.Instance.isJigsawComplete = true;
-
+            factCanvas.SetActive(true);
         }
     }
 }
@@ -229,6 +233,7 @@ private void snapCheck()
             
             if ((leftHit || rightHit) && hit.transform.CompareTag("Piece"))
             {
+                selectSound.Play();
                 draggedPiece = hit.transform;
                 Vector3 rayPosition = leftHit ? 
                     rayInteractorLeft.transform.position : 
@@ -250,9 +255,10 @@ private void snapCheck()
             bool rayHit = leftBumper.action.IsPressed() ? 
                 rayInteractorLeft.TryGetCurrent3DRaycastHit(out hit) : 
                 rayInteractorRight.TryGetCurrent3DRaycastHit(out hit);
-        
+            
             if (rayHit)
             {
+
                 // Keep original X position while updating Y and Z
                 draggedPiece.position = new Vector3(
                     draggedPiece.position.x,  // Keep X position constant
