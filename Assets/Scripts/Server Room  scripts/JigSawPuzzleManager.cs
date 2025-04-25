@@ -203,7 +203,8 @@ private void snapCheck()
         if (piecesCorrect >= jigsawPieces.Count)
         {
             Debug.Log("Puzzle Completed!");
-            // You can trigger any win animation, UI, or effects here
+            GameProgressManager.Instance.isJigsawComplete = true;
+
         }
     }
 }
