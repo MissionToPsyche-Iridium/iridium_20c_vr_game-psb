@@ -26,6 +26,7 @@ public class KeySocketInteractor : XRSocketInteractor
     {
         base.OnSelectEntered(args);
         StartCoroutine(PlayFade());
+        new WaitForSeconds(5f);
         SceneManager.LoadScene("SeverRoomScene");
     }
 
