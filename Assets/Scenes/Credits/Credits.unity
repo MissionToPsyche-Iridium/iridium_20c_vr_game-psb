@@ -2309,7 +2309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18c6d17d0aa3c12408806f4bca71d794, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 94f4a463fc7d9bc459fe1cd21dedcccd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2775,8 +2775,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Angelina Valentin\nAnu Mallya\nJohn Pham\nJoseph Elgin\n\nMeng Su\nASU
-    Industry Mentor \n\nNASA Solar System Exploration \n\n\n\n"
+  m_text: "Angelina Valentin\nAnu Mallya\nJohn Pham\nJoseph Elgin\n\nMeng Su\nCassie
+    Bowman\n\nNASA Solar System Exploration \n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d4fbb3ce6ac8619479d7e3ed004897c0, type: 2}
   m_sharedMaterial: {fileID: 8227730176596852694, guid: d4fbb3ce6ac8619479d7e3ed004897c0, type: 2}

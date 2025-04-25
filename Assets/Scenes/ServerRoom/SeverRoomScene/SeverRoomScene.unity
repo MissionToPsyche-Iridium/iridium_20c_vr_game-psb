@@ -20703,6 +20703,7 @@ MonoBehaviour:
   rightHand: {fileID: 2032530386}
   leftHandPause: {fileID: 234361910}
   rightHandPause: {fileID: 1413988234}
+  snapThreshold: 0.2
 --- !u!4 &1794065954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5675013305860159573, guid: 2f3fe288da751a2428fc82d8e5ed9f7e, type: 3}

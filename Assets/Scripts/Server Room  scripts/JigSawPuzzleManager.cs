@@ -25,12 +25,13 @@ public class JigSawPuzzleManager : MonoBehaviour
         [SerializeField] private XRRayInteractor rayInteractorRight;
         [SerializeField] private InputActionProperty leftBumper;
         [SerializeField] private InputActionProperty rightBumper;
-         [SerializeField] private GameObject leftHand;
+        [SerializeField] private GameObject leftHand;
         [SerializeField] private GameObject rightHand;
         [SerializeField] private GameObject leftHandPause;
         [SerializeField] private GameObject rightHandPause;        
         private int piecesCorrect = 0;
-
+        private Dictionary<Transform, Vector3> correctPositions = new Dictionary<Transform, Vector3>();
+    [SerializeField] private float snapThreshold = 0.05f; // Tweak for snapping sensitivity
     // Start is called before the first frame update
     void Start()
     {
@@ -44,9 +45,9 @@ public class JigSawPuzzleManager : MonoBehaviour
         dimensions = getDimensions(jigsawImage, difficulty);
         createJigsawPieces(jigsawImage);
         // Shuffle the pieces and place them on the board
-        scatter();
 
         updateBorder();
+        scatter();
     }
 
 
@@ -68,10 +69,13 @@ public class JigSawPuzzleManager : MonoBehaviour
     } 
     void createJigsawPieces(Texture2D jigsawImage)
     {
-        
         height = 1f / dimensions.y;
         float aspect = (float)jigsawImage.width / jigsawImage.height;
-        width  = aspect / dimensions.x;
+        width = aspect / dimensions.x;
+
+        // Adjust offsets to center the pieces within the frame
+        float xOffset = -width * (dimensions.x - 1) / 2;
+        float yOffset = -height * (dimensions.y - 1) / 2;
 
         for (int row = 0; row < dimensions.y; row++)
         {
@@ -79,11 +83,17 @@ public class JigSawPuzzleManager : MonoBehaviour
             {
                 Transform piece = Instantiate(piecePrefab, pieceHolder);
                 piece.localPosition = new Vector3(
-                    -width * dimensions.x / 2 + (width *
-                     column), (-height * dimensions.y / 2) + (height * row), -1);
-                     piece.localScale = new Vector3(width, height, 1);
-                     piece.name = $"Piece {row*dimensions.x + column}";
-                     piece.gameObject.tag = "Piece";
+                    xOffset + (width * column), 
+                    yOffset + (height * row), 
+                    0 // Ensure Z is aligned with the pieceHolder
+                );
+                // Store the original local position for snapping
+                Vector3 correctLocalPos = piece.localPosition;
+                correctPositions[piece] = pieceHolder.TransformPoint(correctLocalPos);
+                
+                piece.localScale = new Vector3(width, height, 1);
+                piece.name = $"Piece {row * dimensions.x + column}";
+                piece.gameObject.tag = "Piece";
                 jigsawPieces.Add(piece);
 
                 float width1 = 1f / dimensions.x;
@@ -93,11 +103,10 @@ public class JigSawPuzzleManager : MonoBehaviour
                 uv[0] = new Vector2(column * width1, row * height1);
                 uv[1] = new Vector2((column + 1) * width1, row * height1);
                 uv[2] = new Vector2(column * width1, (row + 1) * height1);
-                uv[3] = new Vector2((column + 1) * width1, (row + 1) * height1); 
+                uv[3] = new Vector2((column + 1) * width1, (row + 1) * height1);
                 Mesh mesh = piece.GetComponent<MeshFilter>().mesh;
                 mesh.uv = uv;
                 piece.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", jigsawImage);
-
             }
         }
     }
@@ -176,43 +185,25 @@ foreach (Transform piece in jigsawPieces)
 
 private void snapCheck()
 {
-    int pieceIndex = jigsawPieces.IndexOf(draggedPiece);
-    int col = pieceIndex % dimensions.x;
-    int row = pieceIndex / dimensions.x;
+    // Get the position of the dragged piece and check if it's close to the correct position
+    Vector3 correctPos = correctPositions[draggedPiece];
 
-    // Calculate the target position using local space coordinates then convert to world space
-    Vector3 localPosition = new Vector3(
-        0,  // Y axis is vertical in world space
-        -height * dimensions.y / 2 + (height * row),
-        -width * dimensions.x / 2 + (width * col)
-    );
-    Vector3 targetPosition = pieceHolder.TransformPoint(localPosition);
-    
-    // Keep the original X position from the piece holder
-    targetPosition.x = pieceHolder.position.x;
+    // Calculate the distance between the dragged piece and the correct position
+    float distance = Vector3.Distance(draggedPiece.position, correctPos);
 
-    float distanceYZ = Vector3.Distance(
-        new Vector3(0, draggedPiece.position.y, draggedPiece.position.z),
-        new Vector3(0, targetPosition.y, targetPosition.z)
-    );
-    // Adjust snap threshold based on piece size
-    float snapThreshold = (width + height) / 4;
-
-    if (distanceYZ < snapThreshold)
+    // If the distance is less than the snap threshold, snap the piece to the correct position and disable it
+    if (distance <= snapThreshold)
     {
-        draggedPiece.position = targetPosition;
-        // Disable the collider after successful snap
-        Collider pieceCollider = draggedPiece.GetComponent<Collider>();
-        if (pieceCollider != null)
-        {
-            pieceCollider.enabled = false;
-        }
-        piecesCorrect++;
+        draggedPiece.position = correctPos;
 
-        if (piecesCorrect == jigsawPieces.Count)
+        draggedPiece.GetComponent<Collider>().enabled = false;
+
+        piecesCorrect++;
+        
+        if (piecesCorrect >= jigsawPieces.Count)
         {
             Debug.Log("Puzzle Completed!");
-            GameProgressManager.Instance.isJigsawComplete = true;
+            // You can trigger any win animation, UI, or effects here
         }
     }
 }
