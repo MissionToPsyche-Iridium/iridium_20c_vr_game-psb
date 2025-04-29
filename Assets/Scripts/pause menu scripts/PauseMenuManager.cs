@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    [SerializeField] private Transform head;
-    [SerializeField] private float spawnDistance = 3;
+    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private float spawnDistance = 3f;
     [SerializeField] private GameObject menu;
     [SerializeField] private GameObject leftHand;
     [SerializeField] private GameObject rightHand;
@@ -14,9 +14,6 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private GameObject rightHandPause;
     [SerializeField] private InputActionProperty showButton;
     [SerializeField] private AudioSource source;
-    [SerializeField] float x = 0.0f;
-    [SerializeField] float y = 0.0f;
-    [SerializeField] float z = 0.0f;
 
     // Update is called once per frame
     void Update()
@@ -41,10 +38,10 @@ public class PauseMenuManager : MonoBehaviour
             {
                 Time.timeScale = 1.0f;
             }
-            menu.transform.position = head.position + new Vector3(head.forward.x+x ,y,head.forward.z+z).normalized * spawnDistance;
+            Vector3 whereToSpawnMenu = cameraTransform.position + cameraTransform.forward *  spawnDistance;
+            menu.transform.position = whereToSpawnMenu;
+            menu.transform.LookAt(cameraTransform);
+            menu.transform.Rotate(0f,180f,0f);
         }
-
-        menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y,head.position.z));
-        menu.transform.forward *= -1;
     }
 }

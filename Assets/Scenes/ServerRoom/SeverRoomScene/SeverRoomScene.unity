@@ -25723,7 +25723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58027f70e0c087c4d8aae98400afc16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 1137338275}
+  cameraTransform: {fileID: 1137338275}
   spawnDistance: 3
   menu: {fileID: 1802117450}
   leftHand: {fileID: 45639032}
@@ -25743,9 +25743,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 8497685798473381005, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   source: {fileID: 2136047368}
-  x: 0.5
-  y: 3
-  z: 0
 --- !u!4 &2136047367
 Transform:
   m_ObjectHideFlags: 0
