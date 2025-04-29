@@ -4412,6 +4412,7 @@ MonoBehaviour:
   fadeOnStart: 1
   fadeDuration: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  self: {fileID: 904211326}
 --- !u!1 &1013155570
 GameObject:
   m_ObjectHideFlags: 0

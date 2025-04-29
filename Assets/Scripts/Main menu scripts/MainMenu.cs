@@ -10,7 +10,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject titleMenu;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private Image black;
-    [SerializeField] private Animator anim;
     public void PlayGame()
     {
         StartCoroutine(PlayFade());
@@ -61,8 +60,6 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator PlayFade()
     {
-        anim.SetBool("Fade", true);
         yield return new WaitUntil(() => black.color.a==1);
-
     }
 }

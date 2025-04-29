@@ -23766,7 +23766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 985010425}
-  spawnDistance: 4
+  spawnDistance: 2.5
   menu: {fileID: 1853822760}
   leftHand: {fileID: 1128918624}
   rightHand: {fileID: 204935931}

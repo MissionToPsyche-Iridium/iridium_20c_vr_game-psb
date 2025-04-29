@@ -62,13 +62,14 @@ public class CollisionPopup : MonoBehaviour
 
             if(finalcollide==1)
             {
-                collision.gameObject.GetComponent<MeshCollider>().enabled=false;
+            collision.gameObject.GetComponent<MeshCollider>().enabled=false;
             Finishtext.enabled=true;
             GameTimer.enabled=false;
             didcollide=false;
             StartCoroutine(NextScene());
+
             Debug.Log("Game complete!");
-            
+                        
             }
             
             
@@ -79,9 +80,15 @@ public class CollisionPopup : MonoBehaviour
     IEnumerator NextScene()
     {
         Debug.Log("End credit delayed coroutine started.");
-        yield return new WaitForSecondsRealtime(30);
+        StartCoroutine(hideText()); 
+        yield return new WaitForSecondsRealtime(20);
         Debug.Log("Yield 30 seconds complete.");
         finalcollide=0;
         SceneManager.LoadScene("Credits");
+    }
+    IEnumerator hideText()
+    {
+        yield return new WaitForSecondsRealtime(10);
+        Finishtext.enabled=false;
     }
 }

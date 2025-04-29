@@ -9,6 +9,7 @@ public class FadeScreen : MonoBehaviour
     public Color fadeColor = Color.black; // Color of the fade effect
     private Renderer screenRenderer; // Reference to the screen's renderer
 
+    [SerializeField] private GameObject self;
     void Start()
     {
         screenRenderer = GetComponent<Renderer>(); // Get the renderer component of the screen
@@ -32,6 +33,7 @@ public class FadeScreen : MonoBehaviour
     {
         // Start the fade coroutine
         StartCoroutine(FadeCoroutine(alphaIn, alphaOut));
+        Destroy(self);
     }
 
 
