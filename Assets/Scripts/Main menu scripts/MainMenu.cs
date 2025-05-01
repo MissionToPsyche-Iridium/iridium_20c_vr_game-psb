@@ -8,8 +8,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject titleMenu;
-    [SerializeField] private GameObject optionsMenu;
-    
+    [SerializeField] private GameObject optionsMenu;    
     [SerializeField] private FadeScreen fadeScreen; // Add this line
 
     public void PlayGame()
@@ -60,8 +59,8 @@ public class MainMenu : MonoBehaviour
     private IEnumerator StartGameWithFade()
     {
         fadeScreen.EnableWithFade();
+        yield return new WaitForSeconds(0.5f); // Wait for the fade effect to complete
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Office");
-        yield return new WaitForSeconds(fadeScreen.fadeDuration);
         
     }
 }
