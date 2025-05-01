@@ -60,7 +60,8 @@ public class MainMenu : MonoBehaviour
     private IEnumerator StartGameWithFade()
     {
         fadeScreen.EnableWithFade();
-        yield return new WaitForSeconds(fadeScreen.fadeDuration);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Office");
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+        
     }
 }
