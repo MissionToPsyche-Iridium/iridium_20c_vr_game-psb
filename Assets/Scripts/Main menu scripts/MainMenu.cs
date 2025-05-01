@@ -9,12 +9,13 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject titleMenu;
     [SerializeField] private GameObject optionsMenu;
+    
+    [SerializeField] private FadeScreen fadeScreen; // Add this line
+
     public void PlayGame()
     {
-        
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Office");
+        StartCoroutine(StartGameWithFade());
     }
-
     public void GoOptions()
     { 
         optionsMenu.SetActive(true);
@@ -56,4 +57,10 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    private IEnumerator StartGameWithFade()
+    {
+        fadeScreen.EnableWithFade();
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Office");
+    }
 }

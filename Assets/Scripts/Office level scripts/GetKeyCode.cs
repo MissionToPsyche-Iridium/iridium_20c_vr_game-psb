@@ -23,10 +23,10 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     [SerializeField] private GameObject leftHandPause;
     [SerializeField] private GameObject rightHandPause;
     [SerializeField] private GameObject safeCollider;
-    [SerializeField] private AudioSource correctAudioSource; 
-    [SerializeField] private AudioSource incorrectAudioSource; 
+    public AudioSource correctAudioSource; 
+    public AudioSource incorrectAudioSource; 
     [SerializeField] private AudioSource keyPress;
-    [SerializeField] private AudioSource doorOpen;
+    public AudioSource doorOpen;
     private void Awake()
     {
         buttonImage = GetComponent<Image>();
@@ -112,8 +112,6 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         {
                             key.SetActive(true);
                             StartCoroutine(RotateSafeDoor());
-                            correctAudioSource.Play();
-                            doorOpen.Play();
                             Transform parentToDestroy = transform.parent.parent.parent;
                             Destroy(parentToDestroy.gameObject);
                             leftHand.SetActive(!leftHand.activeSelf);
@@ -148,6 +146,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     }
     private IEnumerator RotateSafeDoor()
     {
+        correctAudioSource.Play();
+        doorOpen.Play();
         yield return Tween.Rotation(safeDoor.transform, endValue: Quaternion.Euler(safeDoor.transform.rotation.eulerAngles.x, safeDoor.transform.rotation.eulerAngles.y, safeDoor.transform.rotation.eulerAngles.z - 90), duration: 2);
     }
 }

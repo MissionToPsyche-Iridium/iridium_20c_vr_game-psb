@@ -56,6 +56,15 @@ public class FadeScreen : MonoBehaviour
     public IEnumerator DelayDestroy(float delay)
     {
         yield return new WaitForSeconds(delay); // Wait for the specified delay
-        Destroy(self); // Destroy the screen object
+        self.SetActive(false); // Destroy the screen object
+    }
+
+    public void EnableWithFade()
+    {
+        self.SetActive(true);
+        Color startColor = fadeColor;
+        startColor.a = 1f;
+        screenRenderer.material.SetColor("_Color", startColor);
+        FadeIn();
     }
 }
