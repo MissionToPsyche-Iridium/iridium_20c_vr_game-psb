@@ -42,6 +42,7 @@ public class SimpleDoorScript : MonoBehaviour
         if (doorMat != null)
         {
             doorMat.EnableKeyword("_EMISSION");
+            glowColor = Color.green.linear * 2f;
             doorMat.SetColor("_EmissionColor", glowColor);
             DynamicGI.SetEmissive(doorRenderer, glowColor); // Optional
             //Debug.Log("Glow enabled, emission color set to: " + glowColor);
