@@ -26,7 +26,7 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     [SerializeField] private AudioSource correctAudioSource; 
     [SerializeField] private AudioSource incorrectAudioSource; 
     [SerializeField] private AudioSource keyPress;
-    
+    [SerializeField] private AudioSource doorOpen;
     private void Awake()
     {
         buttonImage = GetComponent<Image>();
@@ -112,6 +112,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         {
                             key.SetActive(true);
                             StartCoroutine(RotateSafeDoor());
+                            correctAudioSource.Play();
+                            doorOpen.Play();
                             Transform parentToDestroy = transform.parent.parent.parent;
                             Destroy(parentToDestroy.gameObject);
                             leftHand.SetActive(!leftHand.activeSelf);
@@ -121,7 +123,6 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                             leftHand.transform.position = leftHandPause.transform.position;
                             rightHand.transform.position = rightHandPause.transform.position;
                             inputTarget.textComponent.color = Color.green; // Set text color to green
-                            correctAudioSource.Play();
                             Destroy(safeCollider);
                             SettingManager.Instance.IsRayHandActive = false;
 
