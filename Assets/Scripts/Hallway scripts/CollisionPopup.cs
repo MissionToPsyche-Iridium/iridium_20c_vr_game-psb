@@ -11,11 +11,9 @@ public class CollisionPopup : MonoBehaviour
 {   
     [SerializeField] private TextMeshPro popuptext;
     [SerializeField] private TextMeshPro Finishtext;
-
     [SerializeField] private TextMeshProUGUI GameTimer;
     bool didcollide=false;
     public bool complete=false;
-
     public GameObject musicToReplace;
     public AudioSource musicToAdd; 
     int finalcollide=0;

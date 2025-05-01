@@ -33,7 +33,7 @@ public class FadeScreen : MonoBehaviour
     {
         // Start the fade coroutine
         StartCoroutine(FadeCoroutine(alphaIn, alphaOut));
-        Destroy(self);
+        StartCoroutine(DelayDestroy(2.0f)); // Start the delay destroy coroutine
     }
 
 
@@ -51,5 +51,11 @@ public class FadeScreen : MonoBehaviour
         Color newColor2 = fadeColor; // Set the new color to the fade color
         newColor2.a = alphaOut; // Set the final alpha value
         screenRenderer.material.SetColor("_Color", newColor2); // Set the color of the screen's material
+    }
+
+    public IEnumerator DelayDestroy(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        Destroy(self); // Destroy the screen object
     }
 }

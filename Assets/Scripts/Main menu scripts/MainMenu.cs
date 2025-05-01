@@ -9,10 +9,9 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject titleMenu;
     [SerializeField] private GameObject optionsMenu;
-    [SerializeField] private Image black;
     public void PlayGame()
     {
-        StartCoroutine(PlayFade());
+        
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Office");
     }
 
@@ -57,9 +56,4 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-
-    IEnumerator PlayFade()
-    {
-        yield return new WaitUntil(() => black.color.a==1);
-    }
 }
