@@ -59,7 +59,7 @@ public class MainMenu : MonoBehaviour
     private IEnumerator StartGameWithFade()
     {
         fadeScreen.EnableWithFade();
-        yield return new WaitForSeconds(0.5f); // Wait for the fade effect to complete
+        yield return new WaitForSeconds(0.1f); // Wait for the fade effect to complete
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Office");
         
     }

@@ -29,7 +29,9 @@ public class JigSawPuzzleManager : MonoBehaviour
         [SerializeField] private GameObject leftHand;
         [SerializeField] private GameObject rightHand;
         [SerializeField] private GameObject leftHandPause;
-        [SerializeField] private GameObject rightHandPause;        
+        [SerializeField] private GameObject rightHandPause; 
+        [SerializeField] private GameObject gameBoardCollider;
+       
         private int piecesCorrect = 0;
 
         [Header("Audio")]
@@ -216,6 +218,9 @@ private void snapCheck()
             completeSound.Play();
             GameProgressManager.Instance.isJigsawComplete = true;
             factCanvas.SetActive(true);
+            // Disable the game board collider to prevent further interactions
+            Destroy(gameBoardCollider);
+            SettingManager.Instance.IsRayHandActive = false;
         }
     }
 }
