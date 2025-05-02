@@ -9,6 +9,7 @@ public class SimpleDoorScript : MonoBehaviour
     public Color glowColor = Color.green;
     private Material doorMat;
     private bool isReadyToEnter = false;
+    [SerializeField] private FadeScreen fadeScreen; 
 
     void Start()
     {
@@ -55,7 +56,15 @@ public class SimpleDoorScript : MonoBehaviour
         if (isReadyToEnter && GameProgressManager.Instance.AreBothMinigamesComplete() && (other.CompareTag("Player") || other.CompareTag("Left Hand") || other.CompareTag("Right Hand")))
         {
             //Debug.Log("Player entered the door.");
-            SceneManager.LoadScene("HallwayScene");
-        }
+            // Start the fade effect and load the next scene
+            StartCoroutine(StartGameWithFade());}
+    }
+
+        private IEnumerator StartGameWithFade()
+    {
+        fadeScreen.EnableWithFade();
+        yield return new WaitForSeconds(0.5f); // Wait for the fade effect to complete
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("HallwayScene");
+        
     }
 }

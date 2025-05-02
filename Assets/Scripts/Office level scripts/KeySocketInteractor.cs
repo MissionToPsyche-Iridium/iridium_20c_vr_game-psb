@@ -8,7 +8,9 @@ public class KeySocketInteractor : XRSocketInteractor
 {
     [SerializeField] private GameObject interactorObject; //the snap zone object
     [SerializeField] private Image black;
-    [SerializeField] private Animator anim;
+
+    [SerializeField] private FadeScreen fadeScreen; 
+
     public override bool CanSelect(IXRSelectInteractable interactable)
     {
         GameObject objectToCheck = interactable.transform.gameObject;
@@ -25,15 +27,14 @@ public class KeySocketInteractor : XRSocketInteractor
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
-        StartCoroutine(PlayFade());
-        new WaitForSeconds(5f);
-        SceneManager.LoadScene("SeverRoomScene");
+        StartCoroutine(StartGameWithFade());
     }
 
-    IEnumerator PlayFade()
+    private IEnumerator StartGameWithFade()
     {
-        anim.SetBool("Fade", true);
-        yield return new WaitUntil(() => black.color.a==1);
-
+        fadeScreen.EnableWithFade();
+        yield return new WaitForSeconds(0.5f); // Wait for the fade effect to complete
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SeverRoomScene");
+        
     }
 }
