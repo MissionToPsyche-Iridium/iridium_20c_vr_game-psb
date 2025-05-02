@@ -19,6 +19,7 @@ public class SlidingPuzzleManager : MonoBehaviour
     [SerializeField] private GameObject leftHandPause;
     [SerializeField] private GameObject rightHandPause;
     [SerializeField] private AudioSource slidingSound;
+    [SerializeField] private AudioSource popupSound;
 
     private List<Transform> pieces;
     private int emptyLocation;
@@ -94,6 +95,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                 GameProgressManager.Instance.isPuzzleComplete = true;
                 SettingManager.Instance.IsRayHandActive = false;
                 factCanvas.SetActive(!factCanvas.activeSelf);
+                popupSound.Play();
                 temp = 2;
             }
         }
