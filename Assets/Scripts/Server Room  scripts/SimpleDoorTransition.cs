@@ -26,7 +26,7 @@ public class SimpleDoorScript : MonoBehaviour
         {
             isReadyToEnter = true;
             finishText.SetActive(true);
-            completedSound.Play(); // Play the sound when both minigames are complete
+            StartCoroutine(PlaySound());
         }
     }
 
@@ -46,5 +46,11 @@ public class SimpleDoorScript : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Wait for the fade effect to complete
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("HallwayScene");
         
+    }
+
+    private IEnumerator PlaySound()
+    {
+        yield return new WaitForSeconds(1.5f);
+        completedSound.Play();
     }
 }

@@ -23,10 +23,10 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     [SerializeField] private GameObject leftHandPause;
     [SerializeField] private GameObject rightHandPause;
     [SerializeField] private GameObject safeCollider;
-    private AudioSource correctAudioSource; 
-    private AudioSource incorrectAudioSource; 
+    [SerializeField] private AudioSource correctAudioSource; 
+    [SerializeField] private AudioSource incorrectAudioSource; 
     [SerializeField] private AudioSource keyPress;
-    public AudioSource doorOpen;
+    [SerializeField] private AudioSource doorOpen;
     private void Awake()
     {
         buttonImage = GetComponent<Image>();
@@ -105,36 +105,21 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                     }
                     break;
 
-                case "enter":
-                    if (inputTarget.text.Length > 0)
-                    {
-                        if (inputTarget.text.Equals("2017"))
-                        {
-                            key.SetActive(true);
-                            correctAudioSource.Play();
-                            doorOpen.Play();
-                            StartCoroutine(RotateSafeDoor());
-                            Transform parentToDestroy = transform.parent.parent.parent;
-                            Destroy(parentToDestroy.gameObject);
-                            leftHand.SetActive(!leftHand.activeSelf);
-                            rightHand.SetActive(!rightHand.activeSelf);
-                            leftHandPause.SetActive(!leftHandPause.activeSelf);
-                            rightHandPause.SetActive(!rightHandPause.activeSelf);
-                            leftHand.transform.position = leftHandPause.transform.position;
-                            rightHand.transform.position = rightHandPause.transform.position;
-                            inputTarget.textComponent.color = Color.green; // Set text color to green
-                            Destroy(safeCollider);
-                            SettingManager.Instance.IsRayHandActive = false;
-
-                        }
-                        else
-                        {
-                            incorrectAudioSource.Play();
-                            inputTarget.textComponent.color = Color.red; // Set text color to red
-                            StartCoroutine(Delay());
-                        }
-                    }
-                    break;
+case "enter":
+    if (inputTarget.text.Length > 0)
+    {
+        if (inputTarget.text.Equals("2017"))
+        {
+            StartCoroutine(HandleCorrectCode());
+        }
+        else
+        {
+            incorrectAudioSource.Play();
+            inputTarget.textComponent.color = Color.red;
+            StartCoroutine(Delay());
+        }
+    }
+    break;
             }
         }
     }
@@ -148,6 +133,33 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     }
     private IEnumerator RotateSafeDoor()
     {
+        // Play the door open sound
+        doorOpen.Play();
         yield return Tween.Rotation(safeDoor.transform, endValue: Quaternion.Euler(safeDoor.transform.rotation.eulerAngles.x, safeDoor.transform.rotation.eulerAngles.y, safeDoor.transform.rotation.eulerAngles.z - 90), duration: 2);
     }
+
+    private IEnumerator HandleCorrectCode()
+{
+    key.SetActive(true);
+    correctAudioSource.Play();
+    // Wait a small amount of time to ensure audio starts playing
+    yield return new WaitForSeconds(0.1f);
+    
+    StartCoroutine(RotateSafeDoor());
+    
+    // Allow door opening animation and sound to complete
+    yield return new WaitForSeconds(2f);
+    
+    Transform parentToDestroy = transform.parent.parent.parent;
+    leftHand.SetActive(!leftHand.activeSelf);
+    rightHand.SetActive(!rightHand.activeSelf);
+    leftHandPause.SetActive(!leftHandPause.activeSelf);
+    rightHandPause.SetActive(!rightHandPause.activeSelf);
+    leftHand.transform.position = leftHandPause.transform.position;
+    rightHand.transform.position = rightHandPause.transform.position;
+    inputTarget.textComponent.color = Color.green;
+    Destroy(safeCollider);
+    SettingManager.Instance.IsRayHandActive = false;
+    Destroy(parentToDestroy.gameObject);
+}
 }

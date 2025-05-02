@@ -3671,7 +3671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleMenu: {fileID: 432574694}
   optionsMenu: {fileID: 359758529}
-  fadeScreen: {fileID: 0}
+  fadeScreen: {fileID: 904211331}
 --- !u!114 &784214370
 MonoBehaviour:
   m_ObjectHideFlags: 0

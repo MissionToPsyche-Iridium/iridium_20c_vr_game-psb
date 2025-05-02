@@ -4332,6 +4332,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!4 &253593250 stripped
@@ -5598,6 +5600,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!1 &379785730
@@ -6641,6 +6645,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!1 &555164285
@@ -7757,6 +7763,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 1059239423}
+  incorrectAudioSource: {fileID: 1318142283}
   keyPress: {fileID: 0}
   doorOpen: {fileID: 690825870}
 --- !u!114 &690825867
@@ -8490,6 +8498,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!1 &758092989
@@ -10023,6 +10033,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!4 &968861208 stripped
@@ -11554,6 +11566,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!850595691 &1103859292
@@ -14439,6 +14453,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!1 &1295181276
@@ -17038,6 +17054,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!1001 &1524168297
@@ -22057,6 +22075,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!1 &1784172210
@@ -22283,6 +22303,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!1 &1807793121
@@ -22434,6 +22456,8 @@ MonoBehaviour:
   leftHandPause: {fileID: 172511712}
   rightHandPause: {fileID: 1725899824}
   safeCollider: {fileID: 540206300}
+  correctAudioSource: {fileID: 0}
+  incorrectAudioSource: {fileID: 0}
   keyPress: {fileID: 1419212274}
   doorOpen: {fileID: 0}
 --- !u!1001 &1808099480
