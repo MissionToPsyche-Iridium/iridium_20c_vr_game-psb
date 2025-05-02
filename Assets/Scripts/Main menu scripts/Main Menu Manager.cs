@@ -9,7 +9,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Slider musicVolume;
     [SerializeField] private Slider sFXVolume;
     [SerializeField] private Slider brightness;
-
+    [SerializeField] private Toggle eventModeToggle;
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +29,11 @@ public class MainMenuManager : MonoBehaviour
             sFXVolume.value = value;
         }
         brightness.value = SettingManager.Instance.Brightness;
+
+        if(SettingManager.Instance.EventMode) {
+            eventModeToggle.isOn = true;
+        }else{
+            eventModeToggle.isOn = false;
+        }
     }
 }

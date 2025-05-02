@@ -19,9 +19,11 @@ public class OfficeManager : MonoBehaviour
     [SerializeField] private Slider musicVolume;
     [SerializeField] private Slider sFXVolume;
     [SerializeField] private Slider brightness;
-    // Start is called before the first frame update
     [SerializeField] private Image black;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject notePart1;
+    [SerializeField] private GameObject notePart2;
+
     void Awake()
     {
         if (SettingManager.Instance.EventMode == false)
@@ -33,6 +35,8 @@ public class OfficeManager : MonoBehaviour
         else
         {
             Destroy(safeCollider);
+            notePart1.SetActive(false);
+            notePart2.SetActive(false);
         }
     }
 
