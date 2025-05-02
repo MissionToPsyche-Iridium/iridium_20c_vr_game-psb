@@ -14,8 +14,6 @@ public class CollisionPopup : MonoBehaviour
     [SerializeField] private TextMeshProUGUI GameTimer;
     bool didcollide=false;
     public bool complete=false;
-    public GameObject musicToReplace;
-    public AudioSource musicToAdd; 
     int finalcollide=0;
     // Start is called before the first frame update
     void Start()
@@ -80,9 +78,6 @@ public class CollisionPopup : MonoBehaviour
     IEnumerator NextScene()
     {
         Debug.Log("End credit delayed coroutine started.");
-        AudioSource originalAudio = musicToReplace.GetComponent<AudioSource>();
-        originalAudio.clip = musicToAdd.clip;  // Changed from AudioClip to clip
-        originalAudio.Play();
         StartCoroutine(hideText()); 
         yield return new WaitForSecondsRealtime(20);
         Debug.Log("Yield 30 seconds complete.");

@@ -23,8 +23,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     [SerializeField] private GameObject leftHandPause;
     [SerializeField] private GameObject rightHandPause;
     [SerializeField] private GameObject safeCollider;
-    public AudioSource correctAudioSource; 
-    public AudioSource incorrectAudioSource; 
+    private AudioSource correctAudioSource; 
+    private AudioSource incorrectAudioSource; 
     [SerializeField] private AudioSource keyPress;
     public AudioSource doorOpen;
     private void Awake()
@@ -111,6 +111,8 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
                         if (inputTarget.text.Equals("2017"))
                         {
                             key.SetActive(true);
+                            correctAudioSource.Play();
+                            doorOpen.Play();
                             StartCoroutine(RotateSafeDoor());
                             Transform parentToDestroy = transform.parent.parent.parent;
                             Destroy(parentToDestroy.gameObject);
@@ -146,8 +148,6 @@ public class GetKeyCode : MonoBehaviour, IPointerClickHandler, IPointerDownHandl
     }
     private IEnumerator RotateSafeDoor()
     {
-        correctAudioSource.Play();
-        doorOpen.Play();
         yield return Tween.Rotation(safeDoor.transform, endValue: Quaternion.Euler(safeDoor.transform.rotation.eulerAngles.x, safeDoor.transform.rotation.eulerAngles.y, safeDoor.transform.rotation.eulerAngles.z - 90), duration: 2);
     }
 }
