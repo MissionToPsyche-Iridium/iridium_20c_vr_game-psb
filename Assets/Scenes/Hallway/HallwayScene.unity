@@ -7476,8 +7476,6 @@ MonoBehaviour:
   Finishtext: {fileID: 986285177}
   GameTimer: {fileID: 1077154786}
   complete: 0
-  musicToReplace: {fileID: 1289468255}
-  musicToAdd: {fileID: 1054288760}
 --- !u!54 &1054288759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11116,8 +11114,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   m_InvalidColorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0, b: 0, a: 1}
+    key0: {r: 0.95686275, g: 0.4862745, b: 0.2, a: 1}
+    key1: {r: 0.95686275, g: 0.4862745, b: 0.2, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -11141,7 +11139,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_BlockedColorGradient:
@@ -12463,8 +12461,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   m_InvalidColorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0, b: 0, a: 1}
+    key0: {r: 0.95686275, g: 0.4862745, b: 0.2, a: 1}
+    key1: {r: 0.95686275, g: 0.4862745, b: 0.2, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -12488,7 +12486,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_BlockedColorGradient:

@@ -92,6 +92,7 @@ public class SlidingPuzzleManager : MonoBehaviour
                 leftHandPause.transform.position = leftHand.transform.position;
                 rightHandPause.transform.position = rightHand.transform.position;
                 GameProgressManager.Instance.isPuzzleComplete = true;
+                SettingManager.Instance.IsRayHandActive = false;
                 factCanvas.SetActive(!factCanvas.activeSelf);
                 temp = 2;
             }
