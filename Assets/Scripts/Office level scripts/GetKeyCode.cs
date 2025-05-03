@@ -135,31 +135,30 @@ case "enter":
     {
         // Play the door open sound
         doorOpen.Play();
+        Transform parentToDestroy = transform.parent.parent.parent;
+        Destroy(parentToDestroy.gameObject);
         yield return Tween.Rotation(safeDoor.transform, endValue: Quaternion.Euler(safeDoor.transform.rotation.eulerAngles.x, safeDoor.transform.rotation.eulerAngles.y, safeDoor.transform.rotation.eulerAngles.z - 90), duration: 2);
     }
 
     private IEnumerator HandleCorrectCode()
-{
-    key.SetActive(true);
-    correctAudioSource.Play();
-    // Wait a small amount of time to ensure audio starts playing
-    yield return new WaitForSeconds(0.1f);
+    {
+        key.SetActive(true);
+        correctAudioSource.Play();
+        // Wait a small amount of time to ensure audio starts playing
+        yield return new WaitForSeconds(0.1f);
     
-    StartCoroutine(RotateSafeDoor());
+        StartCoroutine(RotateSafeDoor());
     
-    // Allow door opening animation and sound to complete
-    yield return new WaitForSeconds(2f);
-    
-    Transform parentToDestroy = transform.parent.parent.parent;
-    leftHand.SetActive(!leftHand.activeSelf);
-    rightHand.SetActive(!rightHand.activeSelf);
-    leftHandPause.SetActive(!leftHandPause.activeSelf);
-    rightHandPause.SetActive(!rightHandPause.activeSelf);
-    leftHand.transform.position = leftHandPause.transform.position;
-    rightHand.transform.position = rightHandPause.transform.position;
-    inputTarget.textComponent.color = Color.green;
-    Destroy(safeCollider);
-    SettingManager.Instance.IsRayHandActive = false;
-    Destroy(parentToDestroy.gameObject);
-}
+        // Allow door opening animation and sound to complete
+        yield return new WaitForSeconds(2f);
+        leftHand.SetActive(!leftHand.activeSelf);
+        rightHand.SetActive(!rightHand.activeSelf);
+        leftHandPause.SetActive(!leftHandPause.activeSelf);
+        rightHandPause.SetActive(!rightHandPause.activeSelf);
+        leftHand.transform.position = leftHandPause.transform.position;
+        rightHand.transform.position = rightHandPause.transform.position;
+        inputTarget.textComponent.color = Color.green;
+        Destroy(safeCollider);
+        SettingManager.Instance.IsRayHandActive = false;
+    }
 }
